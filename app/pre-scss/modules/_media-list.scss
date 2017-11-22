@@ -1,0 +1,83 @@
+﻿@import "../helpers/_mixins.scss";
+@import "../helpers/_variables.scss";
+
+.list-media {
+    float: left;
+    width: 100%;
+}
+
+.item-media {
+    margin-bottom: 30px;
+
+    .img {
+        height: 174px;
+        overflow: hidden;
+    }
+
+    h2 {
+        margin: 10px 0 5px 0;
+        height: 48px;
+        overflow: hidden;
+
+        a {
+            font-size: 18px;
+            display: block;
+            line-height: 1.35em;
+            color: $list-color-primary;
+
+            &:hover, &:focus {
+                color: $list-color-hover;
+            }
+        }
+    }
+}
+
+.media-other {
+    margin-top: 20px;
+    float: left;
+
+    strong {
+        font-size: 18px;
+        margin-bottom: 10px;
+        display: block;
+        width: 100%;
+
+        i.fa {
+            color: $list-color-hover;
+            padding-right: 8px;
+            font-size: 20px;
+        }
+    }
+}
+
+@include mq(md) {
+    .item-media {
+        .img {
+            height: 140px;
+        }
+    }
+}
+
+@include mq(sm) {
+    .item-media {
+        .img {
+            height: 200px;
+
+            img {
+                width: 100%;
+            }
+        }
+    }
+}
+
+@include mq(xs) {
+    .item-media {
+        .img {
+            height: auto;
+
+            img {
+                width: 100%;
+            }
+        }
+    }
+}

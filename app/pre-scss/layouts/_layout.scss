@@ -1,0 +1,265 @@
+﻿@import "../helpers/_variables.scss";
+@import "../helpers/_mixins.scss";
+
+
+html {
+    background-color: $background-primary;
+}
+
+body {
+    font-family: $font-face-primary;
+    font-size: $font-size-primary;
+    color: $text-color-primary;
+}
+
+#wrapper {
+    float: left;
+    width: 100%;
+    transition: margin 300ms ease;
+
+    &.open-sidebar {
+        margin-left: 270px;
+    }
+}
+
+.wrapper-main {
+    float: left;
+    width: 100%;
+}
+
+.wrapper-content {
+    float: left;
+    width: 100%;
+}
+
+.fl {
+    float: left;
+}
+
+.fr {
+    float: right;
+}
+
+a {
+    transition: 0.2s all ease-in;
+
+    &:hover {
+        transition: 0.2s all ease-out;
+        text-decoration: none;
+        outline: none;
+    }
+
+    &:focus {
+        text-decoration: none;
+        outline: none;
+    }
+}
+
+ul {
+    list-style-type: none;
+    padding-left: 0;
+    list-style: none;
+    margin-bottom: 0;
+
+    li {
+        list-style: none;
+    }
+}
+
+
+h1, h2, h3, h4, h5, h6 {
+    color: $text-color-primary;
+    margin: 0;
+    padding: 0;
+    display: block;
+    width: 100%;
+}
+
+.tbw-5, .tbw-10, .tbw-15, .tbw-20, .tbw-25, .tbw-30, .tbw-35, .tbw-40, .tbw-45, .tbw-50, .tbw-55, .tbw-60, .tbw-65, .tbw-70, .tbw-75, .tbw-80, .tbw-85, .tbw-90, .tbw-95, .tbw-100 {
+    display: block;
+}
+
+.tbw-5 {
+    width: 5%;
+}
+
+.tbw-10 {
+    width: 10%;
+}
+
+.tbw-15 {
+    width: 15%;
+}
+
+.tbw-20 {
+    width: 20%;
+}
+
+.tbw-25 {
+    width: 25%;
+}
+
+.tbw-30 {
+    width: 30%;
+}
+
+.tbw-35 {
+    width: 35%;
+}
+
+.tbw-40 {
+    width: 40%;
+}
+
+.tbw-45 {
+    width: 45%;
+}
+
+.tbw-50 {
+    width: 50%;
+}
+
+.tbw-55 {
+    width: 55%;
+}
+
+.tbw-60 {
+    width: 60%;
+}
+
+.tbw-65 {
+    width: 65%;
+}
+
+.tbw-70 {
+    width: 70%;
+}
+
+.tbw-75 {
+    width: 75%;
+}
+
+.tbw-80 {
+    width: 80%;
+}
+
+.tbw-85 {
+    width: 85%;
+}
+
+.tbw-90 {
+    width: 90%;
+}
+
+.tbw-95 {
+    width: 95%;
+}
+
+.tbw-100 {
+    width: 100%;
+}
+
+i.fa {
+    padding-right: 5px;
+}
+
+.divBlockL {
+    width: 100%;
+    float: left;
+    display: block;
+}
+
+.divBlockR {
+    width: 100%;
+    float: right;
+    display: block;
+}
+
+
+.npd {
+    padding: 0 !important;
+
+    &t {
+        padding-top: 0 !important;
+    }
+
+    &b {
+        padding-bottom: 0 !important;
+    }
+
+    &l {
+        padding-left: 0 !important;
+    }
+
+    &r {
+        padding-right: 0 !important;
+    }
+}
+
+.nmg {
+    margin: 0 !important;
+
+    &t {
+        margin-top: 0 !important;
+    }
+
+    &b {
+        margin-bottom: 0 !important;
+    }
+
+    &l {
+        margin-left: 0 !important;
+    }
+
+    &r {
+        margin-right: 0 !important;
+    }
+}
+
+@include mq(max-xs) {
+    .npd {
+        &t {
+            padding-top: 15px !important;
+        }
+
+        &b {
+            padding-bottom: 15px !important;
+        }
+
+        &l {
+            padding-left: 15px !important;
+        }
+
+        &r {
+            padding-right: 15px !important;
+        }
+    }
+}
+
+/*Scroll Top*/
+#scrollTop {
+    position: fixed;
+    right: 20px;
+    bottom: 100px;
+    background: $color-primary;
+    color: #fff;
+    width: 34px;
+    height: 34px;
+    text-align: center;
+    line-height: 30px;
+    text-decoration: none;
+    opacity: 0.8;
+    display: none;
+    border-radius: 3px;
+    z-index: 9999;
+
+    span {
+        display: block;
+        font-size: 2em;
+        text-align: center;
+    }
+
+    &:hover {
+        opacity: 0.8;
+    }
+}

@@ -1,0 +1,282 @@
+﻿@import "../helpers/_mixins.scss";
+@import "../helpers/_variables.scss";
+
+/*------------------------------------News------------------------------------------------------------------*/
+/*Grid News*/
+.list-news.grid {
+    float: left;
+    width: 100%;
+    padding-top: 40px;
+    padding-bottom: 40px;
+
+    .item-news {
+        float: left;
+        width: 100%;
+        margin-bottom: 30px;
+
+        .img {
+            position: relative;
+            overflow: hidden;
+            float: left;
+            width: 100%;
+
+            a {
+                float: left;
+                display: block;
+            }
+
+            img {
+                width: 100%;
+                height: auto;
+            }
+        }
+
+        .detail {
+            float: left;
+            width: 100%;
+            overflow: hidden;
+            text-align: justify;
+
+            h3 {
+                margin-top: 15px;
+                margin-bottom: 5px;
+
+                a {
+                    font-size: 20px;
+                    color: $list-color-primary;
+                    display: block;
+                    line-height: 1.30em;
+
+                    &:hover, &:focus {
+                        color: $list-color-hover;
+                    }
+                }
+            }
+
+            .text-news {
+                overflow: hidden;
+                text-align: justify;
+                float: left;
+                width: 100%;
+            }
+        }
+
+        .option {
+            float: left;
+            width: 100%;
+            padding: 15px 0;
+
+            a {
+                &.bt-readmore {
+                    padding: 7px 14px;
+                    color: $list-button-color;
+                    border: 1px solid $list-button-border;
+                   border-radius:4px;
+                    display: inline-block;
+
+                    span {
+                        padding-left: 5px;
+                    }
+
+                    &:hover, &:focus {
+                        color: #fff;
+                        background-color: $list-button-color-hover;
+                        border-color: $list-button-color-hover;
+                    }
+                }
+
+                &.link-readmore {
+                    color: $list-color-hover;
+
+                    span {
+                        padding-left: 5px;
+                    }
+
+                    &:hover, &:focus {
+                        text-decoration: underline;
+                    }
+                }
+            }
+        }
+    }
+}
+/*List news*/
+.list-news.list {
+    float: left;
+    width: 100%;
+    padding: 10px 0 0 0;
+
+    .item-news {
+        padding: 20px 0;
+        float: left;
+        width: 100%;
+        border-bottom: 1px dashed $list-border-color;
+
+        &:first-child {
+            .img {
+                width: 40%;
+                height: auto !important;
+            }
+
+            .detail {
+                width: 60%;
+
+                h2 {
+                    a {
+                        font-size: 20px;
+                        font-weight:bold;
+                    }
+                }
+            }
+        }
+
+        .img {
+            position: relative;
+            overflow: hidden;
+            width: 25%;
+            float: left;
+
+            a {
+                display: block;
+            }
+
+            img {
+                width: 100%;
+            }
+        }
+
+        .detail {
+            width: 75%;
+            float: left;
+            padding-left: 20px;
+            text-align: justify;
+
+            h3 {
+                margin-top: 0;
+                margin-bottom: 5px;
+
+                a {
+                    font-size: 20px;
+                    color: $list-color-primary;
+                    display: block;
+
+                    &:hover {
+                        color: $list-color-hover;
+                    }
+                }
+            }
+
+            .btn-link {
+                color: $list-color-hover;
+            }
+        }
+
+        .text-news {
+            overflow: hidden;
+        }
+    }
+}
+/*Post Date*/
+.post-date {
+    padding: 4px 0;
+    font-size: 13px;
+    color: #afafaf;
+    margin-bottom: 5px;
+
+    span {
+        border-left: 1px solid #afafaf;
+        padding: 0 10px;
+
+        &:hover, &:hover a {
+            color: #555;
+        }
+
+        &:first-child {
+            border-left: 0;
+            padding-left: 0;
+        }
+    }
+}
+
+
+
+
+@include mq(lg) {
+    .list-news.grid {
+        .item-news {
+            .img {
+                height: 200px;
+            }
+
+            .detail {
+                height: 188px;
+            }
+        }
+    }
+
+    .list-news.list {
+        .item-news {
+            .img {
+                height: 145px;
+                overflow: hidden;
+            }
+        }
+    }
+}
+
+@include mq(md) {
+    .list-news.grid {
+        .item-news {
+            .img {
+                height: 200px;
+            }
+
+            .detail {
+                height: 188px;
+            }
+        }
+    }
+
+
+    .list-news.list {
+        .item-news {
+            .img {
+                width: 32%;
+            }
+
+            .detail {
+                width: 68%;
+            }
+        }
+    }
+}
+
+@include mq(sm) {
+    .list-news.grid {
+        .item-news {
+            .img {
+                height: 200px;
+            }
+
+            .detail {
+                height: 188px;
+            }
+        }
+    }
+}
+
+@include mq(xs) {
+    .list-news.list {
+        .item-news {
+            .img {
+                width:100% !important;
+            }
+            .detail {
+                width: 100% !important;
+                padding-left: 0;
+                margin-top: 15px;
+            }
+        }
+    }
+}
+/*End list news*/

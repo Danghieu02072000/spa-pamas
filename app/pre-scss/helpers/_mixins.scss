@@ -1,0 +1,86 @@
+﻿
+@mixin font( $name, $src ) {
+    @font-face {
+        font-family: $name;
+        src: url('../fonts/' + $src + '.ttf') format('truetype');
+        font-weight: normal;
+        font-style: normal;
+    }
+}
+
+
+@mixin button-config ( $padding-botton , $size-botton  ){
+    font-size:$size-botton;
+    padding:$padding-botton;
+}
+
+@mixin size($value) {
+  $width: nth($value, 1);
+  $height: $width;
+
+  @if length($value) > 1 {
+    $height: nth($value, 2);
+  }
+
+  @if is-size($height) {
+    height: $height;
+  } @else {
+    @warn "`#{$height}` is not a valid length for the `$height` parameter in the `size` mixin.";
+  }
+
+  @if is-size($width) {
+    width: $width;
+  } @else {
+    @warn "`#{$width}` is not a valid length for the `$width` parameter in the `size` mixin.";
+  }
+}
+
+@mixin mq($breakpoint) {
+
+  $mq-xs: "(max-width: 767px)";
+  $mq-sm: "(min-width: 768px) and (max-width: 991px)";
+  $mq-md: "(min-width: 992px) and (max-width: 1199px)";
+  $mq-lg: "(min-width: 1200px)  and (max-width: 1359px)";
+  $mq-desk: "(min-width: 1360px) and (max-width: 1599px)";
+  $mq-desk-lg: "(min-width: 1600px) and (max-width: 1920px)";
+  $mq-max-desk-lg:"(max-width: 1600px)";
+  $mq-max-desk: "(max-width: 1360px)";
+  $mq-max-lg: "(max-width: 1200px)";
+  $mq-max-md: "(max-width: 1024px)";
+  $mq-max-sm: "(max-width: 800px)";
+  $mq-max-xs: "(max-width: 480px)";
+
+  @if $breakpoint == xs {
+    @media #{$mq-xs} { @content; }
+  }
+  @else if $breakpoint == sm {
+    @media #{$mq-sm} { @content; }
+  }
+  @else if $breakpoint == md {
+    @media #{$mq-md}  { @content; }
+  }
+  @else if $breakpoint == lg {
+    @media #{$mq-lg}  { @content; }
+  }
+  @else if $breakpoint == desk {
+    @media #{$mq-desk}  { @content; }
+  }
+  @else if $breakpoint == desk-lg {
+    @media #{$mq-desk-lg}  { @content; }
+  }
+   @else if $breakpoint == max-desk-lg {
+    @media #{$mq-max-desk-lg}  { @content; }
+  }
+    @else if $breakpoint == max-desk {
+    @media #{$mq-max-desk}  { @content; }
+  }
+  @else if $breakpoint == max-md {
+    @media #{$mq-max-md}  { @content; }
+  }
+   @else if $breakpoint == max-sm {
+    @media #{$mq-max-sm}  { @content; }
+  }
+    @else if $breakpoint == max-xs {
+    @media #{$mq-max-xs}  { @content; }
+  }
+}

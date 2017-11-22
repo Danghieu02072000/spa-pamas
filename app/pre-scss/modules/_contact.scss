@@ -1,0 +1,146 @@
+﻿/*Contact*/
+@import "../helpers/_mixins.scss";
+@import "../helpers/_variables.scss";
+
+.contact-form {
+    margin-top: 30px;
+    float:left;
+    width:100%;
+    h3 {
+        font-size: 24px;
+        color: $text-color-primary;
+        font-weight: bold;
+        margin-bottom: 15px;
+    }
+
+    b {
+        font-weight: normal;
+        color: #747474;
+        display: block;
+        margin-bottom: 20px;
+        font-size: 14px;
+    }
+}
+
+#frmContact {
+    float: left;
+    width: 100%;
+    padding-bottom: 10px;
+
+    .form-group {
+        float: left;
+        width: 100%;
+        margin-bottom: 25px;
+    }
+
+    label {
+        font-weight: normal;
+        color: $text-color-primary;
+        line-height: 28px;
+
+        strong {
+            font-weight: bold;
+            color: #ed161d;
+        }
+
+        &.error {
+            position: absolute;
+            color: #ed161d;
+            font-size: 13px;
+            font-style: italic;
+            margin-top: -3px;
+        }
+    }
+
+    .form-control {
+        height: 38px;
+        border-radius: 0;
+        box-shadow: none;
+        border: 1px solid $border-color-primary;
+
+        &.ipt-area {
+            height: auto !important;
+        }
+
+        &:hover, &:focus {
+        }
+    }
+    .bt {
+        width:50%;
+    }
+}
+
+
+.contact-detail {
+    margin-top: 30px;
+    float: left;
+    width: 100%;
+
+    h2 {
+        font-size: 24px;
+        color: $text-color-primary;
+        font-weight:bold;
+        margin-bottom: 15px;
+        
+    }
+
+    b {
+        font-weight: normal;
+        color: #747474;
+        display: block;
+        margin-bottom: 10px;
+        font-size: 15px;
+        line-height: 1.5em;
+    }
+
+    ul {
+        float: left;
+        width: 100%;
+        border-left: 3px solid $color-primary;
+        padding-left: 15px;
+        margin-top: 10px;
+
+        li {
+            display: block;
+            width: 100%;
+            padding: 6px 0;
+            float: left;
+            font-size: 16px;
+            color: #8e8e8e;
+
+            strong {
+                width: 85px;
+                float: left;
+                display: block;
+                font-weight: normal;
+                line-height: 1.4em;
+            }
+
+            i {
+                font-weight:bold;
+                color: $color-primary;
+            }
+
+            span {
+                width: calc(100% - 85px);
+                float: left;
+                display: block;
+                line-height: 1.4em;
+            }
+
+            a {
+               font-weight:bold;
+                color: $color-primary;
+            }
+        }
+    }
+}
+
+.contact-maps {
+    width: 100%;
+    height: 400px;
+    float: left;
+    margin-bottom:40px;
+}
+/*Contact*/
+

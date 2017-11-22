@@ -1,0 +1,76 @@
+﻿@import "mixins.scss";
+
+$font-roboto:'Roboto';
+$font-roboto-bold:'Roboto Bold';
+$font-roboto-medium:'Roboto Medium';
+$font-roboto-light:'Roboto Light';
+
+$font-roboto-con:'Roboto Condensed';
+$font-roboto-con-bold:'Roboto Condensed Bold';
+$font-roboto-con-italic:'Roboto Condensed Italic';
+$font-roboto-con-light:'Roboto Condensed Light';
+
+$font-opensans:'Open Sans';
+$font-opensans-bold:'Open Sans Bold';
+$font-opensans-light:'Open Sans Light';
+
+$font-myriadpro:'myriad-pro';
+$font-myriadpro-bold:'myriad-pro-bold';
+$font-myriadpro-light:'myriad-pro-light';
+
+$font-default:'Helvetica,Arial,'DejaVu Sans','Liberation Sans',Freesans,sans-serif';
+
+$font-face-primary:$font-default;
+$font-size-primary: 15px;
+$background-primary: #ffffff;
+$text-color-primary: #383838;
+$button-color-primary: #00aaac;
+$border-color-primary:#e5e5e5;
+$color-primary:#007ebb;
+$color-hover:#fb9c00;
+$color-info:#fb9c00;
+
+$pagination-color:#383838;
+$pagination-hover:#007ebb;
+
+
+$nav-mobie-color:#515151;
+$nav-mobie-color-hover:#222222;
+$nav-mobie-fontsize:15px;
+$nav-mobie-back:#ffffff;
+$nav-mobie-back-hover:#eeeeee;
+$nav-mobie-border:#d9d9d9;
+
+
+$button-hover-primary:#007ebb;
+
+
+$owl-primary:#007ebb;
+
+
+$list-color-primary:#383838;
+$list-color-hover:#007ebb;
+$list-border-color:#e5e5e5;
+
+
+$list-button-border:#e5e5e5;
+$list-button-color:#383838;
+$list-button-color-hover:#007ebb;
+
+$radio-color:#007ebb;
+$radio-border:#999999;
+$radio-size-outer:20px;
+$radio-size-inner:12px;
+
+$checkbox-color:#007ebb;
+$checkbox-unchecked:#999999;
+$checkbox-duration: .4s;
+$checkbox-size:20px;
+$checkbox-background:#667788;
+
+
+
+
+$slider-color:#007ebb;
+$slider-paganition:#007ebb;
+

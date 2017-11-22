@@ -1,0 +1,184 @@
+/*Đại lý*/
+@import "../helpers/_mixins.scss";
+
+$color-defauld: #373737;
+$color-hover: #ff0000;
+$border-color: #e1e1e1;
+
+.box-agency {
+    padding: 30px 0;
+    float: left;
+    width: 100%;
+
+}
+.search-agency {
+    float:left;
+    width:100%; 
+}
+
+#frmAgency {
+    select {
+        border: 1px solid $border-color;
+        border-radius: 0;
+        height: 38px;
+        box-shadow: none;
+        font-size: 16px;
+    }
+
+    button {
+        line-height: 36px;
+        text-align: center;
+        border: none;
+        background: $color-hover;
+        color: #fff;
+        padding-left: 11px;
+        padding-right: 11px;
+
+        span {
+            font-size: 18px;
+        }
+    }
+}
+.accordion-agency {
+    float:left;
+    width:100%;
+   
+}
+.accordion {
+    width: 100%;
+
+    h3 {
+        margin: 0;
+        padding: 6px 0;
+        border-bottom: 2px solid $border-color;
+        border-top: 1px solid #fff;
+        cursor: pointer;
+        font-size: 18px;
+        color: $color-defauld;
+         font-weight:300;
+        position: relative;
+        margin-top: 10px;
+        transition:0.3s ease-in-out;
+
+        span {
+            position: absolute;
+            right: 10px;
+            font-size: 20px;
+            color: #b3b3b3;
+        }
+
+        &.open, &:hover {
+            font-weight:bold;
+
+            span {
+                color: $color-hover;
+            }
+        }
+    }
+}
+
+.accordion-content {
+    margin: 0;
+    padding: 30px 0;
+}
+
+.item-angency {
+    margin-bottom: 30px;
+    float: left;
+    width: 100%;
+
+    .img {
+        display: block;
+        position: relative;
+
+        .agency-button {
+            width: 100%;
+            height: 100%;
+            position: absolute;
+            background: rgba(0,0,0,0.6);
+            top: 0;
+            line-height: 100%;
+            opacity:0;
+            transition:0.4s ease;
+            text-align: center;
+
+            a {
+                top: calc(50% - 20px);
+                left: calc(50% - 20px);
+                position: absolute;
+                width: 40px;
+                height: 40px;
+                text-align: center;
+                line-height: 43px;
+                border-radius:20px;
+                border: 2px solid #fff;
+                color: #fff;
+
+                &:hover {
+                    border: 2px solid $color-hover;
+                    color: #fff;
+                    background: $color-hover;
+                }
+
+                span {
+                    font-size: 20px;
+                }
+            }
+        }
+
+        &:hover {
+            .agency-button {
+                visibility: visible;
+                opacity:1;
+                
+            }
+        }
+    }
+
+    > span {
+        color: $color-defauld;
+    }
+
+    i {
+        color: $color-hover;
+        font-size:15px;
+    }
+
+    .location {
+        padding: 10px 0;
+        float: left;
+    }
+
+    .contact {
+        float: left;
+        width: 100%;
+
+        .phone {
+            width: 50%;
+            float: left;
+        }
+
+        .clock {
+            width: 50%;
+            float: left;
+            text-align: right;
+        }
+    }
+}
+
+@media only screen and (max-width: 1024px) {
+    .item-angency .img img {
+        width: 100%;
+    }
+}
+
+@media only screen and (max-width: 480px) {
+    .search-agency .no-pd-r {
+        padding-right: 15px;
+        margin-bottom: 15px;
+    }
+
+    #frmAgency button {
+        width: 100%;
+    }
+}

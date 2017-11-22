@@ -1,0 +1,280 @@
+﻿@import "../helpers/_mixins.scss";
+@import "../helpers/_variables.scss";
+
+#header-main {
+    float: left;
+    width: 100%;
+    background-color: rgba(0,0,0,0.8);
+    z-index: 1001;
+}
+
+#mainMenu {
+    float: left;
+    display: inline-block;
+
+    > ul {
+        float: left;
+        text-align: left;
+
+        > li {
+            display: block;
+            float: left;
+            position: relative;
+            padding: 0 15px;
+
+            > a {
+                display: block;
+                color: #fff;
+                font-size: 16px;
+                padding: 10px 0;
+                float: left;
+                position: relative;
+
+                &:after {
+                    content: "";
+                    width: 0;
+                    position: absolute;
+                    bottom: 0;
+                    left: 0;
+                    height: 2px;
+                    transition:width 0.2s ease-out;
+                    background-color: $color-primary;
+                }
+            }
+
+            &:hover {
+                > a {
+                    &:after {
+                        width: 100%;
+                       transition:width 0.4s ease-in;
+                    }
+                }
+
+                > ul {
+                    transform: translateX(60px);
+                    visibility: visible;
+                    opacity:1;
+                    transition:0.4s ease-in;
+                }
+            }
+
+            > ul {
+                position: absolute;
+                visibility: hidden;
+                opacity:0;
+                transition:0.2s ease-out;
+                left: -60px;
+                top: 42px;
+                padding: 10px 20px;
+                background-color: rgba(0,0,0,1);
+                border-radius:0 0 8px 8px;
+
+                > li {
+                    display: block;
+                    float: left;
+                    width: 200px;
+                    position: relative;
+
+                    > a {
+                        display: block;
+                        float: left;
+                        font-size: 15px;
+                        color: #fff;
+                        padding: 10px 0;
+
+                        &:after {
+                            content: "";
+                            width: 0;
+                            position: absolute;
+                            bottom: 0;
+                            left: 0;
+                            height: 1px;
+                            transition:width 0.2s ease-out;
+                            background-color: $color-primary;
+                        }
+
+                        &:hover {
+                            color: white;
+
+                            &:after {
+                                width: 50px;
+                              transition:width 0.4s ease-in;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+.account-link {
+    float: right;
+    display: inline-block;
+
+    .search-mini {
+        display: inline-block;
+        float: left;
+        padding: 5px 0;
+        margin-right: 10px;
+        position: relative;
+
+        .ipt {
+            width: 32px;
+            height: 32px;
+            border-radius:3px;
+            border: 0;
+            text-indent: 5px;
+            position: absolute;
+            right: 0;
+            top: 5px;
+            background-color: transparent;
+            z-index: 4;
+            transition:all 0.3s;
+
+            &:focus {
+                outline: none;
+                width: 200px;
+                background-color: #fff;
+
+                & + button {
+                    z-index: 5;
+                    color: $color-primary;
+                }
+            }
+        }
+
+        .bt {
+            position: absolute;
+            right: 0;
+            top: 5px;
+            width: 32px;
+            height: 32px;
+            background-color: transparent;
+            color: #fff;
+            border: 0;
+            font-size: 18px;
+            text-align: center;
+            line-height: 32px;
+            z-index: 3;
+        }
+    }
+
+    > ul {
+        float: left;
+        text-align: left;
+
+        > li {
+            display: inline-block;
+            float: left;
+            padding: 10px 0;
+
+            &:before {
+                content: "|";
+                color: #fff;
+                float: left;
+            }
+
+            &:last-child {
+                > a {
+                    padding-right: 0;
+                }
+            }
+
+            > a {
+                color: white;
+                font-size: 16px;
+                padding: 0px 10px;
+                display: inline-block;
+
+                &:hover {
+                    color: $color-primary;
+                }
+            }
+        }
+    }
+}
+
+.user-log {
+    float: left;
+    position:relative;
+    span.avartar_log {
+        width: 30px;
+        height: 30px;
+        border-radius:15px;
+        background-color: #d6d6d6;
+        display: block;
+        float: left;
+        position: relative;
+        margin-top: -5px;
+    }
+
+    b {
+        font-weight: normal;
+        padding-left: 10px;
+    }
+
+    &:hover {
+        > ul {
+            transform: translateX(60px);
+            visibility: visible;
+           opacity:1;
+             transition:0.4s ease-in;
+            
+        }
+    }
+
+    .sub-user-log {
+        position: absolute;
+        visibility: hidden;
+      opacity:0;
+       transition:0.2s ease-out;
+        left: -60px;
+        top: 42px;
+        width:180px;
+        padding: 10px 20px;
+        background-color: rgba(0,0,0,1);
+        border-radius:0 0 8px 8px;
+
+        > li {
+            display: block;
+            float: left;
+            width: 100%;
+            position: relative;
+
+            > a {
+                display: block;
+                float: left;
+                font-size: 15px;
+                color: #fff;
+                padding: 10px 0;
+
+                &:after {
+                    content: "";
+                    width: 0;
+                    position: absolute;
+                    bottom: 0;
+                    left: 0;
+                    height: 1px;
+                    transition:width 0.2s ease-out;
+                    background-color: $color-primary;
+                }
+
+                &:hover {
+                    color: white;
+
+                    &:after {
+                        width: 50px;
+                         transition:width 0.4s ease-in;
+                    }
+                }
+            }
+        }
+    }
+}
+
+@include mq(max-sm) {
+    #header-main {
+        display: none;
+    }
+}

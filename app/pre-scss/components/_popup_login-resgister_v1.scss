@@ -1,0 +1,172 @@
+﻿@import "../helpers/_mixins.scss";
+@import "../helpers/_variables.scss";
+
+
+
+.popup-login {
+    width: 500px;
+    min-height: 300px;
+    background: #fff;
+    margin: 0 auto;
+    position: relative;
+    border-radius:4px;
+
+    button.mfp-close {
+        position: absolute;
+        width: 38px !important;
+        height: 38px ;
+        top: -19px;
+        right: -19px;
+       border-radius:19px;
+        background: #fff;
+        opacity: 1;
+        border: 3px solid $color-primary;
+        color: $color-primary;
+        line-height: 23px;
+        transition:color 0.3s ease;
+
+        &:hover ,&:focus {
+            background: $color-primary;
+            color: #fff;
+            top:-19px;
+        }
+    }
+}
+.tab-log-res {
+   
+    width: 100%;
+    height:100%;
+    overflow:hidden;
+
+    .tab-nav {
+        float: left;
+        width: 100%;
+        border-radius:4px 4px 0 0;
+         overflow:hidden;
+
+        a {
+            width: 50%;
+            text-align: center;
+            float: left;
+            display: block;
+            line-height: 60px;
+            color: #888888;
+            font-weight:300;
+            font-size: 24px;
+            background-color: #dbdbdb;
+
+            &.tab-current {
+                background-color: $color-primary;
+                color: #fff;
+            }
+        }
+    }
+
+    .tab-content {
+        float: left;
+        width: 100%;
+        padding: 20px;
+
+        strong {
+            color: $color-primary;
+            font-weight:300;
+            font-size: 30px;
+            text-align:center;
+            display:block;
+            font-weight:normal;
+            margin-bottom:15px;
+        }
+        .form-group {
+            width:100%;
+            float:left;
+            margin-bottom:20px;
+        }
+        .ipt-firstname {
+            width:calc(50% - 10px);
+            margin-right:10px;
+            float:left;
+        }
+        .ipt-lastname {
+            width:calc(50% - 10px);
+            margin-left:10px;
+            float:right;
+            
+        }
+        .form-control {
+            box-shadow:none;
+            border-color:#d7d7d7;
+            height:50px;
+            &:focus {
+                border:1px solid $color-primary;
+            }
+        }
+        .re-past {
+            text-align:right;
+            width:100%;
+            float:left;
+            display:block;
+            margin-bottom:15px;
+            color:$color-primary;
+            &:hover {
+                color:$color-primary;
+                text-decoration:underline;
+            }
+        }
+        span {
+            margin-bottom:15px;
+            display:block;
+            color:#888888;
+            line-height:1.4em;
+            
+            
+        }
+        textarea {
+            height:auto !important;
+        }
+        .error {
+            color:#ea4335;
+             font-weight:300;
+            font-size:14px;
+            font-weight:normal;
+            padding-top:5px;
+            margin-bottom:0;
+
+        }
+        .btf {
+            line-height:44px;
+            font-size:18px;
+        }
+    }
+}
+.login-other {
+    float:left;
+    width:100%;
+    margin-top:10px;
+    b {
+        font-size:18px;
+        font-weight:normal;
+        color:#808080;
+        padding-top:15px;
+    }
+    a {
+        width:50px;
+        height:50px;
+        text-align:center;
+       display:inline-block;
+       margin-left:28px;
+       border-radius:25px;
+       color:#fff;
+       i {
+           padding:0;
+           line-height:50px;
+           font-size:26px;
+       }
+       &.facebook {
+           background-color:#3b5998;
+          
+       }
+       &.google {
+           background-color:#ea4335;
+       }
+    }
+}

@@ -1,0 +1,134 @@
+﻿@import "../helpers/_variables.scss";
+@import "../helpers/_mixins.scss";
+
+#menu-mansory {
+    text-align:center;
+    margin:10px 0;
+    li {
+        display:inline-block;
+        &.active {
+            a {
+                background-color:$color-primary;
+            }
+        }
+    }
+}
+
+
+.list-gallery {
+    float: left;
+    width: 100%;
+    overflow: hidden;
+
+
+    .item {
+        width: 20%;
+        overflow: hidden;
+        padding-right: 3px;
+        padding-bottom: 6px;
+        padding-left: 3px;
+        transition:none;
+        img {
+            width: 100%;
+        }
+
+        &.type-videos {
+            &:before {
+                content: "\f04b";
+                font-family: fontAwesome;
+                width: 50px;
+                height: 40px;
+                position: absolute;
+                left: calc(50% - 25px);
+                top: calc(50% - 20px);
+                text-align: center;
+                line-height: 40px;
+                font-size: 22px;
+                border-radius: 6px;
+                background-color: #151108;
+                color: #fff;
+            }
+
+            &:hover {
+                &:before {
+                    background-color: #e62117;
+                    transition: 0.3s ease-in-out;
+                }
+            }
+        }
+
+        &.type-images {
+            &:before {
+                content: "\f030";
+                font-family: fontAwesome;
+                width: 50px;
+                height: 40px;
+                position: absolute;
+                left: calc(50% - 25px);
+                top: calc(50% - 20px);
+                text-align: center;
+                line-height: 40px;
+                font-size: 22px;
+                border-radius: 6px;
+                background-color: #151108;
+                color: #fff;
+            }
+
+            &:hover {
+                &:before {
+                    background-color: $color-primary;
+                   
+                }
+            }
+        }
+
+        &.type-gallery {
+            width: calc(20% - 2px);
+            position: relative;
+            margin-right: 1px;
+            margin-bottom: 2px;
+            margin-left: 1px;
+            padding: 0;
+
+            &.item-wipe {
+                width: calc(40% - 2px);
+            }
+
+            .caption {
+                visibility: hidden;
+                opacity: 0;
+                transition: 0.5s ease-in-out;
+                width: 100%;
+                left: 0;
+                bottom: -30px;
+                padding: 20px;
+                position: absolute;
+                background-color: rgba(0,0,0,0.6);
+                text-align: right;
+
+                strong {
+                    font-size: 18px;
+                    text-transform: uppercase;
+                    display: block;
+                    color: #fff;
+                }
+
+                span {
+                    color: #fff;
+                    font-size: 12px;
+                }
+            }
+
+            &:hover {
+                .caption {
+                    visibility: visible;
+                    opacity: 1;
+                    transform: translateY(-30px);
+                }
+            }
+        }
+    }
+
+    &.no-overflow {
+    }
+}

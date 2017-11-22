@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="vi" class="no-js">
+<!-- Open head page -->
+@@include('./layouts/Head.html', { "namePage":"Trang chủ" })
+<!-- End head page -->
+<body>
+@@include('./includes/LoadingWrap.html')
+<div id="wrapper">
+    <!-- Open sidebar mmenu -->
+    @@include('./layouts/HeaderMmenu.html')
+    <!-- End sidebar mmenu -->
+    <div class="wrapper-main">
+        <!-- Open header pages -->
+        @@include('./layouts/Header.html')
+        <!-- End header pages -->
+        <section class="wrapper-content">
+            <div class="container">
+                @@include('./includes/Contact.html')
+                @@include('./includes/PopupWrap.html')
+                @@include('./includes/PopupThanks.html')
+                @@include('./includes/CartPopup.html')
+                @@include('./includes/SliderGalleryFancy.html')
+            </div>
+        </section>
+        <!-- Open main pages -->
+        <!-- End main pages -->
+        <!-- Open footer pages -->
+        @@include('./layouts/Footer.html')
+        @@include('./includes/NaviSticky.html')
+        <!-- End footer pages -->
+    </div>
+</div>
+<!-- Open content bottom pages -->
+@@include('./layouts/EndPage.html')
+<!-- End content bottom pages -->
+</body>
+</html>
