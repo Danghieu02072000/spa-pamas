@@ -1,0 +1,43 @@
+﻿.ionicons,
+.#{$ionicons-prefix}ios-telephone:before,
+.#{$ionicons-prefix}ios-search-strong:before,
+.#{$ionicons-prefix}ios-home:before,
+.#{$ionicons-prefix}ios-email:before,
+.#{$ionicons-prefix}ios-gear-outline:before,
+.#{$ionicons-prefix}ios-arrow-left:before,
+.#{$ionicons-prefix}ios-arrow-right:before,
+.#{$ionicons-prefix}chevron-left:before,
+.#{$ionicons-prefix}chevron-right:before,
+.#{$ionicons-prefix}arrow-up-a:before,
+.#{$ionicons-prefix}bag:before,
+.#{$ionicons-prefix}android-phone-portrait:before,
+.#{$ionicons-prefix}social-facebook:before,
+.#{$ionicons-prefix}social-twitter:before,
+.#{$ionicons-prefix}social-instagram:before,
+.#{$ionicons-prefix}social-googleplus:before,
+.#{$ionicons-prefix}navicon:before,
+.#{$ionicons-prefix}skip-forward:before,
+.#{$ionicons-prefix}skip-backward:before,
+
+{
+  @extend .ion;
+}
+.#{$ionicons-prefix}ios-telephone:before { content: $ionicon-var-ios-telephone; }
+.#{$ionicons-prefix}ios-search-strong:before { content: $ionicon-var-ios-search-strong; }
+.#{$ionicons-prefix}ios-home:before { content: $ionicon-var-ios-home; }
+.#{$ionicons-prefix}ios-email:before { content: $ionicon-var-ios-email; }
+.#{$ionicons-prefix}ios-gear-outline:before { content: $ionicon-var-ios-gear-outline; }
+.#{$ionicons-prefix}ios-arrow-left:before { content: $ionicon-var-ios-arrow-left; }
+.#{$ionicons-prefix}ios-arrow-right:before { content: $ionicon-var-ios-arrow-right; }
+.#{$ionicons-prefix}chevron-left:before { content: $ionicon-var-chevron-left; }
+.#{$ionicons-prefix}chevron-right:before { content: $ionicon-var-chevron-right; }
+.#{$ionicons-prefix}bag:before { content: $ionicon-var-bag; }
+.#{$ionicons-prefix}arrow-up-a:before { content: $ionicon-var-arrow-up-a; }
+.#{$ionicons-prefix}android-phone-portrait:before { content: $ionicon-var-android-phone-portrait; }
+.#{$ionicons-prefix}social-facebook:before { content: $ionicon-var-social-facebook; }
+.#{$ionicons-prefix}social-twitter:before { content: $ionicon-var-social-twitter; }
+.#{$ionicons-prefix}social-instagram:before { content: $ionicon-var-social-instagram; }
+.#{$ionicons-prefix}social-googleplus:before { content: $ionicon-var-social-googleplus; }
+.#{$ionicons-prefix}navicon:before { content: $ionicon-var-navicon; }
+.#{$ionicons-prefix}skip-forward:before { content: $ionicon-var-skip-forward; }
+.#{$ionicons-prefix}skip-backward:before { content: $ionicon-var-skip-backward; }

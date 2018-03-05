@@ -1,5 +1,4 @@
 var gulp = require('gulp');
-
 var merge = require('merge-stream');
 var sourcemaps = require('gulp-sourcemaps');
 var plumber = require('gulp-plumber');
@@ -208,7 +207,7 @@ gulp.task('pages', function () {
 });
 
 gulp.task('fonts', function () {
-    return gulp.src('app/fonts/*')
+    return gulp.src('app/fonts/**/*')
         .pipe(gulp.dest('dist/fonts'))
         .pipe(browserSync.reload({ stream: true }));
 });
