@@ -1,5 +1,5 @@
 {
-  "name": "workspace_html",
+  "name": "workspace_html-pug",
   "version": "2.0.0",
   "description": "Workspace_HTML",
   "main": "gulpfile.js",
