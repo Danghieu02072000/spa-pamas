@@ -253,6 +253,7 @@ gulp.task('fonts', function () {
         .pipe(browserSync.reload({ stream: true }));
 });
 
+
 gulp.task('watch', ['browserSync'], function () {
     gulp.watch('src/scss/**/*.scss', ['styles:all']);
     gulp.watch('src/js/include/**/*.js', ['scripts']);
@@ -266,3 +267,5 @@ gulp.task('style:w', ['browserSync'], function () {
     gulp.watch('src/**/*.html', ['pages']);
     gulp.watch('src/img/**/*', ['images']);  
 });
+
+gulp.task('build', ['styles:all', 'scripts', 'pages', 'fonts', 'images', 'browserSync']);
