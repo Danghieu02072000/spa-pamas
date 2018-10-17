@@ -18,6 +18,7 @@
   "homepage": "https://github.com/thienhiep1711/workspace_ver7.0#readme",
   "devDependencies": {
     "browser-sync": "^2.18.13",
+    "del": "^3.0.0",
     "gulp": "^3.9.1",
     "gulp-autoprefixer": "^6.0.0",
     "gulp-clean-css": "^3.10.0",
