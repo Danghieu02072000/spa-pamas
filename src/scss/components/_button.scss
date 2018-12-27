@@ -1,54 +1,45 @@
-﻿@import "../helpers/variables_import";
+﻿@import "../helpers/_variables.scss";
+@import "../helpers/_mixins.scss";
 
-$pre: 'bt';
-
-.#{$pre} {
-    color: $color-white;
-    font-weight: $bt-weight;
+.bt {
+    color: #fff;
+    cursor: pointer;
     display: inline-block;
-    font-size: $bt-size;
+    font-size: 16px;
+    line-height: 36px;
     text-align: center;
     position: relative;
-    transition:$bt-transition;
-    border-radius: $bt-radius;
-    border-style: $bt-border-style;
-    border-width: $bt-border-width;
-    padding: $bt-padding;
+    vertical-align: middle;
+    transition:0.2s ease-in-out;
+}
+
+.bt-block {
+    width: 100%;
+    float: left;
+}
+
+.bt-primary {
+    background-color: $color-primary;
+    border-radius: 4px;
+    border: 1px solid $color-primary;
+    padding: 0 20px;
+    margin: 0px 2px;
+
     &:hover {
-        cursor: pointer;
+        color: $color-primary;
+        background-color:#fff;
     }
-    &__block {
-        width: 100%;
-    }
-    &__left {
-        float: left;
-    }
-    &__right {
-        float: right;
-    }
-    &--primary {
-        background-color:$bt-background-primary;
-        border-color:$bt-background-primary;
-        &:hover {
-            background-color:$bt-background-hover-primary;
-            border-color:$bt-background-hover-primary;
-        }
-    }
-    &--secondary {
-        background-color:$bt-background-secondary;
-        border-color:$bt-background-secondary;
-        &:hover {
-            background-color:$bt-background-hover-secondary;
-            border-color:$bt-background-hover-secondary;
-        }
-    }
-    &--default {
-        background-color:$bt-background-default;
-        border-color:$bt-background-default;
-        color: $text-color-primary;
-        &:hover {
-            background-color:$bt-background-hover-default;
-            border-color:$bt-background-hover-default;
-        }
+}
+
+.bt-info {
+    background-color: $color-info;
+    border-radius: 4px;
+    border: 1px solid $color-info;
+    padding: 0 20px;
+    margin: 0px 2px;
+
+    &:hover {
+        color: $color-info;
+        background-color:#fff;
     }
 }

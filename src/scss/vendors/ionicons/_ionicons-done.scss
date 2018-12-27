@@ -18,19 +18,7 @@
 .#{$ionicons-prefix}navicon:before,
 .#{$ionicons-prefix}skip-forward:before,
 .#{$ionicons-prefix}skip-backward:before,
-.#{$ionicons-prefix}social-youtube:before,
-.#{$ionicons-prefix}ios-arrow-thin-right:before,
-.#{$ionicons-prefix}home:before,
-.#{$ionicons-prefix}android-globe:before,
-.#{$ionicons-prefix}chatbubbles:before,
-.#{$ionicons-prefix}android-arrow-up:before,
-.#{$ionicons-prefix}arrow-left-b:before,
-.#{$ionicons-prefix}arrow-right-b:before,
-.#{$ionicons-prefix}ios-camera-outline:before,
-.#{$ionicons-prefix}link:before,
-.#{$ionicons-prefix}eye:before,
-.#{$ionicons-prefix}social-youtube-outline:before,
-.#{$ionicons-prefix}ios-list-outline:before,
+
 {
   @extend .ion;
 }
@@ -53,16 +41,3 @@
 .#{$ionicons-prefix}navicon:before { content: $ionicon-var-navicon; }
 .#{$ionicons-prefix}skip-forward:before { content: $ionicon-var-skip-forward; }
 .#{$ionicons-prefix}skip-backward:before { content: $ionicon-var-skip-backward; }
-.#{$ionicons-prefix}social-youtube:before { content: $ionicon-var-social-youtube; }
-.#{$ionicons-prefix}ios-arrow-thin-right:before { content: $ionicon-var-ios-arrow-thin-right;}
-.#{$ionicons-prefix}home:before { content: $ionicon-var-home; }
-.#{$ionicons-prefix}android-globe:before { content: $ionicon-var-android-globe; }
-.#{$ionicons-prefix}chatbubbles:before { content: $ionicon-var-chatbubbles; }
-.#{$ionicons-prefix}android-arrow-up:before { content: $ionicon-var-android-arrow-up; }
-.#{$ionicons-prefix}arrow-left-b:before { content: $ionicon-var-arrow-left-b; }
-.#{$ionicons-prefix}arrow-right-b:before { content: $ionicon-var-arrow-right-b; }
-.#{$ionicons-prefix}ios-camera-outline:before { content: $ionicon-var-ios-camera-outline; }
-.#{$ionicons-prefix}link:before { content: $ionicon-var-link; }
-.#{$ionicons-prefix}eye:before { content: $ionicon-var-eye; }
-.#{$ionicons-prefix}social-youtube-outline:before { content: $ionicon-var-social-youtube-outline; }
-.#{$ionicons-prefix}ios-list-outline:before { content: $ionicon-var-ios-list-outline; }

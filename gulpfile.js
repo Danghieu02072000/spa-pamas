@@ -11,7 +11,7 @@ var flatten = require('gulp-flatten');
 var rename = require('gulp-rename');
 var concat = require('gulp-concat');
 var uglify = require('gulp-uglify');
-var pug = require('gulp-pug');
+var fileinclude = require('gulp-file-include');
 var browserSync = require('browser-sync').create();
 
 // Styles tasks
@@ -297,19 +297,22 @@ gulp.task('scripts:only', function () {
 
 // Html task
 gulp.task('pages', function () {
-    gulp.src('src/pug/pages/*.pug')
-        .pipe(pug({
-            pretty: true,
-            cache: true,
+    gulp.src('src/*.html')
+        .pipe(plumber({
+            errorHandler: function (error) {
+                console.log(error.message);
+                this.emit('end');
+            }
         }))
-        .on('error', function (err) {
-            process.stderr.write(err.message + '\n');
-            this.emit('end');
-        })
+        .pipe(fileinclude({
+            prefix: '@@',
+            basepath: '@file'
+        }))
         .pipe(gulp.dest('dist/'))
         .pipe(browserSync.reload({
             stream: true
         }));
+
 });
 
 // Fonts task
@@ -357,7 +360,7 @@ gulp.task('sourcemaps:clean', function () {
 gulp.task('w:all', ['browserSync'], function () {
     gulp.watch('src/scss/**/*.scss', ['styles:all']);
     gulp.watch('src/js/include/**/*.js', ['scripts:all']);
-    gulp.watch('src/pug/**/*.pug', ['pages']);
+    gulp.watch('src/**/*.html', ['pages']);
     gulp.watch('src/fonts/*', ['fonts']);
     gulp.watch('src/img/**/*', ['images']);
 });
@@ -365,7 +368,7 @@ gulp.task('w:all', ['browserSync'], function () {
 gulp.task('w:only', ['browserSync'], function () {
     gulp.watch('src/scss/**/*.scss', ['styles:only']);
     gulp.watch('src/js/include/**/*.js', ['scripts:only']);
-    gulp.watch('src/pug/**/*.pug', ['pages']);
+    gulp.watch('src/**/*.html', ['pages']);
     gulp.watch('src/img/**/*', ['images']);
 });
 
