@@ -1,0 +1,60 @@
+a.btn.btn-info.call-inline-pop(href='#popupName', data-src='#popupName', title='') Popup Wrap
+#popupName.popup-wrap.popup-register(style='display: none')
+  .popup-content-wrap
+    .popup-header
+      h2.popup-title Đăng ký tài khoản
+    .popup-content
+      form#frmRegister.form-register
+        .form-group
+          label.control-label Họ tên:
+          input.form-control(type='text', placeholder='Họ tên', name='rgName')
+        .form-group
+          label.control-label Số điện thoại:
+          input.form-control(type='text', placeholder='Số điện thoại', name='rgPhone')
+        .form-group
+          label.control-label Email:
+          input.form-control(type='text', placeholder='Email', name='rgEmail')
+        .form-group
+          .row
+            .col-sm-12
+              label.control-label Chọn shop gần bạn nhất:
+            .col-sm-5
+              select.form-control(name='rgAddress')
+                option(value='') Chọn thành phố
+                option(value='2') Hải Phòng
+                option(value='3') Sài Gòn
+            .col-sm-7
+              select.form-control(name='rgAddress')
+                option(value='') Chọn địa chỉ
+                option(value='2') Hải Phòng
+                option(value='3') Sài Gòn
+        .form-group
+          label.control-label Giới tính:
+          .boxRadioCheck
+            label.radioPure
+              input#radio1(type='radio', name='radios', checked='')
+              span.outer
+                span.inner
+              i Nam
+            label.radioPure
+              input#radio2(type='radio', name='radios')
+              span.outer
+                span.inner
+              i Nữ
+        .form-group
+          label.control-label Nghề nghiệp:
+          .boxCheckbox
+            label.itemCheckBox
+              input#checkbox1(type='checkbox')
+              i.check-box(for='checkbox1')
+              span Công nghệ phần mềm
+            label.itemCheckBox
+              input#checkbox2(type='checkbox')
+              i.check-box(for='checkbox2')
+              span Khoa học máy tính
+        .form-group
+          label.control-label Tỉnh khác (vui lòng ghi địa chỉ):
+          textarea.form-control(type='text', rows='4', placeholder='Địa chỉ', name='rgContent')
+        .form-group
+          button#frmButton.btn.btn-primary(type='submit') Đăng Ký
+    .popup-footer
