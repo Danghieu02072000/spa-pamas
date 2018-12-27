@@ -39,24 +39,23 @@
             }
 
             &.tie-news:before {
-                content: '\f15c';
+                content: '\f453';
             }
 
             &.tie-video:before {
-                content: '\f16a';
+                content: '\f24c';
             }
 
             &.tie-picture:before {
-                content: '\f083';
+                content: '\f3f5';
             }
 
             &.tie-eye:before {
-                content: '\f06e ';
+                content: '\f133';
             }
-        }
-
-        a:hover {
-            
+            &.tie-link:before {
+                content: '\f1fe';
+            }
         }
     }
 
@@ -83,6 +82,7 @@
 .item-ef {
     .img {
         position: relative;
+        display: block;
 
         .roll {
             width: 100%;
@@ -96,45 +96,46 @@
             left: 0;
             background-position: center center;
             background-repeat: no-repeat;
-            font: normal normal normal 14px/1 FontAwesome;
+            font: normal normal normal 14px/1 Ionicons;
 
             &:before {
                 color: #fff;
-                width: 40px;
-                height: 40px;
-                border: 3px solid #fff;
+                width: 50px;
+                height: 50px;
+                border: 2px solid #fff;
                 border-radius: 100%;
                 top: 50%;
                 left: 50%;
                 text-align: center;
-                line-height: 35px;
+                line-height: 45px;
                 display: block;
                 position: absolute;
                 margin: -20px 0 0 -20px;
                 transform: scale(0);
                 transition:0.4s ease-in-out;
-                font-size: 18px;
+                font-size: 28px;
             }
 
             &.tie-news:before {
-                content: '\f15c';
+                content: '\f453';
             }
 
             &.tie-video:before {
-                content: '\f16a';
+                content: '\f24c';
             }
 
             &.tie-picture:before {
-                content: '\f083';
+                content: '\f3f5';
             }
 
             &.tie-eye:before {
-                content: '\f06e ';
+                content: '\f133';
+            }
+            &.tie-link:before {
+                content: '\f1fe';
             }
         }
 
-        a {
-        }
     }
 
     &:hover .roll {
@@ -186,19 +187,22 @@
             }
 
             &.tie-news:before {
-                content: '\f15c';
+                content: '\f453';
             }
 
             &.tie-video:before {
-                content: '\f16a';
+                content: '\f24c';
             }
 
             &.tie-picture:before {
-                content: '\f083';
+                content: '\f3f5';
             }
 
             &.tie-eye:before {
-                content: '\f06e ';
+                content: '\f133';
+            }
+            &.tie-link:before {
+                content: '\f1fe';
             }
         }
     }
