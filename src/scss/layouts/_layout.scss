@@ -23,8 +23,8 @@ body {
 }
 
 .wrapper-main {
-    float: left;
-    width: 100%;
+    display: flex;
+    flex-direction: column;
 }
 
 .wrapper-content {

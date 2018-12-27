@@ -10,6 +10,7 @@
 @import "components/_navi-sticky.scss";
 @import "components/loading.scss";
 @import "components/_icon-toogle.scss";
+@import "components/pagination";
 
 
 /*---Layout---*/
@@ -25,7 +26,7 @@
 // @import "modules/_cart.scss";
 // @import "modules/_agency.scss";
 // @import "modules/_contact.scss";
-// @import "modules/_news-list.scss";
+@import "modules/_news-list.scss";
 // @import "modules/_news_detail.scss";
 // @import "modules/_product-list.scss";
 // @import "modules/_product-detail.scss";
