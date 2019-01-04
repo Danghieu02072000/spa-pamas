@@ -27,7 +27,7 @@ $text-color-primary: #383838;
 $button-color-primary: #00aaac;
 $border-color-primary:#e5e5e5;
 $color-white: #ffffff;
-$color-primary:#007ebb;
+$color-primary:#fb9c00;
 $color-secondary:#fb9c00;
 $color-hover:#fb9c00;
 $color-info:#fb9c00;
@@ -78,20 +78,15 @@ $list-button-color:#383838;
 $list-button-color-hover: $color-primary;
 
 
-/* Radio buton */
-$radio-color: $color-primary;
-$radio-border:#999999;
-$radio-size-outer:20px;
-$radio-size-inner:12px;
-
-/* Checkbox */
-$checkbox-color:$color-primary;
-$checkbox-unchecked:#999999;
-$checkbox-duration: .4s;
-$checkbox-size:20px;
-$checkbox-background:#667788;
-
-
+/* Checkbox Radio buton */
+$control-color: $color-primary;
+$control-border: #e6e6e6;
+$control-back: #e6e6e6;
+$control-text: #fff;
+$control-color-disable: #7b7b7b;
+$control-back-disable: #e6e6e6;
+$control-size: 22px;
+$control-radio-size: 8px;
 
 
 $slider-color:#007ebb;
