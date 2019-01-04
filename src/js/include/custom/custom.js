@@ -31,8 +31,7 @@ $(document).ready(function () {
                 element.removeClass('open');
                 element.find('li').removeClass('open');
                 element.find('ul').slideUp();
-            }
-            else {
+            } else {
                 element.addClass('open');
                 element.children('ul').slideDown();
                 element.siblings('li').children('ul').slideUp();
@@ -47,7 +46,7 @@ $(document).ready(function () {
 // ----------- Check Device customs
 $(document).ready(function () {
     if (!isTouchDevice) {
-       
+
     }
     if (isDesktop) {
 
@@ -113,21 +112,29 @@ function component() {
             lazyLoad: true,
             autoHeight: true,
             loop: true,
+            responsive: {
+                0: {
+                    nav: false,
+                },
+                600: {
+
+                },
+            }
         });
     });
 
     $(document).ready(function () {
-        $(".slider-picture").owlCarousel({
+        $(".slider-carousel").owlCarousel({
             nav: true,
             navText: ["<i class='icon ion-ios-arrow-left'></i>", "<i class='icon ion-ios-arrow-right'></i>"],
-            items: 4,
+            items: 5,
             lazyLoad: true,
             autoHeight: true,
             loop: false,
-            margin: 25,
-            autoplay:true,
-            autoplayTimeout:4000,
-            autoplayHoverPause:true,
+            margin: 20,
+            autoplay: true,
+            autoplayTimeout: 4000,
+            autoplayHoverPause: true,
             dots: false,
             responsive: {
                 0: {
@@ -144,11 +151,87 @@ function component() {
                 1024: {
                     items: 4,
                 },
-               
+
             }
         });
     });
+
+    $(document).ready(function () {
+        var sync1 = $("#slide_sync");
+        var sync2 = $("#thub_sync");
+        var slidesPerPage = 5; //globaly define number of elements per page
+        var syncedSecondary = true;
+        sync1.owlCarousel({
+            items: 1,
+            slideSpeed: 2000,
+            nav: true,
+            dots: false,
+            loop: true,
+            autoplay: false,
+            lazyLoad: true,
+            responsiveRefreshRate: 200,
+            navText: ["<i class='icon ion-ios-arrow-left'></i>", "<i class='icon ion-ios-arrow-right'></i>"],
+        }).on('changed.owl.carousel', syncPosition);
+        sync2
+            .on('initialized.owl.carousel', function () {
+                sync2.find(".owl-item").eq(0).addClass("current");
+            })
+            .owlCarousel({
+                items: slidesPerPage,
+                nav: true,
+                smartSpeed: 200,
+                lazyLoad: true,
+                dots: false,
+                navText: ["<i class='icon ion-ios-arrow-left'></i>", "<i class='icon ion-ios-arrow-right'></i>"],
+                slideSpeed: 500,
+                slideBy: slidesPerPage, //alternatively you can slide by 1, this way the active slide will stick to the first item in the second carousel
+                responsiveRefreshRate: 100,
+
+            }).on('changed.owl.carousel', syncPosition2);
+
+        function syncPosition(el) {
+            //if you set loop to false, you have to restore this next line
+            //var current = el.item.index;
+            //if you disable loop you have to comment this block
+            var count = el.item.count - 1;
+            var current = Math.round(el.item.index - (el.item.count / 2) - .5);
+            if (current < 0) {
+                current = count;
+            }
+            if (current > count) {
+                current = 0;
+            }
+            //end block
+            sync2
+                .find(".owl-item")
+                .removeClass("current")
+                .eq(current)
+                .addClass("current");
+            var onscreen = sync2.find('.owl-item.active').length - 1;
+            var start = sync2.find('.owl-item.active').first().index();
+            var end = sync2.find('.owl-item.active').last().index();
+            if (current > end) {
+                sync2.data('owl.carousel').to(current, 100, true);
+            }
+            if (current < start) {
+                sync2.data('owl.carousel').to(current - onscreen, 100, true);
+            }
+        }
+
+        function syncPosition2(el) {
+            if (syncedSecondary) {
+                var number = el.item.index;
+                sync1.data('owl.carousel').to(number, 100, true);
+            }
+        }
+        sync2.on("click", ".owl-item", function (e) {
+            e.preventDefault();
+            var number = $(this).index();
+            sync1.data('owl.carousel').to(number, 100, true);
+        });
+    });
 };
+
 function afterLoad() {
     $("#loading-wrap").fadeOut(500);
 };
@@ -159,7 +242,7 @@ function ResizeWindows() {
 
     if (Xwidth < 800) {
         $(document).ready(function () {
-            
+
         });
     };
 
@@ -178,7 +261,9 @@ $(function cusScrollTop() {
     });
     $('#scrollTop').click(function (e) {
         e.preventDefault();
-        $('html, body').animate({ scrollTop: 0 }, 300);
+        $('html, body').animate({
+            scrollTop: 0
+        }, 300);
 
     });
 });
@@ -191,7 +276,7 @@ ResizeWindows();
 
 function Done() {
     ResizeWindows(),
-    component()
+        component()
 };
 
 $(document).ready(function () {

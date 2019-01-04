@@ -18,17 +18,11 @@
 
     &:hover .owl-prev, &:hover .owl-next ,&:hover .callFullScreen {
         opacity: 1;
+        z-index: 9;
     }
 
     .owl-item img {
         max-width: 100%;
-    }
-
-    .owl-controls .owl-buttons {
-        position: absolute;
-        top: 44%;
-        height: 0;
-        width: 100%;
     }
 
     .owl-prev, .owl-next {
@@ -113,7 +107,8 @@
         top: 0;
         display: block;
         background: url(../img/icons/ico-fullscreen.png) no-repeat center center rgba(0, 0, 0, 0.4);
-        opacity: 0;
+        opacity: 1;
+        z-index: 9;
 
         &:hover {
             background-color: rgba(0,0,0,0.6);
@@ -146,7 +141,7 @@
             min-height: 32px;
         }
 
-        &.synced .item-thub {
+        &.current .item-thub {
             opacity: 1;
             border: 1px solid #222;
         }
@@ -163,38 +158,31 @@
         }
     }
 
-    .owl-controls {
-        .owl-buttons {
+    .owl-nav {
+        .owl-prev,.owl-next  {
+            line-height: 40px;
             position: absolute;
-            top: 5%;
-            height: 0;
-            width: 100%;
+            width: 30px;
+            height: 40px;
+            text-align: center;
+            font-size: 34px;
+            color: #222;
+            transition: all .5s ease;
+            border-radius:2px;
+            background-color: transparent;
+            &:hover {
+                color:#fff;
+                background-color: transparent;
+                outline: none;
+            }
+        }
+        .owl-prev {
+            left: -40px;
+        }
+    
+        .owl-next {
+            right: -40px;
         }
     }
 
-    .owl-prev, .owl-next {
-        line-height: 40px;
-        position: absolute;
-        top:10px ;
-        width: 30px;
-        height: 40px;
-        text-align: center;
-        font-size: 34px;
-        color: #222;
-        transition: all .5s ease;
-       border-radius:2px;
-
-        &:hover {
-            background-color:#222;
-            color:#fff;
-        }
-    }
-
-    .owl-prev {
-        left: -40px;
-    }
-
-    .owl-next {
-        right: -40px;
-    }
 }

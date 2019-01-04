@@ -27,8 +27,6 @@ $dot-background: $color-gray !default;
 $dot-background-active: $color-base !default;
 
 .owl-carousel {
-    margin-bottom: 20px;
-
     .owl-item {
         cursor: pointer;
     }
@@ -109,7 +107,8 @@ $dot-background-active: $color-base !default;
         .owl-dot {
             display: inline-block;
             zoom: 1;
-            *display: inline;
+            display: inline;
+            background-color: transparent;
 
             span {
                 width: $dot-width;

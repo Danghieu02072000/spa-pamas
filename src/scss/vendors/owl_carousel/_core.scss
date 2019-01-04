@@ -12,6 +12,7 @@
 	.owl-stage {
 		position: relative;
 		-ms-touch-action: pan-Y;
+		touch-action: manipulation;
 		-moz-backface-visibility: hidden; /* fix firefox animation glitch */
 	}
 
@@ -29,6 +30,7 @@
 		overflow: hidden;
 		/* fix for flashing background */
 		-webkit-transform: translate3d(0px, 0px, 0px);
+		transform: translate3d(0px, 0px, 0px);
 	}
 
 	.owl-wrapper,
@@ -46,12 +48,13 @@
 		min-height: 1px;
 		float: left;
 		-webkit-backface-visibility: hidden;
+		backface-visibility: hidden;
 		-webkit-tap-highlight-color: transparent;
 		-webkit-touch-callout: none;
 	}
 	.owl-item img {
 		display: block;
-		max-width: 100%;
+		width: 100%;
 	}
 
 	.owl-nav.disabled,
@@ -63,12 +66,18 @@
 	.owl-nav .owl-next,
 	.owl-dot {
 		cursor: pointer;
-		cursor: hand;
 		-webkit-user-select: none;
 		-khtml-user-select: none;
 		-moz-user-select: none;
 		-ms-user-select: none;
 		user-select: none;
+	}
+
+	.owl-nav button.owl-prev,
+	.owl-nav button.owl-next,
+	button.owl-dot {
+		border: none;
+		padding:0!important;
 	}
 
 	&.owl-loaded {
@@ -89,6 +98,7 @@
 	}
 
 	&.owl-drag .owl-item {
+		touch-action: pan-y;
 		-webkit-user-select: none;
 		-moz-user-select: none;
 		-ms-user-select: none;

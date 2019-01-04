@@ -2,40 +2,30 @@
 .owl-theme {
 	// Styling Next and Prev buttons
 	.owl-nav {
+		margin-top: 10px;
 		text-align: center;
 		-webkit-tap-highlight-color: transparent;
 
 		[class*='owl-'] {
-			color: $nav-color;
-			font-size: $nav-font-size;
-			margin: $nav-margin;
-			padding: $nav-padding;
-			background: $nav-background;
+			color: $owl-nav-color;
+			font-size: $owl-nav-font-size;
+			margin: $owl-nav-margin;
+			padding: $owl-nav-padding;
+			background: $owl-nav-background;
 			display: inline-block;
 			cursor: pointer;
-			border-radius: 4px;
-            position:absolute;
-            top:calc(50% - 20px);
-            width:40px;
-            height:40px;
-            line-height:30px;
+			border-radius: 3px;
 
 			&:hover {
-				background: $nav-background-hover;
-				color:$nav-color-hover;
+				background: $owl-nav-background-hover;
+				color:$owl-nav-color-hover;
 				text-decoration: none;
 			}
 		}
 		.disabled {
-			opacity: $nav-disabled-opacity;
+			opacity: $owl-nav-disabled-opacity;
 			cursor: default;
 		}
-        .owl-prev {
-            left:0;
-        }
-         .owl-next {
-            right:0;
-        }
 	}
 
 	// Styling dots
@@ -46,31 +36,27 @@
 	.owl-dots {
 		text-align: center;
 		-webkit-tap-highlight-color: transparent;
-        position:absolute;
-        bottom:0px;
-        margin:auto;
-        left:0;
-        right:0;
+
 		.owl-dot {
 			display: inline-block;
 			zoom: 1;
 			*display: inline;
 
 			span {
-				width: $dot-width;
-				height: $dot-height;
-				margin: $dot-margin;
-				background: $dot-background;
+				width: $owl-dot-width;
+				height: $owl-dot-height;
+				margin: $owl-dot-margin;
+				background: $owl-dot-background;
 				display: block;
 				-webkit-backface-visibility: visible;
 				transition: opacity 200ms ease;
-				border-radius: 30px;
+				border-radius: $dot-rounded;
 			}
 
 			&.active,
 			&:hover {
 				span {
-					background: $dot-background-active;
+					background: $owl-dot-background-active;
 				}
 			}
 		}

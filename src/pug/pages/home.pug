@@ -3,9 +3,13 @@ extends ../_layouts/_layouts
 block content
   .listnew
     .container
+      //- include ../_modules/_news/_news_list
+      //- include ../_modules/_checkbox_radio/_checkbox
+      //- include ../_modules/_checkbox_radio/_radio_button
+      include ../_modules/_sliders/_slider_full
+      include ../_modules/_sliders/_carousel
       .row
-        .col-sm-8
-          //- include ../_modules/_news/_news_list
-          include ../_modules/_checkbox_radio/_checkbox
-          include ../_modules/_checkbox_radio/_radio_button
+        .col-6
+          include ../_modules/_sliders/_slider_thumb
+      
     
