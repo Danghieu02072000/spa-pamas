@@ -3,10 +3,10 @@
 $pre: 'control';
 
 .#{$pre} {
-    display: block;
+    display: inline-block;
     position: relative;
     padding-left: 30px;
-    margin-bottom: 15px;
+    margin: 5px 15px 5px 0px;
     cursor: pointer;
     font-size: 16px;
 

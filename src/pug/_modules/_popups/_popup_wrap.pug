@@ -1,0 +1,43 @@
+a.btn.btn-info(href='#popupName', data-fancybox='', data-src='#popupName', title='') Popup Wrap
+
+#popupName.popup__wrap
+  .popup__main
+    .popup__header
+      h2.popup__title Đăng ký tài khoản
+    .popup__content
+      form#frmRegister
+        .form-group
+          .control-label Họ tên:
+          input.form-control(type='text', placeholder='Họ tên', name='rgName')
+        .form-group
+          .control-label Số điện thoại:
+          input.form-control(type='text', placeholder='Số điện thoại', name='rgPhone')
+        .form-group
+          .control-label Email:
+          input.form-control(type='text', placeholder='Email', name='rgEmail')
+        .form-group
+          .control-label Giới tính:
+          label.control.control--radio
+            | Nam
+            input(type='radio', name='radio', checked='checked')
+            .control__indicator
+          label.control.control--radio
+            | Nữ
+            input(type='radio', name='radio')
+            .control__indicator
+        .form-group
+          .control-label Nghề nghiệp:
+          label.control.control--checkbox
+            | Công nghệ phần mềm
+            input(type='checkbox', checked='checked')
+            .control__indicator
+          label.control.control--checkbox
+            | Khoa học máy tính
+            input(type='checkbox')
+            .control__indicator
+        .form-group
+          .control-label Tỉnh khác (vui lòng ghi địa chỉ):
+          textarea.form-control(type='text', rows='4', placeholder='Địa chỉ', name='rgContent')
+        .form-group
+          button#frmButton.btn.btn-primary(type='submit') Đăng Ký
+    .popup__footer

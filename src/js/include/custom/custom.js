@@ -230,6 +230,72 @@ function component() {
             sync1.data('owl.carousel').to(number, 100, true);
         });
     });
+    
+    $(document).ready(function () {
+        $("#frmRegister").validate({
+            rules: {
+                rgName: {
+                    required: true
+                },
+                rgEmail: {
+                    required: true,
+                    email: true,
+                },
+                rgPhone: {
+                    required: true,
+                    minlength: 10,
+                    maxlength: 12,
+                    number: true,
+                },
+                rgAddress: {
+                    required: true,
+                },
+                rgContent: {
+                    required: true
+                },
+                rgCapcha: {
+                    required: true
+                },
+            },
+            messages: {
+                rgName: {
+                    required: "Nhập Tên Của Bạn !",
+                },
+                rgAddress: {
+                    required: "Nhập địa chỉ của bạn !",
+                },
+                rgEmail: {
+                    required: "Email không được để trống",
+                    email: "Email không đúng định dạng"
+                },
+                rgPhone: {
+                    required: "Bạn cần nhập Số điện thoại",
+                    minlength: "Số điện thoại tối thiểu 10 số",
+                    maxlength: "Số điện thoại tối đa 12 số",
+                    number: "Bạn cần nhập chữ số"
+                },
+                rgContent: {
+                    required: "Nhập nội dung !",
+                },
+                rgCapcha: {
+                    required: "Nhập mã bảo mật !",
+                },
+            },
+            submitHandler: function () {
+                $.fancybox.open({
+                    src: '#popupThanks',
+                    type: 'inline',
+                    afterShow: function () {
+                       setTimeout(function () {
+                           $.fancybox.close();
+                       }, 10000);
+                    },
+                });
+    
+            },
+        });
+    
+    });
 };
 
 function afterLoad() {

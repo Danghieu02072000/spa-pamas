@@ -31,6 +31,9 @@
 .#{$ionicons-prefix}eye:before,
 .#{$ionicons-prefix}social-youtube-outline:before,
 .#{$ionicons-prefix}ios-list-outline:before,
+.#{$ionicons-prefix}checkmark-circled:before,
+.#{$ionicons-prefix}android-checkmark-circle:before,
+.#{$ionicons-prefix}ios-checkmark-outline:before,
 {
   @extend .ion;
 }
@@ -66,3 +69,6 @@
 .#{$ionicons-prefix}eye:before { content: $ionicon-var-eye; }
 .#{$ionicons-prefix}social-youtube-outline:before { content: $ionicon-var-social-youtube-outline; }
 .#{$ionicons-prefix}ios-list-outline:before { content: $ionicon-var-ios-list-outline; }
+.#{$ionicons-prefix}checkmark-circled:before { content: $ionicon-var-checkmark-circled; }
+.#{$ionicons-prefix}android-checkmark-circle:before { content: $ionicon-var-android-checkmark-circle; }
+.#{$ionicons-prefix}ios-checkmark-outline:before { content: $ionicon-var-ios-checkmark-outline; }
