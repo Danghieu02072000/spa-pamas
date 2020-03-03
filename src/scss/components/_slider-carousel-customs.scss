@@ -1,9 +1,9 @@
 ﻿@import "../helpers/_mixins.scss";
 @import "../helpers/_variables.scss";
 
-$color-base: rgba(0,0,0,0.8) !default;
-$color-white: #FFF !default;
-$color-gray: rgba(0,0,0,0.5) !default;
+$color-base: rgba(0, 0, 0, 0.8) !default;
+$color-white: #fff !default;
+$color-gray: rgba(0, 0, 0, 0.5) !default;
 
 //nav
 
@@ -27,164 +27,163 @@ $dot-background: $color-gray !default;
 $dot-background-active: $color-base !default;
 
 .owl-carousel {
-    .owl-item {
-        cursor: pointer;
+  .owl-item {
+    cursor: pointer;
+  }
+
+  .owl-caption {
+    padding: 10px;
+    width: 100%;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    line-height: 1.4em;
+    color: #fff;
+    background-color: rgba(0, 0, 0, 0.7);
+  }
+
+  .cloned {
+    img {
+      min-height: 100px;
+    }
+  }
+
+  .owl-nav {
+    text-align: center;
+    -webkit-tap-highlight-color: transparent;
+
+    [class*="owl-"] {
+      color: $nav-color;
+      font-size: $nav-font-size;
+      margin: $nav-margin;
+      padding: $nav-padding;
+      background: $nav-background;
+      display: inline-block;
+      cursor: pointer;
+      border-radius: 4px;
+      position: absolute;
+      top: calc(50% - 20px);
+      width: 40px;
+      height: 40px;
+      line-height: 40px;
+      transition: all 0.3s ease-in-out;
+      opacity: 0.5;
+
+      &:hover {
+        background: $nav-background-hover;
+        color: $nav-color-hover;
+        text-decoration: none;
+      }
     }
 
-    .owl-caption {
-        padding: 10px;
-        width: 100%;
-        position: absolute;
-        bottom: 0;
-        left: 0;
-        line-height: 1.4em;
-        color: #fff;
-        background-color: rgba(0,0,0,0.7);
+    .disabled {
+      opacity: $nav-disabled-opacity;
+      cursor: default;
     }
 
-    .cloned {
-        img {
-            min-height: 100px;
+    .owl-prev {
+      left: 0;
+    }
+
+    .owl-next {
+      right: 0;
+    }
+  }
+  // Styling dots
+  .owl-nav.disabled + .owl-dots {
+    margin-top: 10px;
+  }
+
+  .owl-dots {
+    text-align: center;
+    -webkit-tap-highlight-color: transparent;
+    position: absolute;
+    bottom: 0px;
+    margin: auto;
+    left: 0;
+    right: 0;
+
+    .owl-dot {
+      display: inline-block;
+      zoom: 1;
+      display: inline;
+      background-color: transparent;
+
+      span {
+        width: $dot-width;
+        height: $dot-height;
+        margin: $dot-margin;
+        background: $dot-background;
+        display: block;
+        -webkit-backface-visibility: visible;
+        transition: opacity 200ms ease;
+        border-radius: 30px;
+      }
+
+      &.active,
+      &:hover {
+        span {
+          background: $dot-background-active;
         }
+      }
     }
+  }
+
+  &:hover {
+    .owl-nav {
+      [class*="owl-"] {
+        opacity: 1;
+      }
+    }
+  }
+
+  &.owl-thubs {
+    margin-top: 10px;
+    margin-bottom: 10px;
+    margin-left: 30px;
+    margin-right: 30px;
+    width: calc(100% - 60px);
 
     .owl-nav {
-        text-align: center;
-        -webkit-tap-highlight-color: transparent;
+      [class*="owl-"] {
+        opacity: 1;
+        width: 30px;
+        height: 100%;
+        top: 0;
+        margin: 0;
+        border-radius: 0;
 
-        [class*='owl-'] {
-            color: $nav-color;
-            font-size: $nav-font-size;
-            margin: $nav-margin;
-            padding: $nav-padding;
-            background: $nav-background;
-            display: inline-block;
-            cursor: pointer;
-            border-radius: 4px;
-            position: absolute;
-            top: calc(50% - 20px);
-            width: 40px;
-            height: 40px;
-            line-height: 40px;
-            transition: all 0.3s ease-in-out;
-            opacity: 0.5;
-
-
-            &:hover {
-                background: $nav-background-hover;
-                color: $nav-color-hover;
-                text-decoration: none;
-            }
+        i {
+          margin: auto;
+          top: calc(50% - 20px);
+          left: 0;
+          right: 0;
+          position: absolute;
         }
-
-        .disabled {
-            opacity: $nav-disabled-opacity;
-            cursor: default;
-        }
-
-        .owl-prev {
-            left: 0;
-        }
-
-        .owl-next {
-            right: 0;
-        }
+      }
     }
-    // Styling dots
-    .owl-nav.disabled + .owl-dots {
-        margin-top: 10px;
+    .owl-prev {
+      left: -30px;
+    }
+    .owl-next {
+      right: -30px;
+    }
+    .owl-item {
+      opacity: 0.6;
     }
 
-    .owl-dots {
-        text-align: center;
-        -webkit-tap-highlight-color: transparent;
-        position: absolute;
-        bottom: 0px;
-        margin: auto;
-        left: 0;
-        right: 0;
-
-        .owl-dot {
-            display: inline-block;
-            zoom: 1;
-            display: inline;
-            background-color: transparent;
-
-            span {
-                width: $dot-width;
-                height: $dot-height;
-                margin: $dot-margin;
-                background: $dot-background;
-                display: block;
-                -webkit-backface-visibility: visible;
-                transition: opacity 200ms ease;
-                border-radius: 30px;
-            }
-
-            &.active,
-            &:hover {
-                span {
-                    background: $dot-background-active;
-                }
-            }
-        }
+    .current {
+      opacity: 1;
     }
+  }
 
-    &:hover {
-        .owl-nav {
-            [class*='owl-'] {
-                opacity: 1;
-            }
-        }
+  &.owl-views {
+    margin-bottom: 0;
+  }
+
+  &.owl-full {
+    img {
+      width: 100%;
     }
-
-    &.owl-thubs {
-        margin-top: 10px;
-        margin-bottom: 10px;
-        margin-left: 30px;
-        margin-right: 30px;
-        width: calc(100% - 60px);
-
-        .owl-nav {
-            [class*='owl-'] {
-                opacity: 1;
-                width: 30px;
-                height: 100%;
-                top: 0;
-                margin: 0;
-                border-radius:0;
-
-                i {
-                    margin: auto;
-                    top: calc(50% - 20px);
-                    left: 0;
-                    right: 0;
-                    position: absolute;
-                }
-            }
-        }
-        .owl-prev {
-            left:-30px;
-        }
-        .owl-next {
-            right:-30px;
-        }
-        .owl-item {
-            opacity: 0.6;
-        }
-
-        .current {
-            opacity: 1;
-        }
-    }
-
-    &.owl-views {
-        margin-bottom:0;
-    }
-
-    &.owl-full {
-        img {
-            width: 100%;
-        }
-    }
+  }
 }

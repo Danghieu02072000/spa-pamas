@@ -1,111 +1,110 @@
 ﻿@import "../helpers/variables_import";
 
-$pre: 'control';
+$pre: "control";
 
 .#{$pre} {
-    display: inline-block;
-    position: relative;
-    padding-left: 30px;
-    margin: 5px 15px 5px 0px;
-    cursor: pointer;
-    font-size: 16px;
+  display: inline-block;
+  position: relative;
+  padding-left: 30px;
+  margin: 5px 15px 5px 0px;
+  cursor: pointer;
+  font-size: 16px;
+
+  input {
+    position: absolute;
+    z-index: -1;
+    opacity: 0;
+
+    &:focus ~ .#{$pre}__indicator {
+      background: darken($control-back, 5%);
+    }
+
+    &:checked ~ .#{$pre}__indicator {
+      background: $control-color;
+      border-color: $color-primary;
+
+      &:after {
+        display: block;
+      }
+    }
+
+    &:checked:focus ~ .#{$pre}__indicator {
+      background: darken($control-color, 5%);
+    }
+
+    &:disabled ~ .#{$pre}__indicator {
+      background: $control-back-disable;
+      border-color: $control-back-disable;
+      opacity: 0.6;
+      pointer-events: none;
+
+      &:after {
+        border-color: $control-color-disable;
+      }
+    }
+  }
+
+  &__indicator {
+    position: absolute;
+    top: 2px;
+    left: 0;
+    height: $control-size;
+    width: $control-size;
+    background: $control-back;
+    border: 1px solid $control-border;
+
+    &::after {
+      content: "";
+      position: absolute;
+      display: none;
+    }
+  }
+
+  &--radio {
+    .#{$pre}__indicator {
+      border-radius: 50%;
+
+      &:after {
+        left: 6px;
+        top: 6px;
+        height: 8px;
+        width: 8px;
+        border-radius: 50%;
+        background: $control-text;
+      }
+    }
 
     input {
-        position: absolute;
-        z-index: -1;
-        opacity: 0;
-
-
-        &:focus~.#{$pre}__indicator {
-            background: darken($control-back, 5%);
+      &:disabled ~ .#{$pre}__indicator {
+        &:after {
+          background-color: $control-color-disable;
         }
-
-        &:checked~.#{$pre}__indicator {
-            background: $control-color;
-            border-color: $color-primary;
-
-            &:after {
-                display: block;
-            }
-        }
-
-        &:checked:focus~.#{$pre}__indicator {
-            background: darken($control-color, 5%);
-        }
-
-        &:disabled~.#{$pre}__indicator {
-            background: $control-back-disable;
-            border-color: $control-back-disable;
-            opacity: 0.6;
-            pointer-events: none;
-
-            &:after {
-                border-color: $control-color-disable;
-            }
-        }
+      }
     }
+  }
 
-    &__indicator {
-        position: absolute;
+  &--checkbox {
+    .#{$pre}__indicator {
+      &:after {
+        left: 7px;
         top: 2px;
-        left: 0;
-        height: $control-size;
-        width: $control-size;
-        background: $control-back;
-        border: 1px solid $control-border;
+        width: 6px;
+        height: 12px;
+        border-style: solid;
+        border-color: $control-text;
+        border-width: 0 2px 2px 0;
+        transform: rotate(45deg);
+      }
+    }
+  }
 
-        &::after {
-            content: '';
-            position: absolute;
-            display: none;
-        }
+  &:hover {
+    input ~ .#{$pre}__indicator {
+      background: darken($control-back, 5%);
     }
 
-    &--radio {
-        .#{$pre}__indicator {
-            border-radius: 50%;
-
-            &:after {
-                left: 6px;
-                top: 6px;
-                height: 8px;
-                width: 8px;
-                border-radius: 50%;
-                background: $control-text;
-            }
-        }
-
-        input {
-            &:disabled~.#{$pre}__indicator {
-                &:after {
-                    background-color: $control-color-disable;
-                }
-            }
-        }
+    input:not([disabled]):checked ~ .#{$pre}__indicator {
+      background: darken($control-color, 5%);
     }
-
-    &--checkbox {
-        .#{$pre}__indicator {
-            &:after {
-                left: 7px;
-                top: 2px;
-                width: 6px;
-                height: 12px;
-                border-style: solid;
-                border-color: $control-text;
-                border-width: 0 2px 2px 0;
-                transform: rotate(45deg);
-            }
-        }
-    }
-
-    &:hover {
-        input~.#{$pre}__indicator {
-            background: darken($control-back, 5%);
-        }
-
-        input:not([disabled]):checked~.#{$pre}__indicator {
-            background: darken($control-color, 5%);
-        }
-    }
+  }
 }

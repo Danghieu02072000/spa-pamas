@@ -9,36 +9,35 @@ $rotation: 45deg;
 $translateY: ($height-icon / 2);
 $translateX: 0;
 
-
 #sidebar-icon {
-  width:$width-line;
-  height:$height-icon;
-  position:relative;
-  display:inline-block;
-  
+  width: $width-line;
+  height: $height-icon;
+  position: relative;
+  display: inline-block;
+
   .line {
-    display:block;
-    background:$color;
-    width:$width-line;
-    height:$height-line;
-    position:absolute;
-    left:0;
-    border-radius:($height-line / 2);
+    display: block;
+    background: $color;
+    width: $width-line;
+    height: $height-line;
+    position: absolute;
+    left: 0;
+    border-radius: ($height-line / 2);
     transition: all $transition-time;
     -webkit-transition: all $transition-time;
     -moz-transition: all $transition-time;
-    
+
     &.line-1 {
-      top:0;
+      top: 0;
     }
     &.line-2 {
-      top:50%;
+      top: 50%;
     }
     &.line-3 {
-      top:100%;
+      top: 100%;
     }
   }
-  
+
   &.active {
     .line-1 {
       transform: translateY($translateY) translateX($translateX) rotate($rotation);
@@ -46,7 +45,7 @@ $translateX: 0;
       -moz-transform: translateY($translateY) translateX($translateX) rotate($rotation);
     }
     .line-2 {
-      opacity:0;
+      opacity: 0;
     }
     .line-3 {
       transform: translateY($translateY * -1) translateX($translateX) rotate($rotation * -1);

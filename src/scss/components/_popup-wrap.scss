@@ -1,158 +1,157 @@
 ﻿@import "../helpers/variables_import";
 
-$pre: 'popup';
+$pre: "popup";
 
 .#{$pre} {
-    &__wrap {
-        max-width: 550px;
-        background-color: #fff;
-        margin: 10px auto;
-        max-height: 100%;
-        position: relative;
-        padding: 0;
-        overflow: visible;
-        display: none;
-       
-        .control-label {
-            color: $text-color-primary;
-            margin-bottom: 10px;
-        }
-        
-        label {
-            &.error {
-                font-size: 14px;
-                color: #a94442;
-                padding-top: 4px;
-                text-align: left;
-                margin-bottom: 0;
-            }
-        }
+  &__wrap {
+    max-width: 550px;
+    background-color: #fff;
+    margin: 10px auto;
+    max-height: 100%;
+    position: relative;
+    padding: 0;
+    overflow: visible;
+    display: none;
 
-        textarea {
-            height: auto !important;
-        }
-    
-        .error {
-            border-color: #a94442;
-        }
-    
-        button.fancybox-close-small {
-            width: 43px;
-            height: 43px;
-            color: #fff;
-            opacity: 1;
-            transition: 0.3s ease-in-out;
-            outline: none;
-    
-            &:after {
-                background: transparent;
-                font-size: 24px;
-                color: #fff;
-                transform: none;
-                width: 100%;
-                height: 100%;
-                left: 0;
-                top: 0;
-                line-height: 43px;
-                text-align: center;
-            }
-    
-            &:hover {
-                border-color: $color-primary;
-                background-color: $color-primary;
-            }
-        }
-        @include mq(max-sm) {
-            margin: 50px auto 20px auto;
-        
-            .form-group {
-                margin-bottom: 10px;
-            }
-        }
-        @include mq(max-xs) {
-            max-width: calc(100% - 20px);
-            .#{$pre} {
-                &__button {
-                    width: 100%;
-                }
-                &__content {
-                    padding: 15px;
-                    max-height:none;
-                }
-            }
-            select {
-                margin-bottom:15px;
-            }
-            label {
-                &.error {
-                    font-size: 12px;
-                }
-            }
-        }
+    .control-label {
+      color: $text-color-primary;
+      margin-bottom: 10px;
     }
-    &__main {
-        display: flex;
-        flex-direction: column;
-        background-color: #fff;
+
+    label {
+      &.error {
+        font-size: 14px;
+        color: #a94442;
+        padding-top: 4px;
+        text-align: left;
+        margin-bottom: 0;
+      }
     }
-    &__header {
+
+    textarea {
+      height: auto !important;
+    }
+
+    .error {
+      border-color: #a94442;
+    }
+
+    button.fancybox-close-small {
+      width: 43px;
+      height: 43px;
+      color: #fff;
+      opacity: 1;
+      transition: 0.3s ease-in-out;
+      outline: none;
+
+      &:after {
+        background: transparent;
+        font-size: 24px;
+        color: #fff;
+        transform: none;
+        width: 100%;
+        height: 100%;
+        left: 0;
+        top: 0;
+        line-height: 43px;
         text-align: center;
-    }
-    &__content  {
-        padding: 20px 25px 10px 25px;
-        max-height: calc(100vh - 80px);
-        overflow: auto;
-    }
-    &__title {
-        background-color: $color-primary;
-        color: #fff;
-        text-transform: uppercase;
-        padding: 8px;
-        font-weight: normal;
-        font-size: 18px;
-    }
-    &__button {
-        display: inline-block;
-        padding: 9px 20px;
-        color: #fff;
-        font-size: 16px;
-        background-color: $color-primary;
-        clear: both;
-        text-transform: uppercase;
-        border: 0;
+      }
 
-        &:hover {
-            background-color: $color-primary;
-        }
+      &:hover {
+        border-color: $color-primary;
+        background-color: $color-primary;
+      }
     }
-    &__thanks {
-        .icon {
-            font-size: 72px;
-            color: $color-primary;
-            margin: 30px 0;
-        }
-    
-        p {
-            line-height: 1.4em;
-            font-size: 18px;
-        }
-        .#{$pre} {
-            &__content {
-                text-align: center;
-            }
-        }
+    @include mq(max-sm) {
+      margin: 50px auto 20px auto;
+
+      .form-group {
+        margin-bottom: 10px;
+      }
     }
+    @include mq(max-xs) {
+      max-width: calc(100% - 20px);
+      .#{$pre} {
+        &__button {
+          width: 100%;
+        }
+        &__content {
+          padding: 15px;
+          max-height: none;
+        }
+      }
+      select {
+        margin-bottom: 15px;
+      }
+      label {
+        &.error {
+          font-size: 12px;
+        }
+      }
+    }
+  }
+  &__main {
+    display: flex;
+    flex-direction: column;
+    background-color: #fff;
+  }
+  &__header {
+    text-align: center;
+  }
+  &__content {
+    padding: 20px 25px 10px 25px;
+    max-height: calc(100vh - 80px);
+    overflow: auto;
+  }
+  &__title {
+    background-color: $color-primary;
+    color: #fff;
+    text-transform: uppercase;
+    padding: 8px;
+    font-weight: normal;
+    font-size: 18px;
+  }
+  &__button {
+    display: inline-block;
+    padding: 9px 20px;
+    color: #fff;
+    font-size: 16px;
+    background-color: $color-primary;
+    clear: both;
+    text-transform: uppercase;
+    border: 0;
+
+    &:hover {
+      background-color: $color-primary;
+    }
+  }
+  &__thanks {
+    .icon {
+      font-size: 72px;
+      color: $color-primary;
+      margin: 30px 0;
+    }
+
+    p {
+      line-height: 1.4em;
+      font-size: 18px;
+    }
+    .#{$pre} {
+      &__content {
+        text-align: center;
+      }
+    }
+  }
 }
 
 .fancybox-slide--complete {
-    .popup-wrap {
-        opacity: 1;
-        transform: translateY(0);
-    }
+  .popup-wrap {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }
 
 @include mq(max-xs) {
-    .popup-wrap {
-        
-    }
+  .popup-wrap {
+  }
 }

@@ -2,65 +2,67 @@
 @import "../helpers/_variables.scss";
 
 .div-phantrang {
-    margin-top: 20px;
-    width: 100%;
+  margin-top: 20px;
+  width: 100%;
+  float: left;
+  text-align: left;
+  padding: 0 0 20px 0;
+
+  .count-page {
     float: left;
-    text-align: left;
-    padding: 0 0 20px 0;
 
-    .count-page {
-        float: left;
-
-        span {
-            color: $pagination-color;
-            font-size: 15px;
-        }
-
-        select {
-            height: 32px;
-            padding: 0 5px;
-            font-size: 16px;
-        }
+    span {
+      color: $pagination-color;
+      font-size: 15px;
     }
+
+    select {
+      height: 32px;
+      padding: 0 5px;
+      font-size: 16px;
+    }
+  }
 }
 
 .dot-fillin {
-    ul {
-        float: right;
+  ul {
+    float: right;
 
-        li {
-            float: left;
-            display: inline-block;
+    li {
+      float: left;
+      display: inline-block;
 
-            a {
-                text-align: center;
-                margin-left: 4px;
-                padding: 5px 10px;
-                display: block;
-                color: $pagination-color;
-                background: #ebebeb;
-                font-size: 15px;
-            }
+      a {
+        text-align: center;
+        margin-left: 4px;
+        padding: 5px 10px;
+        display: block;
+        color: $pagination-color;
+        background: #ebebeb;
+        font-size: 15px;
+      }
 
-            &:hover a, &:focus a, &.current a {
-                background: $pagination-hover;
-                color: #fff;
-            }
+      &:hover a,
+      &:focus a,
+      &.current a {
+        background: $pagination-hover;
+        color: #fff;
+      }
 
-            span i {
-                padding-right: 0;
-                font-size: 22px;
-            }
-        }
+      span i {
+        padding-right: 0;
+        font-size: 22px;
+      }
     }
+  }
 }
 
-@include mq(xs){
-      .div-phantrang .count-page {
-        margin-bottom: 10px;
-    }
+@include mq(xs) {
+  .div-phantrang .count-page {
+    margin-bottom: 10px;
+  }
 
-    .dot-fillin ul li {
-        margin-bottom: 4px;
-    }
+  .dot-fillin ul li {
+    margin-bottom: 4px;
+  }
 }

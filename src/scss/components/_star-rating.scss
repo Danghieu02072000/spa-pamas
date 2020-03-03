@@ -22,10 +22,8 @@ $star-height: 24px;
 $rating-max: 5;
 $use-half-rating: false;
 
-$empty-star-icon: 'data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACUAAAAkCAYAAAAOwvOmAAACZ0lEQVR42s2Yz0sUYRjH+wVmB4lCOgR66BAegoQU/4SgQ4culSeRoEKiU0QRrHpSwcCDFEREBMGSiMIOdpA9bGwbLTML+1MjQlE8GGmXgpTdPk/MxrLMzsDM484ufFne2ff9vp95nnee9905VKlUVFQqlQa1vFRM0un0CaB2TNPsbBmoYrF4E6hKoVC42zJQAMUECiVaAkpSRqT2bKhyPp/vCh0KoBEBqooUPmgFqI+1UMgKFSqbzZ4TkHpxvSc0KFL1xAkKjYUGRepKTlBc/xIKFJNfEoBGyuVyfWFAPXWDIlrTTYWKRqNHmXTLA2ozEokc8QWFwRAGb9EcWkRLXFtGCfSJtolyaAV9k8nQd3tyL23QdxVlUZr2B9vbQPP2vK/QczTDgzOJrv+7azpMoLIYhazXsrn/Dxnbw1Uu7oYE85tI3aqyOBVDq5lAUj4IyEXXhR6Px4/T8WWTgN6lUqmOega3aj0sYT0gmD/43/dVEghrLyZflaHWARoIVKcsyzoppUIJyMDrtErx5HMYs0cBYMoyXnxUK3p1r/MrUtatvs1wp6MBoe4cBJQZcD3FVKEymcxZhUX+K5lMtqtBYXhbAUpSeEUTKuZ1GkCPSfEPj36zKlCya7tVdkDeSC2rppn2e5e+aypQcnpoMMk2k1xrUNNGZA01ALsQGAqjFw7GC5wozniMO0+/zw5jHwaCkruuO/b+REMeprUnjmNS39BejUciEBSp668xW/b7nkB8AFuxffZpn/INxSM8bq+NexI1hXdYs3YKb/iGYvAzWRs+INyidhnfKd9Q8qdCvrVlGEab2+9/AaqhSf4SQ/sOAAAAAElFTkSuQmCC';
-$full-star-icon: 'data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACUAAAAkCAYAAAAOwvOmAAACtElEQVR42s2YzWsTQRjG4wf4cRBRRFDRgkEtuzujoOKfIHjw4MWPk4igIuJJRBGqPamg4EEUREQEoSiiYtBDCWibZmakHvSgBil+H9SmbXZGUGl8XsniQpdN2J1mE3gJm8y+89t3nnlmZnP1et1K+NLbYyuXlSRfHi6brxWv1p7ml3QMlC+83UbxupbsUMdAacUeEZRR7FlHQNGQGcl/N6AmRweclZlDGeEdJqAgMJTHMoeCjobCUFryF5lCjQ26qwOYcNSG3O7MoFCVU1FQWnpnMoMykr2OgkJUMoHSwt0YQERXy9nUdihfsotxUL7iF9oK1deXm6Ul+xpbKcU/9/TkZiaCwkK6F9q4jU7uIh4gHuO6n9wZiQWuhyHoVzDIN4gR6gy/fY8BCtvDJ9zzFu1fwvWf47cByo3rAvLca/R7A+2uauVdMoKdqym2899To/FZcmNKlGkIdpMW9//CLXvbQT+WCYxkP2Ej+wOWKWZIjtxmqIovnfWxQh8pds0F2PV2AEFPd36U8wtann1asH1U1mkC+gUNH01kCdDYBoC9s6yfD6bMtqTyqWqxayFZhaXhKkyIdYutmCc+M+AzJ5IDsUm6n/JYdfRgrUsa1cHuVdaXGfjI6ZRDd3AaoNhwKigcLqxCmdKa5elnHTcfSyvmWYPSgh+wMvuEu80eFErfbDcAsz2JdqNNdHXZChSt2rHOLvkt8rJgmGG4T2Ks4b0VKNo9RAuXf0MnO6I8jc6CpKHIHWnJ89JDKXYtYhju+2V3adx9E4qtRTs1BUry46mg6KnD215oZ5x2qq1O7WIxN5v8LTjWt/q+oYkVOJtDC2l/0vcElIe20w0N/hkvOYsSQ6EyvaQNAB2hqqV+h4XZR2C+YLuSQyl+hbSRACLuaLYVD3k+MRQdKujbdlQK+Tlx//8FHj0VVkETdoMAAAAASUVORK5CYII='; 
-
-
+$empty-star-icon: "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACUAAAAkCAYAAAAOwvOmAAACZ0lEQVR42s2Yz0sUYRjH+wVmB4lCOgR66BAegoQU/4SgQ4culSeRoEKiU0QRrHpSwcCDFEREBMGSiMIOdpA9bGwbLTML+1MjQlE8GGmXgpTdPk/MxrLMzsDM484ufFne2ff9vp95nnee9905VKlUVFQqlQa1vFRM0un0CaB2TNPsbBmoYrF4E6hKoVC42zJQAMUECiVaAkpSRqT2bKhyPp/vCh0KoBEBqooUPmgFqI+1UMgKFSqbzZ4TkHpxvSc0KFL1xAkKjYUGRepKTlBc/xIKFJNfEoBGyuVyfWFAPXWDIlrTTYWKRqNHmXTLA2ozEokc8QWFwRAGb9EcWkRLXFtGCfSJtolyaAV9k8nQd3tyL23QdxVlUZr2B9vbQPP2vK/QczTDgzOJrv+7azpMoLIYhazXsrn/Dxnbw1Uu7oYE85tI3aqyOBVDq5lAUj4IyEXXhR6Px4/T8WWTgN6lUqmOega3aj0sYT0gmD/43/dVEghrLyZflaHWARoIVKcsyzoppUIJyMDrtErx5HMYs0cBYMoyXnxUK3p1r/MrUtatvs1wp6MBoe4cBJQZcD3FVKEymcxZhUX+K5lMtqtBYXhbAUpSeEUTKuZ1GkCPSfEPj36zKlCya7tVdkDeSC2rppn2e5e+aypQcnpoMMk2k1xrUNNGZA01ALsQGAqjFw7GC5wozniMO0+/zw5jHwaCkruuO/b+REMeprUnjmNS39BejUciEBSp668xW/b7nkB8AFuxffZpn/INxSM8bq+NexI1hXdYs3YKb/iGYvAzWRs+INyidhnfKd9Q8qdCvrVlGEab2+9/AaqhSf4SQ/sOAAAAAElFTkSuQmCC";
+$full-star-icon: "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACUAAAAkCAYAAAAOwvOmAAACtElEQVR42s2YzWsTQRjG4wf4cRBRRFDRgkEtuzujoOKfIHjw4MWPk4igIuJJRBGqPamg4EEUREQEoSiiYtBDCWibZmakHvSgBil+H9SmbXZGUGl8XsniQpdN2J1mE3gJm8y+89t3nnlmZnP1et1K+NLbYyuXlSRfHi6brxWv1p7ml3QMlC+83UbxupbsUMdAacUeEZRR7FlHQNGQGcl/N6AmRweclZlDGeEdJqAgMJTHMoeCjobCUFryF5lCjQ26qwOYcNSG3O7MoFCVU1FQWnpnMoMykr2OgkJUMoHSwt0YQERXy9nUdihfsotxUL7iF9oK1deXm6Ul+xpbKcU/9/TkZiaCwkK6F9q4jU7uIh4gHuO6n9wZiQWuhyHoVzDIN4gR6gy/fY8BCtvDJ9zzFu1fwvWf47cByo3rAvLca/R7A+2uauVdMoKdqym2899To/FZcmNKlGkIdpMW9//CLXvbQT+WCYxkP2Ej+wOWKWZIjtxmqIovnfWxQh8pds0F2PV2AEFPd36U8wtann1asH1U1mkC+gUNH01kCdDYBoC9s6yfD6bMtqTyqWqxayFZhaXhKkyIdYutmCc+M+AzJ5IDsUm6n/JYdfRgrUsa1cHuVdaXGfjI6ZRDd3AaoNhwKigcLqxCmdKa5elnHTcfSyvmWYPSgh+wMvuEu80eFErfbDcAsz2JdqNNdHXZChSt2rHOLvkt8rJgmGG4T2Ks4b0VKNo9RAuXf0MnO6I8jc6CpKHIHWnJ89JDKXYtYhju+2V3adx9E4qtRTs1BUry46mg6KnD215oZ5x2qq1O7WIxN5v8LTjWt/q+oYkVOJtDC2l/0vcElIe20w0N/hkvOYsSQ6EyvaQNAB2hqqV+h4XZR2C+YLuSQyl+hbSRACLuaLYVD3k+MRQdKujbdlQK+Tlx//8FHj0VVkETdoMAAAAASUVORK5CYII=";
 
 // =============================================================================
 // 2. Star rating block
@@ -41,38 +39,36 @@ $full-star-icon: 'data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACUAAAAkCAYAAAAO
 
 $unit-width: 100% / $rating-max;
 
-
 .boxStarRating {
-    float:left;
+  float: left;
 
-    width:180px;
-    .count-rating {
-        font-size:14px;
-        padding-left:5px;
-        float:right;
-        display:inline-block;
-        margin-top:3px;
-        span {
-           padding:0 3px;
-           display:inline-block;
-        }
+  width: 180px;
+  .count-rating {
+    font-size: 14px;
+    padding-left: 5px;
+    float: right;
+    display: inline-block;
+    margin-top: 3px;
+    span {
+      padding: 0 3px;
+      display: inline-block;
     }
+  }
 }
 
 .star-rating {
-  font-size: 0;    
-  float:left;                        // [1]
-  position: relative;                      // [2]
-  width: $star-width * $rating-max;        // [3]
-  height: $star-height;                    // [4]
-  overflow: hidden;                        // [4]
+  font-size: 0;
+  float: left; // [1]
+  position: relative; // [2]
+  width: $star-width * $rating-max; // [3]
+  height: $star-height; // [4]
+  overflow: hidden; // [4]
   background-image: url($empty-star-icon); // [5]
-  background-size: contain;                // [6]
-  
+  background-size: contain; // [6]
+
   // Cosmetic stuff for pen presentation
   margin: 0;
 }
-
 
 // =============================================================================
 // 3. Star element
@@ -86,35 +82,33 @@ $unit-width: 100% / $rating-max;
 // =============================================================================
 
 .star-rating__star {
-  position: absolute;                           // [1]
-  z-index: 1;                                   // [1]
-  top: 0;                                       // [1]
-  left: 0;                                      // [1]
-  width: $unit-width;                           // [2]
-  height: 100%;                                 // [2]
-  opacity: 0;                                   // [3]
-  background-image: url($full-star-icon);       // [4]
-  background-size: contain;                     // [5]
-  margin:0;
+  position: absolute; // [1]
+  z-index: 1; // [1]
+  top: 0; // [1]
+  left: 0; // [1]
+  width: $unit-width; // [2]
+  height: 100%; // [2]
+  opacity: 0; // [3]
+  background-image: url($full-star-icon); // [4]
+  background-size: contain; // [5]
+  margin: 0;
 
-  
-  
   // Set each star element width
   // @todo: create silent classes so they can be extended in current-rating
   // =============================================================================
 
-   $t: unquote('& ~');
-  
+  $t: unquote("& ~");
+
   @for $i from 1 to $rating-max {
     $l: ();
     @for $n from 1 to ($i + 1) {
       $l: append($l, #{$t});
     }
-    #{$l} & {width: #{$unit-width * ($i + 1)}; }
+    #{$l} & {
+      width: #{$unit-width * ($i + 1)};
+    }
   }
-
 }
-
 
 // =============================================================================
 // 4. Input element
@@ -128,21 +122,23 @@ $unit-width: 100% / $rating-max;
 //
 // =============================================================================
 
-.star-rating__input { 
-    -moz-appearance:none;         // [1]
-    -webkit-appearance:none;      // [1]
-    position: relative;           // [2]
-    z-index: 2;                   // [2]
-    opacity: 0;                   // [3]
-    display: inline-block;        // [4]
-    width: $unit-width;           // [5]
-    height: 100%;                 // [5]
-    margin: 0 !important;                    // [6]
-    padding: 0;                   // [6]
+.star-rating__input {
+  -moz-appearance: none; // [1]
+  -webkit-appearance: none; // [1]
+  position: relative; // [2]
+  z-index: 2; // [2]
+  opacity: 0; // [3]
+  display: inline-block; // [4]
+  width: $unit-width; // [5]
+  height: 100%; // [5]
+  margin: 0 !important; // [6]
+  padding: 0; // [6]
 
-    &:hover + i,
-    &:checked + i { opacity: 1; }
+  &:hover + i,
+  &:checked + i {
+    opacity: 1;
   }
+}
 
 // =============================================================================
 // 4. Current rating
@@ -151,15 +147,17 @@ $unit-width: 100% / $rating-max;
 // =============================================================================
 
 .current-rating {
+  .star-rating:hover & {
+    display: none;
+  }
+  %show-rating {
+    opacity: 1;
+  }
 
-.star-rating:hover & { display: none; }
-  %show-rating { opacity: 1; }
-  
   @for $i from 1 to 100 {
-  
     // Full Stars
     // =============================================================================
-  
+
     &.current-rating--#{$i} {
       .star-rating__star {
         width: 1% * $i;
@@ -167,10 +165,7 @@ $unit-width: 100% / $rating-max;
       }
     }
 
-
     // Half Stars
     // =============================================================================
-
-  
   }
 }

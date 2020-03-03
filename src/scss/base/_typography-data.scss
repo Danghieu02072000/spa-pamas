@@ -1,19 +1,19 @@
 ﻿@import "../helpers/_mixins.scss";
 
-@include font(myriad-pro,myriadpro-regular-webfont);
-@include font(myriad-pro-bold,myriadpro-semibold);
-@include font(myriad-pro-light,myriadpro-light-webfont);
+@include font(myriad-pro, myriadpro-regular-webfont);
+@include font(myriad-pro-bold, myriadpro-semibold);
+@include font(myriad-pro-light, myriadpro-light-webfont);
 
-@include font(Roboto,Roboto-Regular);
-@include font(Roboto Bold,Roboto-Bold);
-@include font(Roboto Medium,Roboto-Medium);
-@include font(Roboto Light,Roboto-Light);
+@include font(Roboto, Roboto-Regular);
+@include font(Roboto Bold, Roboto-Bold);
+@include font(Roboto Medium, Roboto-Medium);
+@include font(Roboto Light, Roboto-Light);
 
-@include font(Roboto Condensed,RobotoCondensed-Regular);
-@include font(Roboto Condensed Bold,RobotoCondensed-Bold);
-@include font(Roboto Condensed Italic,RobotoCondensed-Italic);
-@include font(Roboto Condensed Light,RobotoCondensed-Light);
+@include font(Roboto Condensed, RobotoCondensed-Regular);
+@include font(Roboto Condensed Bold, RobotoCondensed-Bold);
+@include font(Roboto Condensed Italic, RobotoCondensed-Italic);
+@include font(Roboto Condensed Light, RobotoCondensed-Light);
 
-@include font(Open Sans Bold,OpenSans-Regular);
-@include font(Open Sans Bold,OpenSans-Bold);
-@include font(Open Sans Light,OpenSans-Light);
+@include font(Open Sans Bold, OpenSans-Regular);
+@include font(Open Sans Bold, OpenSans-Bold);
+@include font(Open Sans Light, OpenSans-Light);

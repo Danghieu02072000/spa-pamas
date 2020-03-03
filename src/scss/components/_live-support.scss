@@ -6,142 +6,138 @@ $primary-bg-hover: #ff6a00;
 $primary-color: #353535;
 
 .live-support {
-    position: fixed;
-    top: 20%;
-    right: 0;
-    font-family: Arial, Helvetica, sans-serif;
-    z-index: 9999;
+  position: fixed;
+  top: 20%;
+  right: 0;
+  font-family: Arial, Helvetica, sans-serif;
+  z-index: 9999;
 }
 
 .call-live-support {
-    width: 160px;
-    height: 34px;
-    transform: rotate(270deg);
-    border-radius:6px 6px 0 0px;
-    position: absolute;
-    right: -60px;
-    top: 62px;
-    background: $primary-bg;
-    font-weight: normal;
-    color: #fff;
-    text-align: center;
-    line-height: 34px;
-    font-size: 15px;
-    cursor: pointer;
-    transition:0.3s ease;
-    
-    
+  width: 160px;
+  height: 34px;
+  transform: rotate(270deg);
+  border-radius: 6px 6px 0 0px;
+  position: absolute;
+  right: -60px;
+  top: 62px;
+  background: $primary-bg;
+  font-weight: normal;
+  color: #fff;
+  text-align: center;
+  line-height: 34px;
+  font-size: 15px;
+  cursor: pointer;
+  transition: 0.3s ease;
 
-    z-index: 9998;
+  z-index: 9998;
 
-    &:hover, &:focus {
-        background: $primary-bg-hover;
-    }
+  &:hover,
+  &:focus {
+    background: $primary-bg-hover;
+  }
 }
 
 @media screen {
-    
 }
 
 .box-live-support {
-    position: absolute;
-    right: -270px;
-    width: 270px;
-    top: -5px;
-    min-height: 140px;
-    border-radius:4px;
-    border: 1px solid $primary-bg;
-    float: left;
-    background: #fff;
-    transition:0.1s ease;
-    z-index: 9999;
+  position: absolute;
+  right: -270px;
+  width: 270px;
+  top: -5px;
+  min-height: 140px;
+  border-radius: 4px;
+  border: 1px solid $primary-bg;
+  float: left;
+  background: #fff;
+  transition: 0.1s ease;
+  z-index: 9999;
 
-    &.open {
-        transform:translateX(-273px);
-        transition:0.5s ease;
+  &.open {
+    transform: translateX(-273px);
+    transition: 0.5s ease;
+  }
+
+  .title-sp {
+    width: 100%;
+    height: 34px;
+    background: $primary-bg;
+    color: #fff;
+    padding-left: 10px;
+
+    strong {
+      line-height: 34px;
+      font-size: 16px;
+      display: inline-block;
+      width: calc(100% - 80px);
+      float: left;
     }
 
-    .title-sp {
-        width: 100%;
-        height: 34px;
-        background: $primary-bg;
-        color: #fff;
+    .close-live-sp {
+      float: right;
+      display: inline-block;
+      width: 80px;
+      line-height: 34px;
+      cursor: pointer;
+
+      i {
+        font-size: 18px;
+        position: relative;
+        top: 2px;
+      }
+    }
+  }
+
+  .body-sp {
+    min-height: 100px;
+    max-height: 300px;
+
+    .item-sp {
+      float: left;
+      border-bottom: 1px dashed #e1e1e1;
+      width: 100%;
+      padding: 10px;
+
+      &:last-child {
+        border-bottom: none;
+      }
+
+      a {
+        width: 44px;
+        height: 44px;
+        float: left;
+        text-align: center;
+        padding-top: 10px;
+
+        span {
+          font-size: 36px;
+          color: #00aff0;
+        }
+      }
+
+      .profile {
+        float: left;
+        width: calc(100% - 44px);
         padding-left: 10px;
 
-        strong {
-            line-height: 34px;
-            font-size: 16px;
-            display: inline-block;
-            width: calc(100% - 80px);
-            float: left;
-           
-           
+        span {
+          display: block;
+          font-size: 14px;
         }
 
-        .close-live-sp {
-            float: right;
-            display: inline-block;
-            width: 80px;
-            line-height: 34px;
-            cursor: pointer;
-
-            i {
-                font-size: 18px;
-                position: relative;
-                top: 2px;
-            }
+        i {
+          font-style: normal;
+          font-weight: bold;
+          color: $primary-bg;
+          padding-left: 4px;
+          display: inline-block;
         }
+
+        b {
+          text-transform: uppercase;
+        }
+      }
     }
-
-    .body-sp {
-        min-height: 100px;
-        max-height: 300px;
-
-        .item-sp {
-            float: left;
-            border-bottom: 1px dashed #e1e1e1;
-            width: 100%;
-            padding: 10px;
-
-            &:last-child {
-                border-bottom: none;
-            }
-
-            a {
-                width: 44px;
-                height: 44px;
-                float: left;
-                text-align: center;
-                padding-top: 10px;
-
-                span {
-                    font-size: 36px;
-                    color: #00AFF0;
-                }
-            }
-
-            .profile {
-                float: left;
-                width: calc(100% - 44px);
-                padding-left: 10px;
-
-                span {
-                    display: block;
-                    font-size: 14px;
-                }
-
-                i {
-                    font-style: normal;
-                    font-weight: bold;
-                    color: $primary-bg;
-                    padding-left: 4px;
-                    display: inline-block;
-                }
-
-                b {
-                    text-transform: uppercase;
-                }
-            }
-        }
-    }
+  }
 }

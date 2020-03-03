@@ -1,182 +1,184 @@
 ﻿@import "../helpers/_variables.scss";
 @import "../helpers/_mixins.scss";
 
-
 html {
-    background-color: $background-primary;
+  background-color: $background-primary;
 }
 
 body {
-    font-family: $font-face-primary;
-    font-size: $font-size-primary;
-    color: $text-color-primary;
+  font-family: $font-face-primary;
+  font-size: $font-size-primary;
+  color: $text-color-primary;
 }
 
 #wrapper {
-    float: left;
-    width: 100%;
-    transition: margin 300ms ease;
+  float: left;
+  width: 100%;
+  transition: margin 300ms ease;
 
-    &.open-sidebar {
-        margin-left: 270px;
-    }
+  &.open-sidebar {
+    margin-left: 270px;
+  }
 }
 
 .wrapper-main {
-    display: flex;
-    flex-direction: column;
+  display: flex;
+  flex-direction: column;
 }
 
 .wrapper-content {
-    float: left;
-    width: 100%;
+  float: left;
+  width: 100%;
 }
 
 .fl {
-    float: left;
+  float: left;
 }
 
 .fr {
-    float: right;
+  float: right;
 }
 
 a {
-    transition: 0.2s all ease-in;
-    
-    &:hover {
-        transition: 0.2s all ease-out;
-        text-decoration: none;
-        outline: none;
-    }
+  transition: 0.2s all ease-in;
 
-    &:focus {
-        text-decoration: none;
-        outline: none;
-    }
+  &:hover {
+    transition: 0.2s all ease-out;
+    text-decoration: none;
+    outline: none;
+  }
+
+  &:focus {
+    text-decoration: none;
+    outline: none;
+  }
 }
 
 ul {
-    list-style-type: none;
-    padding-left: 0;
-    list-style: none;
-    margin-bottom: 0;
+  list-style-type: none;
+  padding-left: 0;
+  list-style: none;
+  margin-bottom: 0;
 
-    li {
-        list-style: none;
-    }
+  li {
+    list-style: none;
+  }
 }
 
-
-h1, h2, h3, h4, h5, h6 {
-    color: $text-color-primary;
-    margin: 0;
-    padding: 0;
-    display: block;
-    width: 100%;
-    float:left;
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  color: $text-color-primary;
+  margin: 0;
+  padding: 0;
+  display: block;
+  width: 100%;
+  float: left;
 }
 
 i.fa {
-    padding-right: 5px;
+  padding-right: 5px;
 }
 
 .divBlockL {
-    width: 100%;
-    float: left;
-    display: block;
+  width: 100%;
+  float: left;
+  display: block;
 }
 
 .divBlockR {
-    width: 100%;
-    float: right;
-    display: block;
+  width: 100%;
+  float: right;
+  display: block;
 }
 
-
 .npd {
-    padding: 0 !important;
+  padding: 0 !important;
 
-    &t {
-        padding-top: 0 !important;
-    }
+  &t {
+    padding-top: 0 !important;
+  }
 
-    &b {
-        padding-bottom: 0 !important;
-    }
+  &b {
+    padding-bottom: 0 !important;
+  }
 
-    &l {
-        padding-left: 0 !important;
-    }
+  &l {
+    padding-left: 0 !important;
+  }
 
-    &r {
-        padding-right: 0 !important;
-    }
+  &r {
+    padding-right: 0 !important;
+  }
 }
 
 .nmg {
-    margin: 0 !important;
+  margin: 0 !important;
 
-    &t {
-        margin-top: 0 !important;
-    }
+  &t {
+    margin-top: 0 !important;
+  }
 
-    &b {
-        margin-bottom: 0 !important;
-    }
+  &b {
+    margin-bottom: 0 !important;
+  }
 
-    &l {
-        margin-left: 0 !important;
-    }
+  &l {
+    margin-left: 0 !important;
+  }
 
-    &r {
-        margin-right: 0 !important;
-    }
+  &r {
+    margin-right: 0 !important;
+  }
 }
 
 @include mq(max-xs) {
-    .npd {
-        &t {
-            padding-top: 15px !important;
-        }
-
-        &b {
-            padding-bottom: 15px !important;
-        }
-
-        &l {
-            padding-left: 15px !important;
-        }
-
-        &r {
-            padding-right: 15px !important;
-        }
+  .npd {
+    &t {
+      padding-top: 15px !important;
     }
+
+    &b {
+      padding-bottom: 15px !important;
+    }
+
+    &l {
+      padding-left: 15px !important;
+    }
+
+    &r {
+      padding-right: 15px !important;
+    }
+  }
 }
 
 /*Scroll Top*/
 #scrollTop {
-    position: fixed;
-    right: 20px;
-    bottom: 100px;
-    background: $color-primary;
-    color: #fff;
-    width: 34px;
-    height: 34px;
+  position: fixed;
+  right: 20px;
+  bottom: 100px;
+  background: $color-primary;
+  color: #fff;
+  width: 34px;
+  height: 34px;
+  text-align: center;
+  line-height: 30px;
+  text-decoration: none;
+  opacity: 0.8;
+  display: none;
+  border-radius: 3px;
+  z-index: 998;
+
+  span {
+    display: block;
+    font-size: 2em;
     text-align: center;
-    line-height: 30px;
-    text-decoration: none;
-    opacity: 0.8;
-    display: none;
-    border-radius: 3px;
-    z-index: 998;
+  }
 
-    span {
-        display: block;
-        font-size: 2em;
-        text-align: center;
-    }
-
-    &:hover {
-        opacity: 1;
-    }
+  &:hover {
+    opacity: 1;
+  }
 }

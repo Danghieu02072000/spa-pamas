@@ -1,55 +1,54 @@
 ﻿@import "../helpers/variables_import";
 
-$pre: 'bt';
+$pre: "bt";
 
 .#{$pre} {
-    color: $color-white;
-    font-weight: $bt-weight;
-    display: inline-block;
-    font-size: $bt-size;
-    text-align: center;
-    position: relative;
-    transition:$bt-transition;
-    border-radius: $bt-radius;
-    border-style: $bt-border-style;
-    border-width: $bt-border-width;
-    padding: $bt-padding;
+  color: $color-white;
+  font-weight: $bt-weight;
+  display: inline-block;
+  font-size: $bt-size;
+  text-align: center;
+  position: relative;
+  transition: $bt-transition;
+  border-radius: $bt-radius;
+  border-style: $bt-border-style;
+  border-width: $bt-border-width;
+  padding: $bt-padding;
+  &:hover {
+    cursor: pointer;
+  }
+  &__block {
+    width: 100%;
+  }
+  &__left {
+    float: left;
+  }
+  &__right {
+    float: right;
+  }
+  &--primary {
+    background-color: $bt-background-primary;
+    border-color: $bt-background-primary;
     &:hover {
-        cursor: pointer;
+      background-color: $bt-background-hover-primary;
+      border-color: $bt-background-hover-primary;
     }
-    &__block {
-        width: 100%;
+  }
+  &--secondary {
+    background-color: $bt-background-secondary;
+    border-color: $bt-background-secondary;
+    &:hover {
+      background-color: $bt-background-hover-secondary;
+      border-color: $bt-background-hover-secondary;
     }
-    &__left {
-        float: left;
+  }
+  &--default {
+    background-color: $bt-background-default;
+    border-color: $bt-background-default;
+    color: $text-color-primary;
+    &:hover {
+      background-color: $bt-background-hover-default;
+      border-color: $bt-background-hover-default;
     }
-    &__right {
-        float: right;
-    }
-    &--primary {
-        background-color:$bt-background-primary;
-        border-color:$bt-background-primary;
-        &:hover {
-            background-color:$bt-background-hover-primary;
-            border-color:$bt-background-hover-primary;
-        }
-    }
-    &--secondary {
-        background-color:$bt-background-secondary;
-        border-color:$bt-background-secondary;
-        &:hover {
-            background-color:$bt-background-hover-secondary;
-            border-color:$bt-background-hover-secondary;
-        }
-    }
-    &--default {
-        background-color:$bt-background-default;
-        border-color:$bt-background-default;
-        color: $text-color-primary;
-        &:hover {
-            background-color:$bt-background-hover-default;
-            border-color:$bt-background-hover-default;
-        }
-    }
+  }
 }
-

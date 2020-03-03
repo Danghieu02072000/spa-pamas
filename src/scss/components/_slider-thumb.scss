@@ -1,188 +1,191 @@
 ﻿@import "../helpers/_mixins.scss";
 @import "../helpers/_variables.scss";
 
-
 .owlThub {
-    padding-bottom: 20px;
-    float:left;
-    width:100%;
+  padding-bottom: 20px;
+  float: left;
+  width: 100%;
 }
 
 .owlThubMain {
-    float: left;
+  float: left;
+  width: 100%;
+
+  img {
     width: 100%;
+  }
 
-    img {
-        width: 100%;
+  &:hover .owl-prev,
+  &:hover .owl-next,
+  &:hover .callFullScreen {
+    opacity: 1;
+    z-index: 9;
+  }
+
+  .owl-item img {
+    max-width: 100%;
+  }
+
+  .owl-prev,
+  .owl-next {
+    position: absolute;
+    margin: 0;
+    border-radius: 5px;
+    background: rgba(0, 0, 0, 0.3);
+    width: 48px;
+    height: 52px;
+    padding: 2px 0 0;
+    line-height: 48px;
+    text-align: center;
+    font-size: 38px;
+    color: #fff;
+    transition: all 0.5s ease;
+    opacity: 0;
+
+    &:hover {
+      background: rgba(0, 0, 0, 0.6);
     }
+  }
 
-    &:hover .owl-prev, &:hover .owl-next ,&:hover .callFullScreen {
+  .owl-prev {
+    left: 10px;
+  }
+
+  .owl-next {
+    right: 10px;
+  }
+
+  .item-owlFull img {
+    width: 100%;
+  }
+
+  .owl-controls {
+    margin-top: 0;
+
+    .owl-page {
+      margin-top: 0;
+
+      &.active,
+      &:hover {
+        span {
+          background: $owl-primary;
+        }
+      }
+
+      span {
+        margin: 0 8px 0 0;
+        background: #fff;
         opacity: 1;
-        z-index: 9;
+        width: 14px;
+        height: 14px;
+        border-radius: 7px;
+        border: 1px solid $owl-primary;
+      }
     }
+  }
 
-    .owl-item img {
-        max-width: 100%;
+  .owl-pagination {
+    text-align: center;
+    bottom: 10px;
+    position: absolute;
+    width: 100%;
+  }
+
+  .owl-caption {
+    padding: 15px 15px;
+    text-align: left;
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    left: 0;
+    background: rgba(0, 0, 0, 0.6);
+    color: #fff;
+  }
+
+  .callFullScreen {
+    width: 40px;
+    height: 40px;
+    position: absolute;
+    right: 0;
+    top: 0;
+    display: block;
+    background: url(../img/icons/ico-fullscreen.png) no-repeat center center rgba(0, 0, 0, 0.4);
+    opacity: 1;
+    z-index: 9;
+
+    &:hover {
+      background-color: rgba(0, 0, 0, 0.6);
     }
-
-    .owl-prev, .owl-next {
-        position: absolute;
-        margin: 0;
-        border-radius: 5px;
-        background: rgba(0, 0, 0, 0.3);
-        width: 48px;
-        height: 52px;
-        padding: 2px 0 0;
-        line-height: 48px;
-        text-align: center;
-        font-size: 38px;
-        color: #fff;
-        transition: all .5s ease;
-        opacity: 0;
-
-        &:hover {
-            background: rgba(0,0,0,0.6);
-        }
-    }
-
-    .owl-prev {
-        left: 10px;
-    }
-
-    .owl-next {
-        right: 10px;
-    }
-
-    .item-owlFull img {
-        width: 100%;
-    }
-
-    .owl-controls {
-        margin-top: 0;
-
-        .owl-page {
-            margin-top: 0;
-
-            &.active, &:hover {
-                span {
-                    background: $owl-primary;
-                }
-            }
-
-            span {
-                margin: 0 8px 0 0;
-                background: #fff;
-                opacity: 1;
-                width: 14px;
-                height: 14px;
-               border-radius:7px;
-                border: 1px solid $owl-primary;
-            }
-        }
-    }
-
-    .owl-pagination {
-        text-align: center;
-        bottom: 10px;
-        position: absolute;
-        width: 100%;
-    }
-
-    .owl-caption {
-        padding: 15px 15px;
-        text-align: left;
-        position: absolute;
-        bottom: 0;
-        width: 100%;
-        left: 0;
-        background: rgba(0, 0, 0, 0.6);
-        color: #fff;
-    }
-
-    .callFullScreen {
-        width: 40px;
-        height: 40px;
-        position: absolute;
-        right: 0;
-        top: 0;
-        display: block;
-        background: url(../img/icons/ico-fullscreen.png) no-repeat center center rgba(0, 0, 0, 0.4);
-        opacity: 1;
-        z-index: 9;
-
-        &:hover {
-            background-color: rgba(0,0,0,0.6);
-        }
-    }
+  }
 }
 
 .boxOwlThumbnail {
-    position: relative;
-    width: 100%;
-    left: 0;
-    bottom: 0;
-    background: #f2f2f2;
-    padding: 5px;
-    float: left;
+  position: relative;
+  width: 100%;
+  left: 0;
+  bottom: 0;
+  background: #f2f2f2;
+  padding: 5px;
+  float: left;
 }
 
 .owlThumbnail {
-    width: calc(100% - 80px);
-    margin-left: 40px;
-    margin-right: 40px;
-    float:left;
-    padding:5px 0;
-    position:relative;
+  width: calc(100% - 80px);
+  margin-left: 40px;
+  margin-right: 40px;
+  float: left;
+  padding: 5px 0;
+  position: relative;
 
-    .owl-item {
-        padding: 0 2.5px;
+  .owl-item {
+    padding: 0 2.5px;
 
-        &.loading {
-            min-height: 32px;
-        }
-
-        &.current .item-thub {
-            opacity: 1;
-            border: 1px solid #222;
-        }
+    &.loading {
+      min-height: 32px;
     }
 
-    .item-thub {
-        opacity: 0.6;
-        cursor: pointer;
-        border: 1px solid #f2f2f2;
-        overflow: hidden;
+    &.current .item-thub {
+      opacity: 1;
+      border: 1px solid #222;
+    }
+  }
 
-        img {
-            max-width: 100%;
-        }
+  .item-thub {
+    opacity: 0.6;
+    cursor: pointer;
+    border: 1px solid #f2f2f2;
+    overflow: hidden;
+
+    img {
+      max-width: 100%;
+    }
+  }
+
+  .owl-nav {
+    .owl-prev,
+    .owl-next {
+      line-height: 40px;
+      position: absolute;
+      width: 30px;
+      height: 40px;
+      text-align: center;
+      font-size: 34px;
+      color: #222;
+      transition: all 0.5s ease;
+      border-radius: 2px;
+      background-color: transparent;
+      &:hover {
+        color: #fff;
+        background-color: transparent;
+        outline: none;
+      }
+    }
+    .owl-prev {
+      left: -40px;
     }
 
-    .owl-nav {
-        .owl-prev,.owl-next  {
-            line-height: 40px;
-            position: absolute;
-            width: 30px;
-            height: 40px;
-            text-align: center;
-            font-size: 34px;
-            color: #222;
-            transition: all .5s ease;
-            border-radius:2px;
-            background-color: transparent;
-            &:hover {
-                color:#fff;
-                background-color: transparent;
-                outline: none;
-            }
-        }
-        .owl-prev {
-            left: -40px;
-        }
-    
-        .owl-next {
-            right: -40px;
-        }
+    .owl-next {
+      right: -40px;
     }
-
+  }
 }

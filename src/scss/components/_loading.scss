@@ -2,55 +2,53 @@
 @import "../helpers/_mixins.scss";
 
 #loading-wrap {
-    position: fixed;
-    top: 0;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: $color-primary;
+  z-index: 9999999;
+
+  .icon-loading-wrap {
+    width: 60px;
+    height: 60px;
     left: 0;
-    width: 100%;
-    height: 100%;
-    background-color: $color-primary;
-    z-index: 9999999;
-
-    .icon-loading-wrap {
-        width: 60px;
-        height: 60px;
-        left: 0;
-        right: 0;
-        position: absolute;
-        margin: auto auto;
-        top: 0;
-        bottom: 0;
-        background-image: url(../img/icons/ico-loading.png);
-        background-position: center center !important;
-        background-repeat: no-repeat !important;
-        animation:spin 1.5s linear infinite;
-    }
+    right: 0;
+    position: absolute;
+    margin: auto auto;
+    top: 0;
+    bottom: 0;
+    background-image: url(../img/icons/ico-loading.png);
+    background-position: center center !important;
+    background-repeat: no-repeat !important;
+    animation: spin 1.5s linear infinite;
+  }
 }
-
 
 .queryloader__overlay {
-    z-index: 999999 !important;
-    background:transparent !important;
+  z-index: 999999 !important;
+  background: transparent !important;
 
-    .queryloader__overlay__percentage {
-        width: 60px !important;
-        height: 60px !important;
-        border-radius: 30px !important;
-        top: calc(50vh - 30px) !important;
-        left: calc(50% - 30px) !important;
-        color: transparent !important;
-        text-align: center !important;
-        line-height: 60px !important;
-        background:transparent !important;
-    }
+  .queryloader__overlay__percentage {
+    width: 60px !important;
+    height: 60px !important;
+    border-radius: 30px !important;
+    top: calc(50vh - 30px) !important;
+    left: calc(50% - 30px) !important;
+    color: transparent !important;
+    text-align: center !important;
+    line-height: 60px !important;
+    background: transparent !important;
+  }
 
-    .queryloader__overlay__bar {
-        display: none;
-    }
+  .queryloader__overlay__bar {
+    display: none;
+  }
 }
 
-
 @keyframes spin {
-    100% {
-        -webkit-transform: rotate(360deg);
-    }
+  100% {
+    -webkit-transform: rotate(360deg);
+  }
 }
