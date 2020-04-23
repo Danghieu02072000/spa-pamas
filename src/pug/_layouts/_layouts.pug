@@ -1,13 +1,14 @@
+block variables
 doctype html
 html
   head
-    title= title
+    title #{title}
     block head_start
       include ../_blocks/_meta
       include ../_blocks/_css_first
       include ../_blocks/_script_first
   body
-    include ../_components/_loadingPage
+    //- include ../_components/_loadingPage
     //- include ../_components/_mobileMenu
     #wrapper
       include _headerMmenu
@@ -21,4 +22,4 @@ html
     include ../_components/_scrollTopArrow
     block body_end
       include ../_blocks/_script_end
-      include ../_components/_loadingEndPage
+      //- include ../_components/_loadingEndPage

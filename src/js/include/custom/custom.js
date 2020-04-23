@@ -1,4 +1,5 @@
-﻿// ---------- Detect Device
+﻿/* global $ */
+// ---------- Detect Device
 var isTouchDevice = 'ontouchstart' in window || 'onmsgesturechange' in window
 var isDesktop = $(window).width() !== 0 && !isTouchDevice
 var isiPad = navigator.userAgent.indexOf('iPad') !== -1
@@ -63,7 +64,6 @@ $(document).ready(function () {
   if (!isTouchDevice) {
   }
   if (isDesktop) {
-    console.log(3)
   }
   if (isiPhone) {
   }
@@ -114,18 +114,14 @@ if (Xwidth < 800) {
   searchMobie()
 }
 
-// Load components
-function component () {
-
-}
-
+/* eslint-disable */
 function afterLoad () {
   $('#loading-wrap').fadeOut(500)
 }
+/* eslint-enable */
 
 function ResizeWindows () {
-  let Yheight = $(window).height()
-  let Xwidth = $(window).width()
+  const Xwidth = $(window).width()
 
   if (Xwidth < 800) {
     $(document).ready(function () {})
@@ -160,11 +156,6 @@ $(window).resize(function () {
 })
 ResizeWindows()
 
-function Done () {
-  ResizeWindows(),
-  component()
-}
-
 $(document).ready(function () {
-  Done()
+  ResizeWindows()
 })
