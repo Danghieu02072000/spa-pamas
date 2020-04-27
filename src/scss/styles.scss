@@ -1,6 +1,19 @@
 /*---Base---*/
 @import "base/_typography.scss";
 
+/*---Layout---*/
+@import "layouts/_layout.scss";
+@import "layouts/_header.scss";
+@import "layouts/_sidebar.scss";
+@import "layouts/_footer.scss";
+
+/*---Sidebar---*/
+@import "components/sidebar-menu";
+@import "components/sidebar-lang";
+@import "components/sidebar-toggle";
+@import "components/sidebar-search";
+@import "components/sidebar-logo";
+
 /*---Components---*/
 @import "components/_button.scss";
 @import "components/_checkbox_radio.scss";
@@ -12,13 +25,6 @@
 @import "components/pagination";
 @import "components/slider-thumb";
 @import "components/_popup-wrap.scss";
-
-/*---Layout---*/
-@import "layouts/_layout.scss";
-@import "layouts/_sidebar-mobie.scss";
-@import "layouts/_header.scss";
-@import "layouts/_sidebar.scss";
-@import "layouts/_footer.scss";
 
 /*---Modules---*/
 // @import "modules/_cart.scss";
