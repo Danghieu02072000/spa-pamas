@@ -8,18 +8,16 @@ html
       include ../_blocks/_css_first
       include ../_blocks/_script_first
   body
-    //- include ../_components/_loadingPage
-    //- include ../_components/_mobileMenu
+    include ../_components/_menu_mobile
     #wrapper
-      include _headerMmenu
-      //- include _headerSidebar
-      .wrapper-main
+      //- include _header_mmenu
+      include _sidebar
+      #main
         block header
           include _header
         block content
         block footer
           include _footer
-    include ../_components/_scrollTopArrow
+    include ../_components/_scrolltop_arrow
     block body_end
       include ../_blocks/_script_end
-      //- include ../_components/_loadingEndPage
