@@ -1,0 +1,20 @@
+.sidebar-search {
+
+}
+
+.sidebar-search__inner {
+  padding: 10px 16px;
+  display: flex;
+  align-items: center;
+}
+
+.sidebar-search__main {
+  display: none;
+}
+
+.sidebar-search__button {
+  .icon {
+    font-size: 26px;
+    line-height: 1em;
+  }
+}

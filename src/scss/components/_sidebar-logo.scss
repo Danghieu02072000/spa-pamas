@@ -1,0 +1,15 @@
+.sidebar-logo {
+  display: flex;
+  justify-content: center;
+  flex: 1 1 auto;
+  align-items: center;
+}
+
+.sidebar-logo__inner {
+  display: block;
+  padding: 5px 10px;
+}
+
+.sidebar-logo__image {
+  max-height: 40px;
+}

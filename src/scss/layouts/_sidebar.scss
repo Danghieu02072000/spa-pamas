@@ -1,226 +1,29 @@
 ﻿@import "../helpers/_variables.scss";
 @import "../helpers/_mixins.scss";
 
-/*Open Header mobie*/
+.sidebar {
 
-#header-sidebar {
-  width: 100%;
+}
+
+.sidebar__wrap {
+  height: 50px;
   position: relative;
-  height: 40px;
-  background: #fff;
-  box-shadow: 2px 0px 6px #ccc;
-  z-index: 1000;
-  display: none;
+  border-bottom: 1px solid $border-color-primary;
+  display: flex;
+  background-color: white;
 }
 
-.left-h-sidebar {
-  width: 50px;
-  height: 40px;
-  float: left;
-  position: relative;
-  text-align: center;
-
-  a {
-    width: 100%;
-    height: 100%;
-    border: 0;
-    background: none;
-    cursor: pointer;
-    display: block;
-    text-align: center;
-    line-height: 40px;
-
-    span {
-      font-size: 32px;
-      color: #727272;
-    }
-
-    &:focus {
-      outline: none;
-    }
-  }
+.sidebar__toggle {
+  display: flex;
+  align-items: center;
+  padding: 10px 16px;
 }
 
-.right-h-sidebar {
-  width: calc(100% - 50px);
-  float: left;
-  padding-right: 88px;
-
-  .logo-mobie {
-    line-height: 32px;
-    display: block;
-    text-align: center;
-    height: 40px;
-    padding: 3px 5px;
-
-    a {
-      display: block;
-      height: 100%;
-
-      img {
-        max-width: 100%;
-        vertical-align: middle;
-        max-height: 100%;
-        display: inline-block;
-      }
-    }
-  }
+.sidebar__inner {
+  display: flex;
+  flex: 1 1 auto;
 }
 
-.cogLangguage {
-  width: 40px;
-  height: 40px;
-  position: absolute;
-  right: 48px;
-  top: 0;
+.sidebar__overlay {
 
-  > a {
-    line-height: 40px;
-    text-align: center;
-    display: block;
-
-    i {
-      font-size: 25px;
-      color: #4a4a4a;
-    }
-  }
-
-  .head-lang {
-    background-color: #f1f0f0;
-    position: absolute;
-    right: -35px;
-    top: 60px;
-    visibility: hidden;
-    width: 150px;
-    opacity: 0;
-    transition: 0.5s ease-in-out;
-
-    a {
-      border-bottom: 1px solid $border-color-primary;
-      line-height: 20px;
-      position: relative;
-      padding: 5px 7px;
-      background-color: #fff;
-      display: block;
-
-      span {
-        margin-left: 8px;
-        color: $text-color-primary;
-      }
-
-      &:last-child {
-        border-bottom: 0;
-      }
-    }
-
-    &.open {
-      visibility: visible;
-      opacity: 1;
-      transform: translateY(-20px);
-    }
-  }
-
-  &.active {
-    > a {
-      i {
-        color: $color-primary;
-      }
-    }
-  }
-}
-
-.button-call-search {
-  text-align: center;
-  line-height: 40px;
-  color: #4a4a4a;
-  font-size: 25px;
-  position: absolute;
-  right: 8px;
-  top: 0;
-  width: 40px;
-  height: 40px;
-
-  &.active {
-    span {
-      color: $color-primary;
-    }
-  }
-}
-
-.boxMobieSearch {
-  width: calc(100% - 30px);
-  height: 46px;
-  position: absolute;
-  background-color: #fff;
-  visibility: hidden;
-  left: 15px;
-  opacity: 0;
-  top: 40px;
-  z-index: 10;
-  padding: 5px;
-  display: none;
-  transition: all 0.2s linear;
-
-  &.open {
-    display: block;
-    visibility: visible;
-    opacity: 1;
-  }
-}
-
-.frMobie-search {
-  height: 100%;
-  width: 100%;
-  position: relative;
-  transition: 0.2s ease;
-  z-index: 99;
-
-  .ipt-search {
-    width: calc(100% - 60px);
-    border: none;
-    text-indent: 10px;
-    float: left;
-    background: none;
-    font-size: 16px;
-    height: 37px;
-    border-radius: 0;
-
-    &:focus {
-      outline: none;
-    }
-  }
-
-  .bt-search-mb {
-    width: 60px;
-    float: left;
-    height: 36px;
-    background: $color-primary;
-    border: none;
-    margin-top: 0;
-    color: #fff;
-    font-size: 15px;
-    text-transform: uppercase;
-
-    span {
-      font-size: 24px;
-    }
-  }
-}
-
-#overlay {
-  position: fixed;
-  width: 100%;
-  display: none;
-  background-color: rgba(0, 0, 0, 0.7);
-  height: 100%;
-  z-index: 999;
-}
-
-@include mq(max-sm) {
-  #wrapper-main {
-    padding-top: 40px;
-  }
-  #header-sidebar {
-    display: block;
-  }
 }

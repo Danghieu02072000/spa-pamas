@@ -2,13 +2,14 @@
 @import "../helpers/_mixins.scss";
 
 html {
-  background-color: $background-primary;
+
 }
 
 body {
   font-family: $font-face-primary;
   font-size: $font-size-primary;
   color: $text-color-primary;
+  background-color: $background-primary;
 }
 
 #wrapper {

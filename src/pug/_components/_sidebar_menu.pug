@@ -1,32 +1,45 @@
-.sidebar-menu(role='navigation')
-  ul.sidebar-menu__inner
-    li.sidebar-menu__item
-      a.sidebar-menu-link(href='#', title='') Trang chủ
-    li.sidebar-menu__item
-      a.sidebar-menu-link(href='#', title='') Giới thiệu
-    li.sidebar-menu__item.sidebar-menu__item--sub
-      a.sidebar-menu__toggle
-      a.sidebar-menu-link(href='#', title='') Sản phẩm
-      ul.sidebar-menu__dropdown
-        li.sidebar-menu__item
-          a.sidebar-menu-link(href='#', title='') Sản phẩm cấp 2
-        li.sidebar-menu__item
-          a.sidebar-menu-link(href='#', title='') Sản phẩm cấp 3
-        li.sidebar-menu__item
-          a.sidebar-menu-link(href='#', title='') Sản phẩm cấp 4
-    li.sidebar-menu__item.sidebar-menu__item--sub
-      a.sidebar-menu__toggle
-      a.sidebar-menu-link(href='#', title='') Dịch vụ
-      ul.sidebar-menu__dropdown
-        li.sidebar-menu__item
-          a.sidebar-menu-link(href='#', title='') Thiết kế webste
-        li.sidebar-menu__item
-          a.sidebar-menu-link(href='#', title='') Tư vấn phần mềm
-        li.sidebar-menu__item
-          a.sidebar-menu-link(href='#', title='') Seo Website
-    li.sidebar-menu__item
-      a.sidebar-menu-link(href='#', title='') Tin tức
-    li.sidebar-menu__item
-      a.sidebar-menu-link(href='#', title='') Hỏi Đáp
-    li.sidebar-menu__item
-      a.sidebar-menu-link(href='#', title='') Liên hệ
+.slideout(role='navigation')
+  .slideout__container
+    .slideout__inner
+      .menu
+        .menu__inner
+          .menu__item
+            .menu__title
+              a.menu-link(href='#', title='') Trang chủ
+          .menu__item
+            .menu__title
+              a.menu-link(href='#', title='') Giới thiệu
+          .menu__item.menu__item--sub
+            .menu__title
+              a.menu-link(href='#', title='') Sản phẩm
+              a.menu__toggle
+                i.icon.ion-ios-arrow-right
+            .menu__dropdown
+              .menu__item
+                a.menu-link(href='#', title='') Sản phẩm cấp 2
+              .menu__item
+                a.menu-link(href='#', title='') Sản phẩm cấp 3
+              .menu__item
+                a.menu-link(href='#', title='') Sản phẩm cấp 4
+          .menu__item.menu__item--sub
+            .menu__title
+              a.menu-link(href='#', title='') Dịch vụ
+              a.menu__toggle
+                i.icon.ion-ios-arrow-right
+            .menu__dropdown
+              .menu__item
+                a.menu-link(href='#', title='') Thiết kế webste
+              .menu__item
+                a.menu-link(href='#', title='') Tư vấn phần mềm
+              .menu__item
+                a.menu-link(href='#', title='') Seo Website
+          .menu__item
+            .menu__title
+              a.menu-link(href='#', title='') Tin tức
+          .menu__item
+            .menu__title
+              a.menu-link(href='#', title='') Hỏi Đáp
+          .menu__item
+            .menu__title
+              a.menu-link(href='#', title='') Liên hệ
+  .slideout__overlay
