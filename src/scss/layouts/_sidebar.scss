@@ -1,16 +1,16 @@
 ﻿@import "../helpers/_variables.scss";
 @import "../helpers/_mixins.scss";
 
-.sidebar {
-
-}
-
 .sidebar__wrap {
   height: 50px;
-  position: relative;
+  position: fixed;
   border-bottom: 1px solid $border-color-primary;
   display: flex;
   background-color: white;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 102;
 }
 
 .sidebar__toggle {
@@ -25,5 +25,18 @@
 }
 
 .sidebar__overlay {
+  @include transition;
+  position: fixed;
+  top: 50px;
+  width: 100%;
+  height: calc(100vh - 50px);
+  background-color: rgba(0, 0, 0, 0.6);
+  z-index: 99;
+  opacity: 0;
+  visibility: hidden;
 
+  .is-search-active & {
+    opacity: 1;
+    visibility: visible;
+  }
 }

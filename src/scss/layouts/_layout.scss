@@ -12,40 +12,19 @@ body {
   background-color: $background-primary;
 }
 
-#wrapper {
-  float: left;
-  width: 100%;
-  transition: margin 300ms ease;
-
-  &.open-sidebar {
-    margin-left: 270px;
-  }
+.wrapper {
+  padding-top: 50px;
 }
 
-.wrapper-main {
+.main {
   display: flex;
   flex-direction: column;
 }
 
-.wrapper-content {
-  float: left;
-  width: 100%;
-}
-
-.fl {
-  float: left;
-}
-
-.fr {
-  float: right;
-}
-
 a {
-  transition: 0.2s all ease-in;
+  @include transition;
 
   &:hover {
-    transition: 0.2s all ease-out;
-    text-decoration: none;
     outline: none;
   }
 

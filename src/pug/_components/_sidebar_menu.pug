@@ -1,7 +1,7 @@
 .slideout(role='navigation')
   .slideout__container
     .slideout__inner
-      .menu
+      .menu.js-menu-mobile
         .menu__inner
           .menu__item
             .menu__title
@@ -42,4 +42,13 @@
           .menu__item
             .menu__title
               a.menu-link(href='#', title='') Liên hệ
-  .slideout__overlay
+          .menu__item
+            .menu__title
+              a.menu-link(href='#', title='') Tin tức
+          .menu__item
+            .menu__title
+              a.menu-link(href='#', title='') Hỏi Đáp
+          .menu__item
+            .menu__title
+              a.menu-link(href='#', title='') Liên hệ
+  .slideout__overlay.js-slideout-overlay

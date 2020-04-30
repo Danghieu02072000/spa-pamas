@@ -1,9 +1,9 @@
 .sidebar-search
   .sidebar-search__inner
-    .sidebar-search__button
+    .sidebar-search__button.js-search-trigger
       span.icon.ion-ios-search-strong
     .sidebar-search__main
       form.sidebar-search__form
-        input#iptSearchMobie.ipt-search(type='search', placeholder='Từ khóa...')
-        button.bt-search-mb(type='button')
+        input#iptSearchMobie.sidebar-search__input(type='search', placeholder='Từ khóa...')
+        button.sidebar-search__submit(type='button')
           span.icon.ion-ios-search-strong

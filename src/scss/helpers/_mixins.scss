@@ -102,3 +102,7 @@
     }
   }
 }
+
+@mixin transition($target: all, $time: 0.3s, $ease: ease) {
+  transition: $target $time $ease;
+}

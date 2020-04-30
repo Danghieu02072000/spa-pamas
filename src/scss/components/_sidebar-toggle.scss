@@ -16,6 +16,7 @@ $translateX: 0;
   display: inline-block;
 
   .line {
+    @include transition;
     display: block;
     background: $color;
     width: $width-line;
@@ -23,9 +24,6 @@ $translateX: 0;
     position: absolute;
     left: 0;
     border-radius: ($height-line / 2);
-    transition: all $transition-time;
-    -webkit-transition: all $transition-time;
-    -moz-transition: all $transition-time;
 
     &.line-1 {
       top: 0;
@@ -38,7 +36,7 @@ $translateX: 0;
     }
   }
 
-  &.active {
+  .is-slideout-active & {
     .line-1 {
       transform: translateY($translateY) translateX($translateX) rotate($rotation);
       -webkit-transform: translateY($translateY) translateX($translateX) rotate($rotation);

@@ -5,6 +5,8 @@ var isDesktop = $(window).width() !== 0 && !isTouchDevice
 var isiPad = navigator.userAgent.indexOf('iPad') !== -1
 var isiPhone = navigator.userAgent.indexOf('iPhone') !== -1
 
+const wrapper = $('#wrapper')
+
 function mMenu () {
   const $menu = $('#mainMenu').clone()
   $menu.attr('id', 'my-mobile-menu')
@@ -12,48 +14,39 @@ function mMenu () {
 }
 
 $(document).ready(function () {
-  const overlay = $('.sidebar-overlay')
+  const slideoutOverlay = $('.js-slideout-overlay')
+  const sidebarOverlay = $('.js-sidebar__overlay')
   const sidebar = $('#sidebar')
-  const wrapper = $('#wrapper')
   const iconSidebar = $('#sidebar-icon')
 
-  $('#sidebar-toggle').on('click', function () {
-    iconSidebar.toggleClass('active')
-    sidebar.toggleClass('open')
-    wrapper.toggleClass('open-sidebar')
-    overlay.toggleClass('active')
+  $('.js-slideout-toggle').on('click', function () {
+    wrapper.toggleClass('is-slideout-active')
   })
-  overlay.on('click', function () {
-    $(this).removeClass('active')
+  slideoutOverlay.on('click', function () {
     sidebar.removeClass('open')
-    wrapper.removeClass('open-sidebar')
+    wrapper.removeClass('is-slideout-active')
     iconSidebar.removeClass('active')
   })
 
-  if ($('.nav-mobie').length) {
-    $('.nav-mobie li.has-sub>.a-open-down').on('click', function () {
-      $(this).removeAttr('href')
-      var element = $(this).parent('li')
-      if (element.hasClass('open')) {
-        element.removeClass('open')
-        element.find('li').removeClass('open')
-        element.find('ul').slideUp()
+  sidebarOverlay.on('click', function () {
+    wrapper.removeClass('is-search-active')
+  })
+
+  if ($('.js-menu-mobile').length > 0) {
+    const MENU_ITEM_SELECTOR = '.menu__item'
+    const MENU_DROPDOWN_SELECTOR = '.menu__dropdown'
+    const MENU_SUB_OPEN_CLASS = 'menu__item--open'
+
+    $('.js-menu-mobile .menu__item--sub .menu__toggle').on('click', function () {
+      var element = $(this).closest(MENU_ITEM_SELECTOR)
+      if (element.hasClass(MENU_SUB_OPEN_CLASS)) {
+        element.removeClass(MENU_SUB_OPEN_CLASS)
+        element.find(MENU_ITEM_SELECTOR).removeClass(MENU_SUB_OPEN_CLASS)
       } else {
-        element.addClass('open')
-        element.children('ul').slideDown()
-        element
-          .siblings('li')
-          .children('ul')
-          .slideUp()
-        element.siblings('li').removeClass('open')
-        element
-          .siblings('li')
-          .find('li')
-          .removeClass('open')
-        element
-          .siblings('li')
-          .find('ul')
-          .slideUp()
+        element.addClass(MENU_SUB_OPEN_CLASS)
+        element.siblings(MENU_ITEM_SELECTOR).children(MENU_DROPDOWN_SELECTOR)
+        element.siblings(MENU_ITEM_SELECTOR).removeClass(MENU_SUB_OPEN_CLASS)
+        element.siblings(MENU_ITEM_SELECTOR).find(MENU_ITEM_SELECTOR).removeClass(MENU_SUB_OPEN_CLASS)
       }
     })
   }
@@ -76,31 +69,10 @@ $('img.lazyImg').lazyload({
 })
 
 function searchMobie () {
-  const overlayPage = $('#overlay')
   $(document).ready(function () {
-    $('.button-call-search').on('click', function () {
-      $(this).addClass('active')
-      $('.boxMobieSearch').addClass('open')
-      overlayPage.fadeIn()
-      $('#iptSearchMobie').blur(function () {
-        $('#iptSearchMobie').focus()
-      })
-    })
-    $('.cogLangguage').on('click', function () {
-      $('.cogLangguage')
-        .addClass('active')
-        .find('.head-lang')
-        .addClass('open')
-      overlayPage.fadeIn()
-    })
-    overlayPage.on('click', function () {
-      $('.button-call-search').removeClass('active')
-      $('.boxMobieSearch').removeClass('open')
-      $('.cogLangguage')
-        .removeClass('active')
-        .find('.head-lang')
-        .removeClass('open')
-      overlayPage.fadeOut()
+    $('.js-search-trigger').on('click', function () {
+      wrapper.addClass('is-search-active')
+      $('#iptSearchMobie').focus()
     })
   })
 }
