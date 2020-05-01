@@ -1,6 +1,12 @@
 ﻿@import "../helpers/_variables.scss";
 @import "../helpers/_mixins.scss";
 
+.sidebar {
+  @include mq(m) {
+    display: none;
+  }
+}
+
 .sidebar__wrap {
   height: 50px;
   position: fixed;

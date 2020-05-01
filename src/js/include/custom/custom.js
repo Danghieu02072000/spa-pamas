@@ -1,3 +1,3 @@
 ﻿export default () => {
-  console.log(2)
+  console.log('customs')
 }

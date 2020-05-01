@@ -1,0 +1,10 @@
+.carousel {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.carousel__item {
+  width: 100%;
+}
