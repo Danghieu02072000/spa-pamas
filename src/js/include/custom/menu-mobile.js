@@ -1,21 +1,44 @@
-/* global $ */
-export default () => {
-  if ($('.js-menu-mobile').length > 0) {
-    const MENU_ITEM_SELECTOR = '.menu__item'
-    const MENU_DROPDOWN_SELECTOR = '.menu__dropdown'
-    const MENU_SUB_OPEN_CLASS = 'menu__item--open'
+import { select, selectAll, on, addClass, hasClass, removeClass, closest } from '../lib/dom'
 
-    $('.js-menu-mobile .menu__item--sub .menu__toggle').on('click', function () {
-      var element = $(this).closest(MENU_ITEM_SELECTOR)
-      if (element.hasClass(MENU_SUB_OPEN_CLASS)) {
-        element.removeClass(MENU_SUB_OPEN_CLASS)
-        element.find(MENU_ITEM_SELECTOR).removeClass(MENU_SUB_OPEN_CLASS)
-      } else {
-        element.addClass(MENU_SUB_OPEN_CLASS)
-        element.siblings(MENU_ITEM_SELECTOR).children(MENU_DROPDOWN_SELECTOR)
-        element.siblings(MENU_ITEM_SELECTOR).removeClass(MENU_SUB_OPEN_CLASS)
-        element.siblings(MENU_ITEM_SELECTOR).find(MENU_ITEM_SELECTOR).removeClass(MENU_SUB_OPEN_CLASS)
-      }
-    })
+const BODY = document.body
+const MENU_SELECTOR = '.js-menu-mobile'
+const MENU_ITEM_SELECTOR = '.menu__item'
+const MENU_DROPDOWN_SELECTOR = '.menu__dropdown'
+const MENU_SUB_OPEN_CLASS = 'menu__item--open'
+const MENU_CLASS_ACTIVE_CLASS = 'is-menu-expanded'
+const MENU_SUB_TOGGLE_SELECTOR = '.menu__toggle'
+
+export default () => {
+  const menuEl = select(MENU_SELECTOR)
+  const colspanAll = (els) => {
+    if (els.length > 0) {
+      els.forEach((item) => {
+        const parentSubEl = closest(MENU_ITEM_SELECTOR, item)
+        if (hasClass(MENU_SUB_OPEN_CLASS, parentSubEl)) {
+          removeClass(MENU_SUB_OPEN_CLASS, parentSubEl)
+        }
+      })
+    }
+  }
+  if (menuEl) {
+    const menuSubEls = selectAll(MENU_DROPDOWN_SELECTOR, menuEl)
+    if (menuSubEls.length > 0) {
+      menuSubEls.map((item) => {
+        const parentSubEl = closest(MENU_ITEM_SELECTOR, item)
+        const toggleEl = select(MENU_SUB_TOGGLE_SELECTOR, parentSubEl)
+        if (toggleEl) {
+          on('click', () => {
+            if (!hasClass(MENU_SUB_OPEN_CLASS, parentSubEl)) {
+              colspanAll(menuSubEls)
+              addClass(MENU_SUB_OPEN_CLASS, parentSubEl)
+              addClass(MENU_CLASS_ACTIVE_CLASS, BODY)
+            } else {
+              removeClass(MENU_SUB_OPEN_CLASS, parentSubEl)
+              removeClass(MENU_CLASS_ACTIVE_CLASS, BODY)
+            }
+          }, toggleEl)
+        }
+      })
+    }
   }
 }
