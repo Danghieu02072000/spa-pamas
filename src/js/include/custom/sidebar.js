@@ -1,8 +1,7 @@
 /* global $ */
 import { disableBodyScroll, clearAllBodyScrollLocks } from '../lib/bodyScrollLock'
-import { ready } from '../lib/dom'
 
-const sidebar = () => {
+export default () => {
   const slideoutOverlay = $('.js-slideout-overlay')
   const sidebarOverlay = $('.js-sidebar__overlay')
   const sidebar = $('#sidebar')
@@ -29,5 +28,3 @@ const sidebar = () => {
     $('#iptSearchMobie').focus()
   })
 }
-
-ready(sidebar())

@@ -1,7 +1,5 @@
 /* global $ */
-import { ready } from '../lib/dom'
-
-const menuMobile = () => {
+export default () => {
   if ($('.js-menu-mobile').length > 0) {
     const MENU_ITEM_SELECTOR = '.menu__item'
     const MENU_DROPDOWN_SELECTOR = '.menu__dropdown'
@@ -21,5 +19,3 @@ const menuMobile = () => {
     })
   }
 }
-
-ready(menuMobile())

@@ -1,7 +1,3 @@
-﻿import { ready } from '../lib/dom'
-
-const menuMobile = () => {
+﻿export default () => {
   console.log(2)
 }
-
-ready(menuMobile())
