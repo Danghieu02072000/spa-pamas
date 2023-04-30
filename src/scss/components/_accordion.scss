@@ -1,0 +1,59 @@
+.accordion__item {
+  margin-top: 16px;
+
+  &:first-child {
+    margin-top: 0;
+  }
+}
+
+.accordion__title {
+  position: relative;
+  font-size: 15px;
+  line-height: 24px;
+  padding: 11px 20px 9px;
+  color: $c-black-2;
+  border: solid 1px $c-gray-1;
+  cursor: pointer;
+  transition: .3s ease;
+
+  &:before,
+  &:after {
+    content: "";
+    position: absolute;
+    right: 20px;
+    top: 50%;
+    transform: translateY(-50%);
+    background: #666;
+  }
+
+  &:before {
+    width: 15px;
+    height: 2px;
+  }
+
+  &:after {
+    height: 15px;
+    width: 2px;
+    right: 26px;
+  }
+}
+
+.accordion__content {
+  display: none;
+  padding: 21px 25px 4px 16px;
+  color: $c-black-2;
+  line-height: 21px;
+  font-size: 15px;
+  font-weight: 500;
+
+  & p {
+    font: inherit;
+    color: inherit;
+    margin: 0;
+  }
+}
+
+.accordion__content--open {
+  display: block;
+  background: red !important;
+}

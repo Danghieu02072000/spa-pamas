@@ -1,5 +1,10 @@
-mixin image(src, className)
- .fafe(class=className)
-   h2 Invoice
-     ul
-       li number
+mixin image-lazy(src, className, type="", title="")
+  if type=="contain"
+    figure.image-lazy(class=className, class='image-lazy--contain')
+      img(src=src, title=title, alt=title).image-lazy__img
+  else if type=='cover'
+    figure.image-lazy(class=className, class='image-lazy--cover')
+      img(src=src, title=title, alt=title).image-lazy__img
+  else
+    figure.image-lazy(class=className, class='image-lazy--normal')
+        img(src=src, title=title, alt=title).image-lazy__img

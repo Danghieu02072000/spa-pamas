@@ -1,57 +1,43 @@
 ﻿@import "../helpers/_variables.scss";
 @import "../helpers/_mixins.scss";
 
-html {
-  background-color: $background-primary;
-}
-
 body {
   font-family: $font-face-primary;
   font-size: $font-size-primary;
   color: $text-color-primary;
+  background-color: $background-primary;
 }
 
-#wrapper {
-  float: left;
-  width: 100%;
-  transition: margin 300ms ease;
+.wrapper {
+  padding-top: 50px;
 
-  &.open-sidebar {
-    margin-left: 270px;
+  @include mq(m) {
+    padding-top: 0;
   }
 }
 
-.wrapper-main {
+.main {
   display: flex;
   flex-direction: column;
 }
 
-.wrapper-content {
-  float: left;
-  width: 100%;
-}
-
-.fl {
-  float: left;
-}
-
-.fr {
-  float: right;
-}
-
 a {
-  transition: 0.2s all ease-in;
+  @include transition;
 
   &:hover {
-    transition: 0.2s all ease-out;
-    text-decoration: none;
     outline: none;
+    text-decoration: none;
+    color: $color-primary;
   }
 
   &:focus {
     text-decoration: none;
     outline: none;
   }
+}
+
+button {
+  @include transition;
 }
 
 ul {
@@ -71,88 +57,8 @@ h3,
 h4,
 h5,
 h6 {
-  color: $text-color-primary;
   margin: 0;
   padding: 0;
-  display: block;
-  width: 100%;
-  float: left;
-}
-
-i.fa {
-  padding-right: 5px;
-}
-
-.divBlockL {
-  width: 100%;
-  float: left;
-  display: block;
-}
-
-.divBlockR {
-  width: 100%;
-  float: right;
-  display: block;
-}
-
-.npd {
-  padding: 0 !important;
-
-  &t {
-    padding-top: 0 !important;
-  }
-
-  &b {
-    padding-bottom: 0 !important;
-  }
-
-  &l {
-    padding-left: 0 !important;
-  }
-
-  &r {
-    padding-right: 0 !important;
-  }
-}
-
-.nmg {
-  margin: 0 !important;
-
-  &t {
-    margin-top: 0 !important;
-  }
-
-  &b {
-    margin-bottom: 0 !important;
-  }
-
-  &l {
-    margin-left: 0 !important;
-  }
-
-  &r {
-    margin-right: 0 !important;
-  }
-}
-
-@include mq(max-xs) {
-  .npd {
-    &t {
-      padding-top: 15px !important;
-    }
-
-    &b {
-      padding-bottom: 15px !important;
-    }
-
-    &l {
-      padding-left: 15px !important;
-    }
-
-    &r {
-      padding-right: 15px !important;
-    }
-  }
 }
 
 /*Scroll Top*/

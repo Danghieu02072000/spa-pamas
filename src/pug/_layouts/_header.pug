@@ -1,44 +1,43 @@
-header#header-main
-  .container
-    #mainMenu
-      ul
-        li
-          a(href='#', title='') Trang chủ
-        li
-          a(href='#', title='') Sản phẩm
-          ul
-            li
-              a(href='#', title='') Thiết kế website
-            li
-              a(href='#', title='') Thiết kế phần mềm
-            li
-              a(href='#', title='') Dịch vụ Data
-            li
-              a(href='#', title='') Thiết kế website
-            li
-              a(href='#', title='') Thiết kế phần mềm
-            li
-              a(href='#', title='') Dịch vụ Data
-        li
-          a(href='#', title='')  Dịch vụ
-          ul
-            li
-              a(href='#', title='') Thiết kế website
-            li
-              a(href='#', title='') Thiết kế phần mềm
-            li
-              a(href='#', title='') Dịch vụ Data
-        li
-          a(href='#', title='') Tin tức
-        li
-          a(href='#', title='') Đối tác
-        li
-          a(href='#', title='') Liên hệ
-    .account-link
-      form.search-mini
-        input.ipt(type='text')
-        button.bt(type='button')
-          span.ion-ios-search-strong
-      ul
-        li
-          a.call-inline-pop(href='#login-res-pop', data-effect='mfp-zoom-in', title='') Đăng nhập
+header.header
+  .navigation
+    .container.navigation__container
+      .navigation__inner
+        .navigation__logo
+          a(href="home.html", title="").navigation__logo-link
+            img(src="./img/logo/logo.png", alt="")
+        .navigation__main
+          .navigation__contact
+            a(href="tel:0966.826.599", title="0966.826.599")
+              i.icon.ion-ios-telephone
+              span 0966.826.599
+            a(href="mailto:booking@viotrans.vn", title="booking@viotrans.vn")
+              i.icon.ion-ios-email
+              span booking@viotrans.vn
+          .navigation__social
+            a(href="#", title="")
+              i.icon.ion-social-twitter
+            a(href="#", title="")
+              i.icon.ion-social-facebook
+          .navigation__langguage.js-langguage
+            .navigation__langguage-toggle.js-language-toogle
+              a(href='#', title='').navigation__langguage-item
+                img(src='img/flags/lang-en.png')
+                span.navigation__langguage-title English
+              i.icon.ion-ios-arrow-down
+            .navigation__langguage-dropdown.js-langguage-dropdown
+              a(href='#', title='').navigation__langguage-item
+                img(src='img/flags/lang-en.png')
+                span.navigation__langguage-title English
+              a(href='#', title='').navigation__langguage-item
+                img(src='img/flags/lang-vi.png')
+                span.navigation__langguage-title Vietnamese
+              a(href='#', title='').navigation__langguage-item
+                img(src='img/flags/lang-ja.png')
+                span.navigation__langguage-title Japannes
+              a(href='#', title='').navigation__langguage-item
+                img(src='img/flags/lang-kr.png')
+                span.navigation__langguage-title Korea
+          .navigation__account
+            a(href="#").bt.bt--link.navigation__account-button Đăng nhập
+            a(href="#").bt.bt--primary.navigation__account-button Đăng ký
+  include ../_components/_menu_desktop

@@ -1,6 +1,9 @@
 import { src, dest, watch, parallel, series } from 'gulp'
 import del from 'del'
-import babel from 'gulp-babel'
+import rollup from 'gulp-better-rollup'
+import rbabel from 'rollup-plugin-babel'
+import resolve from '@rollup/plugin-node-resolve'
+import commonjs from '@rollup/plugin-commonjs'
 import sourcemaps from 'gulp-sourcemaps'
 import plumber from 'gulp-plumber'
 import sass from 'gulp-sass'
@@ -206,6 +209,21 @@ export const scriptLibs = done => {
         }
       })
     )
+    .pipe(rollup({
+      plugins: [rbabel({
+        babelrc: false,
+        presets: [['@babel/preset-env', { modules: false }]]
+      }), resolve(), commonjs()],
+      onwarn: function (warning) {
+        // Skip certain warnings
+
+        // should intercept ... but doesn't in some rollup versions
+        if (warning.code === 'THIS_IS_UNDEFINED') { return }
+
+        // console.warn everything else
+        console.warn(warning.message)
+      }
+    }, 'umd'))
     .pipe(concat('plugins.js'))
     .pipe(dest(files.scriptLibs.dest))
     .pipe(sourcemaps.write(files.maps.script))
@@ -242,8 +260,23 @@ export const scriptCustoms = done => {
         }
       })
     )
-    .pipe(babel({ presets: ['@babel/preset-env'] }))
+    .pipe(rollup({
+      plugins: [rbabel({
+        babelrc: false,
+        presets: [['@babel/preset-env', { modules: false }]]
+      }), resolve(), commonjs()],
+      onwarn: function (warning) {
+        // Skip certain warnings
+
+        // should intercept ... but doesn't in some rollup versions
+        if (warning.code === 'THIS_IS_UNDEFINED') { return }
+
+        // console.warn everything else
+        console.warn(warning.message)
+      }
+    }, 'umd'))
     .pipe(concat('customs.js'))
+    .pipe(uglify())
     .pipe(dest(files.scriptCustoms.dest))
     .pipe(sourcemaps.write(files.maps.script))
     .pipe(dest(files.scriptCustoms.dest))

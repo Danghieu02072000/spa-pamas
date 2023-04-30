@@ -34,6 +34,7 @@
 }
 
 @mixin mq($breakpoint) {
+  $mq-xxs: "(min-width: 375px)";
   $mq-xs: "(min-width: 480px)";
   $mq-sm: "(min-width: 768px)";
   $mq-m: "(min-width: 992px)";
@@ -48,7 +49,11 @@
   $mq-max-l: "(max-width: 1439px)";
   $mq-max-xl: "(max-width: 1599px)";
 
-  @if $breakpoint == xs {
+  @if $breakpoint == xxs {
+    @media #{$mq-xxs} {
+      @content;
+    }
+  } @else if $breakpoint == xs {
     @media #{$mq-xs} {
       @content;
     }
@@ -100,5 +105,17 @@
     @media #{$mq-max-xl} {
       @content;
     }
+  }
+}
+
+@mixin transition($target: all, $time: 0.3s, $ease: ease) {
+  transition: $target $time $ease;
+}
+
+@mixin aspect($height: 9, $width: 16, $positions: 'before') {
+  &:#{$positions} {
+    content: '';
+    display: block;
+    padding-top: ($height / $width) * 100%;
   }
 }

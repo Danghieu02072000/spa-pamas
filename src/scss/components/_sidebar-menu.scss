@@ -1,0 +1,97 @@
+.slideout__container {
+  @include transition;
+  position: fixed;
+  top: 50px;
+  left: -100%;
+  height: 100%;
+  width: 306px;
+  height: calc(100% - 50px);
+  background-color: $color-white;
+  z-index: 100;
+
+  .is-slideout-active & {
+    left: 0;
+  }
+}
+
+.slideout__inner {
+  height: 100%;
+  padding-bottom: 100px;
+  overflow-x: hidden;
+  overflow-y: auto;
+}
+
+.slideout__overlay {
+  @include transition;
+  position: fixed;
+  top: 50px;
+  width: 100%;
+  height: calc(100vh - 50px);
+  background-color: rgba(0, 0, 0, 0.6);
+  z-index: 99;
+  opacity: 0;
+  visibility: hidden;
+
+  .is-slideout-active & {
+    opacity: 1;
+    visibility: visible;
+  }
+}
+
+.menu__item {
+  border-bottom: 1px solid $border-color-primary;
+  position: relative;
+
+  .menu__dropdown & {
+    border-top: 1px solid $border-color-primary;
+    border-bottom: 0;
+  }
+}
+
+.menu-link {
+  display: flex;
+  padding: 12px 16px;
+  color: $text-color-primary;
+
+  .menu__title & {
+    flex: 1 1 auto;
+  }
+}
+
+.menu__dropdown {
+  @include transition;
+  max-height: 0;
+  background-color: #f5f5f5;
+  opacity: 0;
+  visibility: hidden;
+
+  .menu__item--open & {
+    max-height: 500px;
+    opacity: 1;
+    visibility: visible;
+  }
+}
+
+.menu__title {
+  display: flex;
+  justify-content: space-between;
+}
+
+.menu__toggle {
+  position: relative;
+  display: flex;
+  align-items: center;
+  width: 40px;
+  justify-content: center;
+
+  .icon {
+    font-size: 20px;
+    pointer-events: none;
+    z-index: -1;
+    transition: 0.3s ease;
+
+    .menu__item--open & {
+      transform: rotate(90deg);
+    }
+  }
+}

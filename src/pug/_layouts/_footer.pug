@@ -1,3 +1,56 @@
-include ../_mixins/_image.pug
-
-+image('https://link.com', 'btn class')
+footer.footer
+  .container
+    .footer__inner
+      .footer__top
+        .footer__top-inner
+          .footer__contact
+            h4 Liên hệ
+            ul
+              li
+                i.icon.ion-android-pin
+                span Số 38, đường Đình Thôn, phường Mỹ Đình 1, quận Nam Từ Liêm, Hà Nội, Việt Nam
+              li
+                i.icon.ion-ios-telephone
+                a(href="tel:0966.826.599" titl="0966.826.599") 0966.826.599
+              li
+                i.icon.ion-ios-email
+                a(href="mailto:booking@viotrans.vn" title="booking@viotrans.vn") booking@viotrans.vn
+          .footer__letter
+            h5 Đăng ký nhận bản tin khuyến mãi
+            .footer__letter-form
+              input(type="text" placeholder="Email").footer__letter-input
+              button(type="submit").bt.bt--primary Đăng ký
+      .footer__center
+        .footer__center-inner
+          .footer__info
+            h4 Vio Transport – Dịch vụ đặt xe trực tuyến
+            .footer__info-content
+              p Dịch vụ đáp ứng nhu cầu thuê xe có tài xế hay tài xế biết ngoại ngữ theo chuyến hay theo tháng để đưa đón nhân viên, đưa đón khách VIP, đưa rước sân bay, đi công tác, đi sự kiện, đi du lịch, đi team-building, về quê, cưới hỏi...
+          .footer__social
+            h5 Kết nối với chúng tôi
+            .footer__social-list
+              a(href="", title).footer__social-item
+                i.icon.ion-social-facebook
+              a(href="", title).footer__social-item
+                i.icon.ion-social-googleplus
+              a(href="", title).footer__social-item
+                i.icon.ion-social-twitter
+              a(href="", title).footer__social-item
+                i.icon.ion-social-youtube
+      .footer__bottom
+        .footer__bottom-inner
+          .footer__link
+            h4 Link nhanh
+            ul
+              li
+                a(href="#" title="") Giới thiệu
+              li
+                a(href="#" title="") Blog
+              li
+                a(href="#" title="") Tuyển dụng
+              li
+                a(href="#" title="") Liên hệ
+              li
+                a(href="#" title="") Xe sân bay 4 chỗ
+          .footer__copyright
+            span Copyright © 2020 Vio Trans. All rights reserved.

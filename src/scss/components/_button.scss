@@ -14,8 +14,10 @@ $pre: "bt";
   border-style: $bt-border-style;
   border-width: $bt-border-width;
   padding: $bt-padding;
+  text-decoration: none;
   &:hover {
     cursor: pointer;
+    color: $color-white;
   }
   &__block {
     width: 100%;
@@ -35,20 +37,31 @@ $pre: "bt";
     }
   }
   &--secondary {
-    background-color: $bt-background-secondary;
-    border-color: $bt-background-secondary;
+    background-color: transparent;
+    border-color: $color-white;
     &:hover {
-      background-color: $bt-background-hover-secondary;
-      border-color: $bt-background-hover-secondary;
+      background-color: $color-white;
+      color: $color-primary;
     }
   }
   &--default {
-    background-color: $bt-background-default;
-    border-color: $bt-background-default;
-    color: $text-color-primary;
+    background-color: transparent;
+    border-color: #d3d3d3;
+    color: $color-primary;
     &:hover {
-      background-color: $bt-background-hover-default;
-      border-color: $bt-background-hover-default;
+      background-color: $color-primary;
+      border-color: $color-primary;
+      color: $color-white;
+    }
+  }
+
+  &--link {
+    color: $text-color-primary;
+    border: 0;
+    background-color: transparent;
+
+    &:hover {
+      color: $color-primary;
     }
   }
 }
