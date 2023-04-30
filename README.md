@@ -1,4 +1,10 @@
-# Viotrans project
+# Workspace html
+- pug
+- scss
+- vanillajs
+- bootstrap
+- gulp
+
 Setup `package.json` run `npm install`
 1. Start develop `npm run start`
 2. Build `npm run build`
