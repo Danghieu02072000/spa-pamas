@@ -7,7 +7,6 @@
   width: 306px;
   height: calc(100% - 50px);
   background-color: $color-white;
-  box-shadow: 6px 6px 10px rgba(0, 0, 0, 0.2);
   z-index: 100;
 
   .is-slideout-active & {

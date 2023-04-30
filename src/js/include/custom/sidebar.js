@@ -20,7 +20,8 @@ export default () => {
     const sidebarOverlayEl = select(SIDEBAR_OVERLAY_SELECTOR, el)
     const searchTriggerEl = select(SEARCH_TRIGGER_SELECTOR, el)
     if (slideoutToggleEl && slideoutEl) {
-      on('click', () => {
+      on('click', (e) => {
+        e.preventDefault()
         if (!hasClass(SLIDEOUT_ACTIVE_CLASS, BODY)) {
           addClass(SLIDEOUT_ACTIVE_CLASS, BODY)
           disableBodyScroll(slideoutEl)

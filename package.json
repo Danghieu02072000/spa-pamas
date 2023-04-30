@@ -1,24 +1,18 @@
 {
   "name": "workspace_html-pug",
-  "version": "2.0.0",
+  "version": "4.0.0",
   "description": "Workspace_HTML",
   "main": "gulpfile.js",
   "scripts": {
     "start": "gulp dev",
     "build": "gulp build",
-    "build:prod": "gulp build && gulp clean",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "build:prod": "gulp build && gulp clean"
   },
   "repository": {
-    "type": "git",
-    "url": "git+https://github.com/thienhiep1711/workspace_ver7.0.git"
+    "type": "git"
   },
   "author": "Hiepnt",
   "license": "MIT",
-  "bugs": {
-    "url": "https://github.com/thienhiep1711/workspace_ver7.0/issues"
-  },
-  "homepage": "https://github.com/thienhiep1711/workspace_ver7.0#readme",
   "babel": {
     "presets": [
       "@babel/preset-env"

@@ -34,6 +34,27 @@
 .#{$ionicons-prefix}checkmark-circled:before,
 .#{$ionicons-prefix}android-checkmark-circle:before,
 .#{$ionicons-prefix}ios-checkmark-outline:before,
+.#{$ionicons-prefix}ios-arrow-down:before,
+.#{$ionicons-prefix}ios-information:before,
+.#{$ionicons-prefix}ios-information-outline:before,
+.#{$ionicons-prefix}android-car:before,
+.#{$ionicons-prefix}ios-person-outline:before,
+.#{$ionicons-prefix}cash:before,
+.#{$ionicons-prefix}ios-contact-outline:before,
+.#{$ionicons-prefix}man:before,
+.#{$ionicons-prefix}paper-airplane:before,
+.#{$ionicons-prefix}pin:before,
+.#{$ionicons-prefix}pinpoint:before,
+.#{$ionicons-prefix}android-pin:before,
+.#{$ionicons-prefix}ios-calendar:before,
+.#{$ionicons-prefix}ios-calendar-outline:before,
+.#{$ionicons-prefix}android-plane:before,
+.#{$ionicons-prefix}flash:before,
+.#{$ionicons-prefix}ios-star:before,
+.#{$ionicons-prefix}ios-star-half:before,
+.#{$ionicons-prefix}ios-star-outline:before,
+.#{$ionicons-prefix}ios-plus:before,
+.#{$ionicons-prefix}plus:before,
 {
   @extend .ion;
 }
@@ -72,3 +93,24 @@
 .#{$ionicons-prefix}checkmark-circled:before { content: $ionicon-var-checkmark-circled; }
 .#{$ionicons-prefix}android-checkmark-circle:before { content: $ionicon-var-android-checkmark-circle; }
 .#{$ionicons-prefix}ios-checkmark-outline:before { content: $ionicon-var-ios-checkmark-outline; }
+.#{$ionicons-prefix}ios-arrow-down:before { content: $ionicon-var-ios-arrow-down; }
+.#{$ionicons-prefix}ios-information:before { content: $ionicon-var-ios-information; }
+.#{$ionicons-prefix}ios-information-outline:before { content: $ionicon-var-ios-information-outline; }
+.#{$ionicons-prefix}android-car:before { content: $ionicon-var-android-car; }
+.#{$ionicons-prefix}ios-person-outline:before { content: $ionicon-var-ios-person-outline; }
+.#{$ionicons-prefix}cash:before { content: $ionicon-var-cash; }
+.#{$ionicons-prefix}ios-contact-outline:before { content: $ionicon-var-ios-contact-outline; }
+.#{$ionicons-prefix}man:before { content: $ionicon-var-man; }
+.#{$ionicons-prefix}paper-airplane:before { content: $ionicon-var-paper-airplane; }
+.#{$ionicons-prefix}pin:before { content: $ionicon-var-pin; }
+.#{$ionicons-prefix}pinpoint:before { content: $ionicon-var-pinpoint; }
+.#{$ionicons-prefix}android-pin:before { content: $ionicon-var-android-pin; }
+.#{$ionicons-prefix}ios-calendar:before { content: $ionicon-var-ios-calendar; }
+.#{$ionicons-prefix}ios-calendar-outline:before { content: $ionicon-var-ios-calendar-outline; }
+.#{$ionicons-prefix}android-plane:before { content: $ionicon-var-android-plane; }
+.#{$ionicons-prefix}flash:before { content: $ionicon-var-flash; }
+.#{$ionicons-prefix}ios-star:before { content: $ionicon-var-ios-star; }
+.#{$ionicons-prefix}ios-star-half:before { content: $ionicon-var-ios-star-half; }
+.#{$ionicons-prefix}ios-star-outline:before { content: $ionicon-var-ios-star-outline; }
+.#{$ionicons-prefix}ios-plus:before { content: $ionicon-var-ios-plus; }
+.#{$ionicons-prefix}plus:before { content: $ionicon-var-plus; }

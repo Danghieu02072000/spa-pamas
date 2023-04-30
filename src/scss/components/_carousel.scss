@@ -3,8 +3,328 @@
   align-items: center;
   justify-content: center;
   flex-wrap: wrap;
+  margin-left: -8px;
+  margin-right: -8px;
+
+  @include mq(sm) {
+    margin-left: -16px;
+    margin-right: -16px;
+  }
 }
 
 .carousel__item {
   width: 100%;
+  padding-left: 8px;
+  padding-right: 8px;
+
+  @include mq(sm) {
+    padding-left: 16px;
+    padding-right: 16px;
+  }
+}
+
+.carousel__image {
+  @include aspect(9, 16);
+}
+
+.carousel--footer {
+  .carousel__item {
+    width: calc(100%/2);
+
+    @include mq(sm) {
+      width: calc(100%/4);
+    }
+
+    @include mq(m) {
+      width: calc(100%/5);
+    }
+
+    @include mq(l) {
+      width: calc(100%/6);
+    }
+  }
+
+  .carousel__image {
+    @include aspect(120, 170);
+  }
+}
+
+.carousel--mega-search {
+  margin: 0;
+
+  .carousel__item {
+    padding: 0;
+  }
+
+  .carousel__image {
+    @include aspect(334, 750);
+
+    @include mq(m) {
+      @include aspect(335, 1914);
+    }
+  }
+
+  .flickity-page-dots {
+    display: none;
+
+    @include mq(m) {
+      display: block;
+      position: absolute;
+      right: 16px;
+      bottom: 10px;
+      z-index: 9;
+      text-align: right;
+    }
+  }
+
+  .carousel__content {
+    position: absolute;
+    left: 0;
+    top: 50%;
+    display: flex;
+    width: 100%;
+    transform: translateY(-50%);
+  }
+
+  .carousel__title {
+    font-size: 22px;
+    font-family: $font-roboto-bold;
+    color: $color-primary;
+    text-transform: uppercase;
+    text-shadow: 1px 1px 0 #ccc, -1px -1px 0 #ccc, 1px -1px 0 #ccc, -1px 1px 0 #ccc, 1px 1px 0 #ccc;
+
+    @include mq(sm) {
+      font-size: 32px;
+    }
+
+    @include mq(l) {
+      font-size: 38px;
+    }
+  }
+
+  .carousel__description {
+    font-size: 16px;
+    font-weight: bold;
+    color: $color-white;
+    text-transform: uppercase;
+    margin-top: 10px;
+
+    @include mq(sm) {
+      font-size: 24px;
+      margin-top: 0;
+    }
+
+    @include mq(l) {
+      font-size: 28px;
+    }
+  }
+}
+
+.carousel--banner {
+  .carousel__item {
+    width: 100%;
+
+    @include mq(sm) {
+      width: calc(100%/2);
+    }
+
+    @include mq(m) {
+      width: calc(100%/3);
+    }
+  }
+
+  .carousel__image {
+    @include aspect(163, 373);
+  }
+}
+
+.carousel--event {
+  @include mq(sm) {
+    margin-left: -8px;
+    margin-right: -8px;
+  }
+
+  .carousel__item {
+    @include mq(sm) {
+      width: 50%;
+      padding-left: 8px;
+      padding-right: 8px;
+    }
+
+    @include mq(ml) {
+      width: 33.333%;
+    }
+  }
+
+  &:after {
+    content: 'flickity';
+    display: none;
+
+    @include mq(ml) {
+      content: '';
+    }
+  }
+}
+
+.carousel--journey {
+  @include mq(sm) {
+    margin-left: -1px;
+    margin-right: -1px;
+  }
+
+  .carousel__item {
+    @include mq(sm) {
+      width: 50%;
+      padding-left: 1px;
+      padding-right: 1px;
+    }
+
+    @include mq(ml) {
+      width: 33.333%;
+    }
+
+    @include mq(l) {
+      width: 25%;
+    }
+  }
+
+  &:after {
+    content: 'flickity';
+    display: none;
+
+    @include mq(ml) {
+      content: '';
+    }
+  }
+}
+
+.carousel--product {
+  margin-left: 0;
+  margin-right: 0;
+
+  & .carousel__item {
+    padding-left: 0;
+    padding-right: 0;
+
+    @include mq(sm) {
+      width: 50%;
+    }
+
+    @include mq(ml) {
+      width: calc(100% / 3);
+    }
+  }
+
+  & .carousel__image {
+    @include mq(ml) {
+      @include aspect(370, 630);
+    }
+  }
+
+  & .flickity-prev-next-button.next {
+    right: 15px;
+  }
+
+  & .flickity-prev-next-button.previous {
+    left: 15px;
+  }
+}
+
+.carousel--type {
+  & .carousel__item {
+    @include mq(sm) {
+      width: 50%;
+    }
+
+    @include mq(ml) {
+      width: calc(100% / 3);
+    }
+
+    @include mq(l) {
+      width: 25%;
+    }
+  }
+
+  & .carousel__link {
+    border: 1px solid $border-color-primary;
+    display: block;
+  }
+
+  & .carousel__image {
+    @include aspect(115, 170);
+  }
+
+  & .carousel__title {
+    padding: 10px 0;
+    display: block;
+    font-family: $font-roboto-bold;
+    color: inherit;
+
+    &:hover {
+      color: $color-primary;
+    }
+  }
+}
+
+
+.carousel--event-info {
+  & .carousel__image {
+    @include aspect(414, 577);
+  }
+
+  & .flickity-prev-next-button.next {
+    right: 20px;
+  }
+
+  & .flickity-prev-next-button.previous {
+    left: 20px;
+  }
+}
+
+.carousel--utils {
+  width: 100%;
+  margin: 0;
+
+  & .carousel__item {
+    width: 50%;
+
+    @include mq(xxs) {
+      width: 33.333%;
+    }
+
+    @include mq(ml) {
+      width: 25%;
+    }
+
+    @include mq(l) {
+      width: 20%;
+    }
+  }
+}
+
+.carousel--home-product {
+  align-items: flex-start;
+
+  .carousel__item {
+    @include mq(sm) {
+      display: flex;
+      width: 50%;
+      padding-left: 8px;
+      padding-right: 8px;
+    }
+
+    @include mq(sm) {
+      width: 33.333%;
+      padding: 0;
+    }
+  }
+
+  &:after {
+    content: 'flickity';
+    display: none;
+
+    @include mq(sm) {
+      content: '';
+    }
+  }
 }

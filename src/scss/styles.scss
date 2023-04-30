@@ -1,5 +1,6 @@
 /*---Base---*/
 @import "base/_typography.scss";
+@import "base/reset";
 
 /*---Layout---*/
 @import "layouts/_layout.scss";
@@ -7,46 +8,20 @@
 @import "layouts/_sidebar.scss";
 @import "layouts/_footer.scss";
 
+/*---Components---*/
+@import "components/image_lazy";
+@import "components/_button.scss";
+@import "components/_checkbox_radio.scss";
+@import "components/accordion";
+@import "components/menu-main";
+@import "components/flickity";
+@import "components/carousel";
+
 /*---Sidebar---*/
 @import "components/sidebar-menu";
-@import "components/sidebar-lang";
 @import "components/sidebar-toggle";
 @import "components/sidebar-search";
 @import "components/sidebar-logo";
 
-/*---Components---*/
-@import "components/_button.scss";
-@import "components/_checkbox_radio.scss";
-@import "components/_cart-popup.scss";
-@import "components/slider-carousel-customs";
-@import "components/_navi-sticky.scss";
-@import "components/loading.scss";
-@import "components/_icon-toogle.scss";
-@import "components/pagination";
-@import "components/slider-thumb";
-@import "components/_popup-wrap.scss";
-@import "components/flickity";
-@import "components/carousel";
-
-/*---Modules---*/
-// @import "modules/_cart.scss";
-// @import "modules/_agency.scss";
-// @import "modules/_contact.scss";
-@import "modules/_news-list.scss";
-// @import "modules/_news_detail.scss";
-// @import "modules/_product-list.scss";
-// @import "modules/_product-detail.scss";
-// @import "modules/_media-detail.scss";
-// @import "modules/_media-list.scss";
-
-/*@import "modules/_module-gallery-picture.scss";*/
-/*@import "modules/_module-rating.scss";*/
-
 /*---Pages---*/
 @import "pages/_home.scss";
-// @import "pages/_about.scss";
-// @import "pages/_news.scss";
-// @import "pages/_service.scss";
-// @import "pages/_product.scss";
-// @import "pages/_contact.scss";
-// @import "pages/_gallery.scss";

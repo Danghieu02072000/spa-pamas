@@ -3,44 +3,41 @@
 $font-roboto: "Roboto";
 $font-roboto-bold: "Roboto Bold";
 $font-roboto-medium: "Roboto Medium";
-$font-roboto-light: "Roboto Light";
-
-$font-roboto-con: "Roboto Condensed";
-$font-roboto-con-bold: "Roboto Condensed Bold";
-$font-roboto-con-italic: "Roboto Condensed Italic";
-$font-roboto-con-light: "Roboto Condensed Light";
-
-$font-opensans: "Open Sans";
-$font-opensans-bold: "Open Sans Bold";
-$font-opensans-light: "Open Sans Light";
-
-$font-myriadpro: "myriad-pro";
-$font-myriadpro-bold: "myriad-pro-bold";
-$font-myriadpro-light: "myriad-pro-light";
 
 $font-default: "Helvetica,Arial," DejaVu Sans "," Liberation Sans ",Freesans,sans-serif";
 
-$font-face-primary: $font-default;
+$font-face-primary: $font-roboto;
 $font-size-primary: 15px;
-$background-primary: #fbfbfb;
+$background-primary: #ffffff;
 $text-color-primary: #383838;
 $button-color-primary: #00aaac;
 $border-color-primary: #e5e5e5;
+$border-color-secondary: #f1f1f1;
 $color-white: #ffffff;
-$color-primary: #fb9c00;
+$color-primary: #dd4a4a;
 $color-secondary: #fb9c00;
 $color-hover: #fb9c00;
 $color-info: #fb9c00;
 $pagination-color: #383838;
 $pagination-hover: #007ebb;
+$c-gray-1: #cccccc;
+$c-gray-2: #efefef;
+$c-gray-5: #555555;
+$c-gray-6: #666666;
+$c-gray-8: #888888;
+$c-gray-9: #999999;
+$c-black: #000000;
+$c-black-1: #1a1819;
+$c-black-2: #333333;
+$c-red: #eb3339;
 
 /* Buttons */
 $bt-default: #dfdfdf;
-$bt-size: 18px;
+$bt-size: 15px;
 $bt-weight: normal;
-$bt-padding: 6px 20px;
+$bt-padding: 9px 30px;
 $bt-radius: 0px;
-$bt-border-width: 3px;
+$bt-border-width: 1px;
 $bt-border-style: solid;
 $bt-transition: 0.2s ease-in;
 
