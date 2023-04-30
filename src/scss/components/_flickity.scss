@@ -80,15 +80,34 @@ https://flickity.metafizzy.co
 
 .flickity-prev-next-button {
   top: 50%;
-  width: 44px;
-  height: 44px;
+  width: 36px;
+  height: 36px;
   border-radius: 50%;
   /* vertically center */
   transform: translateY(-50%);
+  border: 1px solid $border-color-primary;
+  @include transition;
+
+  &:focus {
+    outline: none;
+  }
+
+  &:hover {
+    border: 1px solid $color-primary;
+    background-color: $color-primary;
+
+    .flickity-button-icon {
+      color: $color-white;
+    }
+  }
 }
 
-.flickity-prev-next-button.previous { left: 10px; }
-.flickity-prev-next-button.next { right: 10px; }
+.flickity-prev-next-button.previous {
+  left: 0px;
+}
+.flickity-prev-next-button.next {
+  right: 0px;
+}
 /* right to left */
 .flickity-rtl .flickity-prev-next-button.previous {
   left: auto;
@@ -101,10 +120,10 @@ https://flickity.metafizzy.co
 
 .flickity-prev-next-button .flickity-button-icon {
   position: absolute;
-  left: 20%;
-  top: 20%;
-  width: 60%;
-  height: 60%;
+  left: 35%;
+  top: 35%;
+  width: 30%;
+  height: 30%;
 }
 
 /* ---- page dots ---- */

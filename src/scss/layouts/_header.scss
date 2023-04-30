@@ -1,108 +1,133 @@
 ﻿@import "../helpers/_mixins.scss";
 @import "../helpers/_variables.scss";
 
-#header-main {
-  background-color: rgba(0, 0, 0, 0.8);
+.header {
   z-index: 1001;
+  display: none;
+
+  @include mq(m) {
+    display: block;
+  }
 }
 
-#mainMenu {
-  float: left;
-  display: inline-block;
+.navigation {
+  border-bottom: 1px solid $border-color-secondary;
 
-  > ul {
-    float: left;
-    text-align: left;
+  .icon {
+    font-size: 18px;
+    line-height: 1em;
+    position: relative;
+    top: 1px;
+    margin-right: 5px;
+  }
+}
 
-    > li {
-      display: block;
-      float: left;
-      position: relative;
-      padding: 0 15px;
+.navigation__inner {
+  display: flex;
+  justify-content: space-between;
+}
 
-      > a {
-        display: block;
-        color: #fff;
-        font-size: 16px;
-        padding: 10px 0;
-        float: left;
-        position: relative;
+.navigation__logo {
+  padding: 8px 0;
+}
 
-        &:after {
-          content: "";
-          width: 0;
-          position: absolute;
-          bottom: 0;
-          left: 0;
-          height: 2px;
-          transition: width 0.2s ease-out;
-          background-color: $color-primary;
-        }
-      }
+.navigation__main {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+}
 
-      &:hover {
-        > a {
-          &:after {
-            width: 100%;
-            transition: width 0.4s ease-in;
-          }
-        }
+.navigation__contact {
+  padding: 0 0 0 10px;
+  a {
+    display: inline-block;
+    margin: 0 10px;
+    color: $c-gray-6;
 
-        > ul {
-          transform: translateX(60px);
-          visibility: visible;
-          opacity: 1;
-          transition: 0.4s ease-in;
-        }
-      }
-
-      > ul {
-        position: absolute;
-        visibility: hidden;
-        opacity: 0;
-        transition: 0.2s ease-out;
-        left: -60px;
-        top: 42px;
-        padding: 10px 20px;
-        background-color: rgba(0, 0, 0, 1);
-        border-radius: 0 0 8px 8px;
-
-        > li {
-          display: block;
-          float: left;
-          width: 200px;
-          position: relative;
-
-          > a {
-            display: block;
-            float: left;
-            font-size: 15px;
-            color: #fff;
-            padding: 10px 0;
-
-            &:after {
-              content: "";
-              width: 0;
-              position: absolute;
-              bottom: 0;
-              left: 0;
-              height: 1px;
-              transition: width 0.2s ease-out;
-              background-color: $color-primary;
-            }
-
-            &:hover {
-              color: white;
-
-              &:after {
-                width: 50px;
-                transition: width 0.4s ease-in;
-              }
-            }
-          }
-        }
-      }
+    &:hover {
+      color: $color-primary;
     }
+  }
+}
+
+.navigation__social {
+  padding: 0 15px;
+  a {
+    margin: 0 5px;
+    color: $c-gray-6;
+
+    &:hover {
+      color: $color-primary;
+    }
+  }
+}
+
+.navigation__langguage {
+  position: relative;
+}
+
+.navigation__langguage-item {
+  img {
+    max-width: 27px;
+  }
+}
+
+.navigation__langguage-title {
+  margin-left: 8px;
+  color: $c-gray-6;
+}
+
+.navigation__langguage-dropdown {
+  position: absolute;
+  opacity: 0;
+  visibility: hidden;
+  width: 140px;
+  border: 1px solid $border-color-primary;
+  background-color: $color-white;
+  z-index: 10;
+  display: flex;
+  flex-direction: column;
+  top: 26px;
+}
+
+.navigation__langguage-dropdown--active {
+  opacity: 1;
+  visibility: visible;
+}
+
+.navigation__langguage-item {
+  padding: 6px 8px;
+  border-bottom: 1px solid $border-color-primary;
+
+  .navigation__langguage-toggle & {
+    border: 0;
+  }
+
+  &:last-child {
+    border-bottom: 0;
+  }
+
+  img {
+    max-width: 20px;
+  }
+
+  &:hover {
+    background-color: #e5e5e5;
+  }
+}
+
+.navigation__account-button {
+  margin-left: 5px;
+
+  &.bt {
+    padding: 5px 16px;
+  }
+}
+
+.navigation__langguage-toggle {
+  .icon {
+    margin-left: 5px;
+    margin-right: 0;
   }
 }
 
@@ -267,11 +292,5 @@
         }
       }
     }
-  }
-}
-
-@include mq(max-sm) {
-  #header-main {
-    display: none;
   }
 }

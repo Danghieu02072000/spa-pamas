@@ -1,0 +1,155 @@
+@import "../helpers/_variables.scss";
+@import "../helpers/_mixins.scss";
+
+.nav-main__wrap {
+  border-bottom: 1px solid $border-color-secondary;
+}
+
+.nav-main__inner {
+  display: flex;
+  justify-content: space-between;
+}
+
+.nav-main__menu {
+  ul {
+    display: flex;
+
+    li {
+      display: flex;
+      border-right: 1px solid $border-color-secondary;
+
+      &:first-child {
+        border-left: 1px solid $border-color-primary;
+        a {
+          .icon {
+            margin-right: 0;
+          }
+        }
+      }
+
+      a {
+        position: relative;
+        display: inline-block;
+        font-family: $font-roboto-medium;
+        padding: 15px 13px;
+        font-size: 14px;
+        text-transform: uppercase;
+        font-weight: 500;
+        color: $c-black-1;
+
+        @include mq(l) {
+          padding: 17px 27px;
+        }
+
+        &:hover {
+          color: $color-primary;
+          background-color: #ffeeee;
+
+          &:before {
+            background-color: $color-primary;
+          }
+        }
+
+        .icon {
+          position: relative;
+          margin-right: 8px;
+          font-size: 18px;
+          top: 1px;
+        }
+
+        &:before {
+          @include transition;
+          content: "";
+          position: absolute;
+          left: 0;
+          top: 0;
+          width: 100%;
+          height: 3px;
+          background-color: transparent;
+        }
+      }
+
+      &.is-active {
+        a {
+          color: $color-primary;
+          background-color: #ffeeee;
+
+          &:before {
+            background-color: $color-primary;
+          }
+        }
+      }
+    }
+  }
+}
+
+.nav-main__search-trigger {
+  padding: 3px 10px;
+
+  &:hover {
+    color: $color-primary;
+  }
+}
+
+.nav-main__search {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 10px 24px;
+  cursor: pointer;
+  border-right: 1px solid $border-color-primary;
+
+  .icon {
+    font-size: 22px;
+  }
+
+  @include mq(ml) {
+    padding: 9px 16px;
+  }
+
+  @include mq(l) {
+    padding: 10px 24px;
+  }
+}
+
+.nav-main__search-main {
+  @include transition;
+  position: absolute;
+  right: 0;
+  top: calc(100% + 20px);
+  width: 350px;
+  height: 60px;
+  background-color: $color-white;
+  opacity: 0;
+  visibility: hidden;
+
+  .nav-main__search---active & {
+    opacity: 1;
+    visibility: visible;
+    transform: translate3d(0, -20px, 0);
+  }
+}
+
+.nav-main__search-form {
+  display: flex;
+  padding: 10px 10px;
+  height: 100%;
+}
+
+.nav-main__search-input {
+  flex: 1 1 0;
+  border: 1px solid $border-color-primary;
+  text-indent: 10px;
+}
+
+.nav-main__search-button {
+  background-color: $color-primary;
+  border: 0;
+  width: 44px;
+  color: $color-white;
+
+  &:hover {
+    background-color: #ff8282;
+  }
+}
