@@ -1,13 +1,12 @@
 {
   "name": "workspace_html-pug",
-  "version": "3.0.0",
+  "version": "4.0.0",
   "description": "Workspace_HTML",
   "main": "gulpfile.js",
   "scripts": {
     "start": "gulp dev",
     "build": "gulp build",
-    "build:prod": "gulp build && gulp clean",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "build:prod": "gulp build && gulp clean"
   },
   "repository": {
     "type": "git"
