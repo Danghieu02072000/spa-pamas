@@ -6,80 +6,58 @@ $font-roboto-medium: "Roboto Medium";
 
 $font-default: "Helvetica,Arial," DejaVu Sans "," Liberation Sans ",Freesans,sans-serif";
 
-$font-face-primary: $font-roboto;
-$font-size-primary: 15px;
+$font-face-primary: Tahoma,Arial,'DejaVu Sans','Liberation Sans',Freesans,sans-serif;
+$font-size-primary: 14px;
 $background-primary: #ffffff;
-$text-color-primary: #383838;
-$button-color-primary: #00aaac;
+$text-color-primary: #424242;
+$button-color-primary: #243168;
 $border-color-primary: #e5e5e5;
-$border-color-secondary: #f1f1f1;
+$color-primary: #243168;
 $color-white: #ffffff;
-$color-primary: #dd4a4a;
-$color-secondary: #fb9c00;
-$color-hover: #fb9c00;
-$color-info: #fb9c00;
+$color-yellow: #feda58;
+$color-red: #a42e2e;
+$color-gray: #929292;
+
+
 $pagination-color: #383838;
-$pagination-hover: #007ebb;
-$c-gray-1: #cccccc;
-$c-gray-2: #efefef;
-$c-gray-5: #555555;
-$c-gray-6: #666666;
-$c-gray-8: #888888;
-$c-gray-9: #999999;
-$c-black: #000000;
-$c-black-1: #1a1819;
-$c-black-2: #333333;
-$c-red: #eb3339;
+$pagination-hover: #243168;
 
-/* Buttons */
-$bt-default: #dfdfdf;
-$bt-size: 15px;
-$bt-weight: normal;
-$bt-padding: 9px 30px;
-$bt-radius: 0px;
-$bt-border-width: 1px;
-$bt-border-style: solid;
-$bt-transition: 0.2s ease-in;
 
-$bt-background-default: $bt-default;
-$bt-background-hover-default: darken($bt-default, 15%);
+/*Nav */
 
-$bt-background-primary: $color-primary;
-$bt-background-hover-primary: lighten($color-primary, 10%);
-
-$bt-background-secondary: $color-secondary;
-$bt-background-hover-secondary: darken($color-secondary, 10%);
-
-/* Nav mobile */
 $nav-mobie-color: #515151;
-$nav-mobie-color-hover: #222222;
-$nav-mobie-fontsize: 15px;
+$nav-mobie-size: 16px;
+$nav-mobie-color-hover:#222222;
 $nav-mobie-back: #ffffff;
 $nav-mobie-back-hover: #eeeeee;
 $nav-mobie-border: #d9d9d9;
 
-$button-hover-primary: $color-primary;
+/* Button */
+$button-hover-primary: #243168;
+$owl-primary: #243168;
+$button-border-gray: #e5e5e5;
 
-/* OwlCaresual */
-$owl-primary: $color-primary;
-
+/* list */
 $list-color-primary: #383838;
-$list-color-hover: $color-primary;
+$list-color-hover: #243168;
 $list-border-color: #e5e5e5;
-
 $list-button-border: #e5e5e5;
 $list-button-color: #383838;
-$list-button-color-hover: $color-primary;
+$list-button-color-hover: #243168;
 
-/* Checkbox Radio buton */
-$control-color: $color-primary;
-$control-border: #e6e6e6;
-$control-back: #e6e6e6;
-$control-text: #fff;
-$control-color-disable: #7b7b7b;
-$control-back-disable: #e6e6e6;
-$control-size: 22px;
-$control-radio-size: 8px;
+/* Radio */
+$radio-color: #243168;
+$radio-border: #999999;
+$radio-size-outer: 20px;
+$radion-size-inner: 12px;
 
-$slider-color: #007ebb;
-$slider-paganition: #007ebb;
+/* Checkbox */
+$checkbox-color:#243168;
+$checkbox-unchecked:#999999;
+$checkbox-duration: .4s;
+$checkbox-size:20px;
+$checkbox-background:#667788;
+
+/* Slider */
+$slider-color: #243168;
+$slider-paganition: #243168;

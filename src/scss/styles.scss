@@ -10,18 +10,13 @@
 
 /*---Components---*/
 @import "components/image_lazy";
-@import "components/_button.scss";
-@import "components/_checkbox_radio.scss";
-@import "components/accordion";
 @import "components/menu-main";
-@import "components/flickity";
-@import "components/carousel";
 
-/*---Sidebar---*/
-@import "components/sidebar-menu";
-@import "components/sidebar-toggle";
-@import "components/sidebar-search";
-@import "components/sidebar-logo";
+// /*---Sidebar---*/
+// @import "components/sidebar-menu";
+// @import "components/sidebar-toggle";
+// @import "components/sidebar-search";
+// @import "components/sidebar-logo";
 
 /*---Pages---*/
 @import "pages/_home.scss";
