@@ -1,0 +1,72 @@
+.about-home {
+    padding: 40px 0;
+}
+.about-home__title {
+    text-align: center;
+    margin: 20px 0;
+    line-height: 1.1;
+    
+    h2 {
+        color: #243168;
+        font-size: 48px;
+        text-transform: uppercase;
+        display: block;
+        font-weight: 700;
+        margin-bottom: 10px;
+    }
+
+    span {
+        font-size: 24px;
+        color: #243168;
+    }
+}
+.about-home__list {
+    display: flex;
+    flex-direction: row;
+}
+.about-home__item {
+    text-align: center;
+    width: calc(100% / 3);
+    padding: 0 15px;
+    justify-content: center;
+    align-items: center;
+}
+.about-home__img {
+    margin: 15px 0;
+}
+.about-home__detail h3 {
+    margin-bottom: 25px;
+    color: #424242;
+    font-size: 18px;
+}
+.about-home__detail span {
+    color: #727272;
+    line-height: 1.5em;
+    margin-bottom: 10px;
+    display: inline-block;
+    transition: all 0.5s ease;
+}
+.about-home__detail a {
+    color: #727272;
+    font-size: 12px;
+    padding: 7px 18px;
+    border-radius: 20px;
+    border: 1px solid #feda58;
+    display: inline-block;
+    margin-top: 10px;
+    transition: all 0.4s ease;
+    opacity: 0;
+    i {
+        margin-left: 5px;
+    }
+}
+.about-home__detail a:hover {
+    background-color: $color-yellow;
+}
+.about-home__item:hover > .about-home__detail > a {
+    opacity: 1;
+    transform: translateY(-25%);
+}
+.about-home__item:hover > .about-home__detail > span {
+    transform: translateY(-10px);
+}

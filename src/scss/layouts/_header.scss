@@ -1,7 +1,9 @@
 ﻿@import "../helpers/_mixins.scss";
 @import "../helpers/_variables.scss";
 
-
+.header {
+  padding-bottom: 500px;
+}
 .header-top__wrapper {
   display: flex;
   flex-direction: row;
@@ -133,4 +135,149 @@
   a:hover {
     color: $color-primary;
   }
+}
+// header-main
+.mainMenu__menu1{
+  transition: 0.3s ease;
+  opacity: 0;
+  z-index: 1;
+  visibility: hidden;
+   position: absolute;
+   left: 0;
+   top: 80px;
+   display: flex;
+   gap: 20px;
+   flex-direction: row;
+   justify-content: space-between;
+   width: 100%;
+   color: #233169;
+   box-shadow: 0 0 57px rgba(0,0,0,.3);
+
+   a{
+    transition: 0.5s ease;
+   }
+
+   a:hover {
+    color: $color-primary;
+   }
+
+}
+.header-main {
+  width: 100%;
+  background-color: #233169;
+  border-bottom: 1px solid #feda58;
+}
+.mainMenu__menu{
+   display: flex;
+   gap: 10px;
+   justify-content: space-between;
+   align-items: center;
+   position: relative;
+}
+.mainMenu__li:hover > .mainMenu__menu1 {
+  visibility: visible;
+  transform: translateY(-20px);
+  opacity: 1;
+}
+.mainMenu__li:hover > .mainMenu__menu1::after {
+  width: 100%;
+  content: "";
+  background-color: transparent;
+  top: -11px;
+  height: 11px;
+  position: absolute;
+}
+.mainMenu__li > a {
+  display: block;
+  color: #fff;
+  font-size: 16px;
+  padding: 14px 11px;
+  transition: color 0.5s ease;
+  i {
+    margin-left: 5px;
+  }
+}
+ 
+.mainMenu__li >  a:hover {
+      color: $color-yellow;
+   }
+.mainMenu__li1 > a {
+  font-size: 17px;
+  font-weight: 700;
+  color: $color-primary;
+  padding: 10px 0 10px 75px;
+  display: inline-block;
+}
+.mainMenu__li1:nth-child(1) > a {
+    background-image: url(../../img/background/ico-skinrebon.png);
+    background-repeat: no-repeat;
+    background-position: 30px center;
+}
+.mainMenu__li1:nth-child(2) > a {
+  background-image: url(../../img/background/ico-dichvuphauthuat.png);
+  background-repeat: no-repeat;
+  background-position: 30px center;
+  display: inline-block;
+}
+.mainMenu__li1 {
+  padding: 20px 0;
+  width: calc(100% / 2);
+}
+.mainMenu__menu2 {
+  padding: 0 30px;
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  flex-wrap: wrap;
+}
+.mainMenu__li2 {
+  width: calc(100% / 2);
+  list-style: circle;
+  padding: 8px 0;
+}
+.mainMenu__li2 > a {
+  color: #424242;
+  font-size: 15px;
+  line-height: 1.4em;
+  display: block;
+  position: relative;
+  font-weight: 700;
+  margin-bottom: 10px;
+}
+.mainMenu__menu3 {
+  display: flex;
+  flex-direction: column;
+  gap: 9px;
+}
+.mainMenu_li3 > a{
+  color: #424242;
+  font-size: 14px;
+  display: block;
+  float: left;
+}
+.mainMenu__menu2-right {
+  margin-top: 10px;
+  display: flex;
+  width: 100%;
+  flex-wrap: wrap;
+  gap: 15px;
+}
+.mainMenu__menu2-right > li {
+  width: calc(100% / 2 - 10px);
+  list-style: circle;
+  
+  a {
+    color: #424242;
+    font-size: 15px;
+    line-height: 1.4em;
+    font-weight: 700;
+  }
+}
+.mainMenu__li:hover > .mainMenu__menu1::before {
+  content: "";
+  border: 10px solid transparent;
+  border-bottom: 10px solid #fff;
+  position: absolute;
+  left: calc(42% - 5px);
+  top: -20px;
 }
