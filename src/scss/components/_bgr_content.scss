@@ -1,0 +1,81 @@
+.bgr-content {
+    padding: 50px 0 120px 0;
+    background-image: url(../../img/background/banner-prl-1.jpg);
+    transform: translate(0%, 11.5491%) translate3d(0px, 0px, 0px);
+}
+.bgr-content__wrapper {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+.bgr-content__left {
+    width: 42%;
+}
+.bgr-content__link {
+    display: inline-block;
+    box-shadow: #999999 -7px 8px 1px;
+}
+.bgr-content__right {
+    width: 50%;
+    color: $color-white;
+    text-align: center;
+
+    h2 {
+        color: #fff;
+        font-size: 24px;
+        text-transform: uppercase;
+        font-weight: 700;
+        margin-bottom: 15px;
+    }
+}
+.bgr-content__detail {
+
+    h3 {
+        font-size: 16px;
+        font-weight: 700;
+        margin-bottom: 15px;
+        line-height: 1.5em;
+    }
+
+    p {
+        text-align: justify;
+        line-height: 1.7em;
+    }
+}
+.bgr-content__icon {
+    margin: 10px 0px 15px 0;
+    width: 100%;
+    a {
+        display: inline-block;
+        width: 56px;
+        height: 56px;
+        border-radius: 28px;
+        background-color: #243168;
+        border: 2px solid #243168;
+        overflow: hidden;
+        margin: 15px;
+        background-repeat: no-repeat;
+        background-position: 6px 7px;
+        transition: all 0.3s linear;
+    }
+    a:nth-child(1){
+        background-image: url(../../img/icons/ico-prl-1.png);
+    }
+    a:nth-child(2){
+        background-image: url(../../img/icons/ico-prl-2.png);
+    }
+    a:nth-child(3){
+        background-image: url(../../img/icons/ico-prl-3.png);
+    }
+    a:nth-child(4){
+        background-image: url(../../img/icons/ico-prl-4.png);
+    }
+    a:nth-child(5){
+        background-image: url(../../img/icons/ico-prl-5.png);
+    }
+    a:hover {
+        background-color: #feda58;
+        background-position: 6px -34px;
+        border-color: #fff;
+    }
+}
