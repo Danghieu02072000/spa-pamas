@@ -1,0 +1,166 @@
+.register-home {
+    padding: 40px 0;
+    float: left;
+    width: 100%;
+}
+.register-home__wrapper {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+.register-home__content {
+    display: flex;
+    justify-content: space-between;
+}
+.register-home__title {
+    text-align: center;
+    width: 100%;
+
+    h2 {
+        font-weight: 700;
+        color: #424242;
+        text-transform: uppercase;
+        font-size: 24px;
+        margin-bottom: 10px;
+    }
+
+    span {
+        font-size: 14px;
+        color: #727272;
+    }
+}
+.register-home__video {
+    width: 58%;
+    margin-top: 40px;
+    float: left;
+    padding: 22px;
+    background-color: #f4f4f4;
+    padding-bottom: 20px;
+}
+.img-video {
+    background-color: #ccc;
+    height: 330px;
+}
+.register-home__detail {
+    text-align: center;
+    padding: 15px 10px 15px 10px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    background-image: url(../../img/background/ico-nhay-left.png),url(../../img/background/ico-nhay-right.png);
+    background-position: left top,right bottom;
+    background-repeat: no-repeat,no-repeat;
+
+    a {
+        font-size: 18px;
+        font-weight: 700;
+        color: #243168;
+        margin-bottom: 10px;
+        display: block;
+    }
+
+    p {
+        color: #6c6c6c;
+        line-height: 1.4em;
+    }
+
+    b {
+        margin-top: 15px;
+        display: block;
+        color: #243168;
+        padding-top: 10px;
+        font-weight: 700;
+    }
+
+    span {
+        font-weight: 400;
+    }
+}
+.regiser-home__arrow {
+    display: flex;
+    justify-content: center;
+    gap: 7px;
+    align-items: center;
+    
+    a {
+        transition: all 0.4s ease;
+    }
+
+    a:hover {
+        border-color: $color-primary;
+        background-color: $color-primary;
+        color: $color-white;
+    }
+    .arrow-prev {
+        align-items: center;
+        width: 30px;
+        height: 30px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-size: 18px;
+        border: 1px solid #e5e5e5;
+        color: #243168;
+        background-color: #f4f4f4;
+    }
+
+    .arrow-next {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 30px;
+        height: 30px;
+        font-size: 18px;
+        border: 1px solid #e5e5e5;
+        color: #243168;
+        background-color: #f4f4f4;
+    }
+}
+.register-home__form {
+    width: 40%;
+    background-image: url(../../img/background/banner-register.png);
+    margin-top: 40px;
+    background-color: #f4f4f4;
+    padding-top: 310px;
+    background-position: top center;
+    background-repeat: no-repeat;
+    padding-left: 22px;
+    padding-right: 22px;
+    padding-bottom: 22px;
+    text-align: center;
+    background-size: 100%;
+
+    form {
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+    }
+    .input-text {
+        width: 100%;
+        height: 50px;
+        background-color: #fff;
+        border-radius: 4px;
+        box-shadow: 0 2px 6px #ccc;
+        border: none;
+        text-indent: 10px;
+        outline: none;
+    }
+
+    a {
+        display: inline-block !important;
+        width: 48%;
+        margin: 0 auto;
+        padding: 14px 40px;
+        border-radius: 26px;
+        font-size: 20px;
+        color: #243168;
+        font-weight: 700;
+        text-transform: uppercase;
+        background-color: #feda58;
+        transition: all 0.4s ease;
+    }
+
+    a:hover {
+        color: $color-white;
+        background-color: $color-primary;
+    }
+}

@@ -1,0 +1,193 @@
+.skinRebon {
+    float: left;
+    width: 100%;
+    padding: 140px 0 120px;
+    background: url(../img/bg-caro.jpg) no-repeat bottom center #f4f4f4;
+}
+.skinRebon__wrapper {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 30px;
+    flex-wrap: wrap;
+}
+.skinRebon__left {
+    width: 41%;
+
+    img {
+        margin-bottom: 20px;
+    }
+}
+.skinRebon__list-btn {
+    display: flex;
+    flex-direction: column;
+    gap: 35px;
+
+    a {
+        display: block;
+    width: 100%;
+    background-color: #a42e2e;
+    border-radius: 4px;
+    font-size: 16px;
+    font-weight: 700;
+    text-transform: uppercase;
+    color: #fff;
+    padding: 18px 20px;
+    position: relative;
+    text-align: center
+    }
+    a::after{
+        content: "";
+        background-color: #fff;
+        position: absolute;
+        left: 13px;
+        width: 10px;
+        top: 27px;
+        height: 4px;
+        border-radius: 2px;
+    }
+    a::before{
+        content: "";
+        background-color: #fff;
+        position: absolute;
+        right: 13px;
+        width: 10px;
+        top: 27px;
+        height: 4px;
+        border-radius: 2px;
+    }
+}
+.skinRebon__right{
+    width: 56%;
+}
+.skinRebon__circle {
+    background: url(../../img/background/ico-char-skin.png) no-repeat center center;
+    width: 416px;
+    height: 374px;
+    margin: 70px auto 30px;
+    padding: 110px 20px 120px 20px;
+    text-align: center;
+    position: relative;
+}
+.skinRebon-circle__text {
+    padding: 0 75px;
+    color: $color-white;
+
+    h4 {
+        font-weight: 700;
+        font-size: 16px;
+    }
+
+    h3 {
+        font-size: 24px;
+        font-weight: 700;
+        text-transform: uppercase;
+        margin: 10px 0;
+    }
+
+    p {
+        line-height: 1.5em;
+        margin-bottom: 10px;
+    }
+
+    a {
+        color: #727272;
+        font-size: 12px;
+        padding: 7px 18px;
+        border-radius: 20px;
+        border: 1px solid #feda58;
+        display: inline-block;
+        margin-top: 10px;
+        opacity: 1;
+        background-color: #fff;
+
+        i {
+            margin-left: 5px;
+        }
+    }
+
+    a:hover {
+        background-color: #feda58;
+        color: #727272;
+    }
+}
+.skinRebon-circle__item {
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    width: 120px;
+    height: 50px;
+
+    span {
+        font-size: 16px;
+        color: #243168;
+        font-style: normal;
+        display: inline-block;
+    }
+    
+    b {
+        font-size: 18px;
+        font-weight: 700;
+        color: #a42e2e;
+        text-transform: uppercase;
+        display: inline-block;
+        transition: all 0.4s ease;
+    }
+}
+.skinRebon-circle__item:nth-child(2) {
+    top: -15%;
+    left: 34%;
+}
+.skinRebon-circle__item:nth-child(3) {
+    top: 8%;
+    left: 83%;
+}
+.skinRebon-circle__item:nth-child(4) {
+    top: 38%;
+    left: 101%;
+}
+.skinRebon-circle__item:nth-child(5) {
+    top: 65%;
+    left: 99%;
+}
+.skinRebon-circle__item:nth-child(6) {
+    top: 90%;
+    left: 88%;
+}
+.skinRebon-circle__item:nth-child(7) {
+    top: 90%;
+    left: -17%;
+}
+.skinRebon-circle__item:nth-child(8) {
+    top: 66%;
+    left: -28%;
+}
+.skinRebon-circle__item:nth-child(9) {
+    top: 38%;
+    left: -28%;
+}
+.skinRebon-circle__item:nth-child(10) {
+    top: 10%;
+    left: -14%;
+}
+.skinRebon-circle__item:hover > b{
+    text-shadow: red -3px 3px 20px;
+}
+.skinRebon__text-after {
+    margin-top: 50px;
+    width: 100%;
+    text-align: center;
+
+    h2 {
+        font-weight: 700;
+        color: #a42e2e;
+        font-size: 24px;
+        margin-bottom: 10px;
+        line-height: 1.4em;
+    }
+
+    p {
+        font-size: 16px;
+        color: #727272;
+    }
+}
