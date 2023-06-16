@@ -1,0 +1,107 @@
+.register-history {
+    padding: 40px 0 0 0;
+    float: left;
+    width: 100%;
+}
+.register-history__wrapper  {
+    display: flex;
+    justify-content: space-between;
+}
+.register-history__img {
+    width: 25%;
+    padding: 0 20px;
+}
+.register-history__form {
+    width: 75%;
+    padding: 0 20px;
+    text-align: center;
+    margin-top: 40px;
+
+    form {
+        margin-top: 30px;
+        padding-bottom: 40px;
+    }
+
+    .box-1 {
+        display: flex;
+        width: 100%;
+        justify-content: space-between;
+        gap: 20px;
+    }
+    .box-1__input {
+        width: calc(100% / 3 - 20px);
+
+        input {
+            height: 46px;
+            border-radius: 4px;
+            box-shadow: none;
+            border: 1px solid #f4f4f4;
+            background-color: #f4f4f4;
+            color: #929292;
+            width: 100%;
+            padding: 6px 12px;
+            outline: none;
+            font-size: 15px;
+            line-height: 1.42857;
+            transition: all 0.3s ease-in-out;
+
+            &:hover {
+                box-shadow: 3px 0 10px rgba(0,0,0,.1);
+            }
+        }
+    }
+    .box-2 {
+        margin-top: 20px;
+        margin-bottom: 25px;
+
+        textarea {
+            border-radius: 4px;
+            box-shadow: none;
+            border: 1px solid #f4f4f4;
+            background-color: #f4f4f4;
+            color: #929292;
+            outline: none;
+            height: 100px;
+            transition: all 0.3s ease-in-out;
+
+            &:hover {
+                box-shadow: 3px 0 10px rgba(0,0,0,.1);
+            }
+        }
+    }
+    .box-3 {
+
+        button {
+            color: #243168;
+            cursor: pointer;
+            display: inline-block;
+            font-size: 18px;
+            font-weight: 700;
+            line-height: 46px;
+            text-transform: uppercase;
+            transition: .3s ease-in-out;
+            background-color: #feda58;
+            border-radius: 25px;
+            border: 1px solid #feda58;
+            padding: 0 40px;
+            margin: 0 2px;
+
+            &:hover {
+                color: $color-yellow;
+                background-color: $color-primary;
+            }
+        }
+
+    }
+}
+.register-history__title {
+    font-size: 24px;
+    color: #243168;
+    font-weight: 700;
+    margin-bottom: 10px;
+    text-transform: uppercase;
+    line-height: 1.4em;
+}
+.register-history__desc {
+    color: #727272;
+}

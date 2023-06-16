@@ -28,14 +28,13 @@
     width: 50%;
     color: $color-white;
     text-align: center;
-
-    h2 {
-        color: #fff;
-        font-size: 24px;
-        text-transform: uppercase;
-        font-weight: 700;
-        margin-bottom: 15px;
-    }
+}
+.bgr-content__title {
+    color: #fff;
+    font-size: 24px;
+    text-transform: uppercase;
+    font-weight: 700;
+    margin-bottom: 15px;
 }
 .bgr-content__detail {
 
@@ -45,11 +44,11 @@
         margin-bottom: 15px;
         line-height: 1.5em;
     }
-
-    p {
-        text-align: justify;
-        line-height: 1.7em;
-    }
+}
+.bgr-content__text {
+    color: $color-white;
+    text-align: justify;
+    line-height: 1.7em;
 }
 .bgr-content__icon {
     margin: 10px 0px 15px 0;

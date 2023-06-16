@@ -1,0 +1,25 @@
+.crumbar {
+    float: left;
+    width: 100%;
+    padding: 12px 0 8px 0;
+    background-color: #f4f4f4;
+}
+.crumbar__list {
+    display: flex;
+    gap: 15px;
+    justify-content: start;
+    align-items: center;
+    a {
+        color: $color-primary
+    }
+
+    .active {
+
+        a {
+            display: flex;
+            justify-content: start;
+            align-items: center;
+            gap: 15px;
+        }
+    }
+}

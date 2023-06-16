@@ -1,0 +1,25 @@
+.bgr-content {
+    float: left;
+    width: 100%;
+}
+.bgr-content__slider {
+    display: flex;
+    gap: 30px;
+
+    .item {
+        width: calc(100% / 4 - 30px);
+
+        a {
+            height: 230px;
+            padding: 35px;
+            text-align: center;
+            background: url(../../img/background/bg-award.jpg) no-repeat center center;
+            background-size: cover;
+            border-radius: 6px;
+            overflow: hidden;
+            display: inline-block;
+            line-height: 160px;
+            width: 100%;
+        }
+    }
+}
