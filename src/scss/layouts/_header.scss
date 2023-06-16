@@ -1,9 +1,9 @@
 ﻿@import "../helpers/_mixins.scss";
 @import "../helpers/_variables.scss";
 
-.header {
-  padding-bottom: 500px;
-}
+// .header {
+//   padding-bottom: 500px;
+// }
 .header-top__wrapper {
   display: flex;
   flex-direction: row;
@@ -138,6 +138,7 @@
 }
 // header-main
 .mainMenu__menu1{
+  background-color: #fff;
   transition: 0.3s ease;
   opacity: 0;
   z-index: 1;

@@ -1,0 +1,34 @@
+.banner-home__wrapper {
+    position: relative;
+    width: 100%;
+}
+.banner-home__btn {
+
+    a {
+        display: inline-block;
+        font-size: 24px;
+        color: #c83232;
+        font-weight: 700;
+        padding: 14px 26px;
+        border-radius: 30px;
+        text-transform: uppercase;
+        background-color: #fff;
+        box-shadow: 0 0 57px #3a070d;
+        float: right;
+        position: absolute;
+        bottom: 39px;
+        right: 29%;
+        transition: all 0.3s ease ;
+    }
+
+    i {
+        margin-left: 10px;
+    }
+
+    &:hover {
+        a {
+            background-color: #c83232;
+            color: $color-white;
+        }
+    }
+}
