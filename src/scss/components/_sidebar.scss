@@ -1,0 +1,142 @@
+.aside-wrapper {
+    width: 355px;
+    margin-top: 30px;
+    border-left: 1px solid #e5e5e5;
+    padding-left: 25px;
+    margin-bottom: 30px;
+
+    .advanced-conet__title {
+        margin: 20px 0;
+    }
+}
+.sidebar__register {
+    float: left;
+    width: 100%;
+    padding: 15px 15px 20px 15px;
+    text-align: center;
+    border-top: 7px solid #455faa;
+    border-radius: 4px;
+    background-color: #ebeef9;
+
+    form {
+        display: block;
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        gap: 13px;
+    }
+
+}
+.sidebar__register-title {
+    font-family: $font-roboto-bold;
+    color: #424242;
+    text-transform: uppercase;
+    font-weight: 700;
+    font-size: 22px;
+    text-align: left;
+    margin: 5px 0 15px;
+}
+.sidebar__register-input {
+    height: 44px;
+    border: none;
+    background-color: #fff;
+    width: 100%;
+    text-indent: 7px;
+    font-size: 14px;
+    text-align: left;
+    border-radius: 4px;
+    outline: none;
+}
+.sidebar__register-btn {
+    margin: 0 auto;
+    height: 44px;
+    background-color: #feda58;
+    color: #243168;
+    padding-left: 30px;
+    padding-right: 30px;
+    text-transform: uppercase;
+    border-radius: 25px;
+    font-size: 16px;
+    transition: .3s ease-in-out;
+    margin-top: 5px;
+    border: none;
+    font-weight: 700;
+    width: 45%;
+
+    &:hover {
+        background-color: #fff;
+        color: #243168;
+    }
+}
+.sidebar__list-wrapper {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    width: 100%;
+}
+.sidebar__list-item {
+    width: 100%;
+}
+.sidebar__list-link {
+    display: block;
+    width: 100%;
+    font-size: 14px;
+    color: #4b4b4b;
+    padding: 12px 10px 12px 36px;
+    border: 1px solid #e5e5e5;
+    position: relative;
+    font-weight: 700;
+    border-radius: 4px;
+    background: url(../../img/background/ico-leaf.png) no-repeat 10px 11px;
+
+    &:hover {
+        color: #fff;
+        background: url(../../img/background/ico-leaf-h.png) no-repeat 10px 11px;
+        background-color: #455faa;
+    }
+}
+.sidebar__qc {
+    width: 100%;
+    float: left;
+}
+.sidebar__news {
+    width: 100%;
+    margin-bottom: 20px;
+    display: flex;
+    gap: 20px;
+    flex-direction: column;
+}
+.sidebar__news-item {
+    display: flex;
+}
+.sidebar__news-img {
+    width: 70px;
+}
+.sidebar__news-detail {
+    width: calc(100% - 70px);
+    padding-left: 15px;
+    
+    span {
+        font-size: 14px;
+        color: #424242;
+        display: block;
+        line-height: 1.4em;
+        text-align: justify;
+        text-indent: 18px;
+        transition: 0.3s ease-in-out;
+    }
+    a {
+        position: relative;
+    }
+    i {
+        position: absolute;
+        top:0;
+        left: 0;
+        color: #424242;
+        transition: 0.3s ease-in-out;
+    }
+
+    &:hover span,i{
+        color: $color-primary;
+    }
+}

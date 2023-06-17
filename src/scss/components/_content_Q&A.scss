@@ -1,0 +1,79 @@
+.title-page {
+    float: left;
+    width: 100%;
+    font-size: 24px;
+    color: #424242;
+    margin: 30px 0 20px;
+    font-weight: 700;
+}
+
+.pageQA__wrapper {
+
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    flex-wrap: wrap;
+    gap: 25px;
+
+    .paging {
+        margin-top: 0;
+    }
+}
+.content-QA {
+    width: calc(100% - 380px);
+    margin-top: 30px;
+    .title-page {
+        margin-top: 0;
+    }
+}
+.content-QA__list {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+.content-QA__item {
+    width: 100%;
+    padding: 20px;
+    border: 1px solid #e5e5e5;
+    margin-bottom: 18px;
+    border-radius: 4px;
+    &:nth-child(even) {
+        background-color: #ebeef9;
+    }
+}
+.content-QA__item-link {
+    font-weight: 700;
+    color: #424242;
+    margin-bottom: 10px;
+    display: block;
+    background: url(../../img/images/ico-faq.png) no-repeat left 4px;
+    padding-left: 38px;
+}
+.content-QA__item-next {
+    padding-left: 38px;
+
+    a {
+        border: 1px solid #e5e5e5;
+        padding: 4px 14px;
+        display: inline-block;
+        border-radius: 14px;
+        font-size: 12px;
+        color: #727272;
+        background-color: #fff;
+        transition: 0.3s ease-in-out;
+
+        i {
+            margin-left: 5px;
+        }
+
+        &:hover {
+            background-color: $color-yellow;
+        }
+    }
+}
+.content-QA__custom {
+    float: right;
+    color: #727272;
+    font-size: 12px;
+}
