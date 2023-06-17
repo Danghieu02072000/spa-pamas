@@ -1,0 +1,28 @@
+.detail-QA {
+    width: calc(100% - 380px);
+    margin-top: 30px;
+}
+.title-2 {
+    font-size: 18px;
+    color: #243168;
+    font-weight: 700;
+    margin: 10px 0 20px 0;
+}
+.QA-view__detail {
+    display: block;
+    float: left;
+    text-transform: uppercase;
+    text-decoration: underline !important;
+    font-size: 16px;
+    padding: 15px 0;
+
+
+    &:hover {
+        color: #243168 !important;
+    }
+}
+.detail-QA__text {
+    padding: 10px 0;
+    float: left;
+    width: 100%;
+}
