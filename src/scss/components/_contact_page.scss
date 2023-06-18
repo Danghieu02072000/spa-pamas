@@ -1,0 +1,164 @@
+.contact-page__local {
+    float: left;
+    width: 100%;
+    display: flex;
+    gap: 30px;
+}
+.contact-page__item {
+    width: calc(100% / 3 - 20px);
+    outline: 1px solid #e5e5e5;
+    border: 5px solid #fff;
+    background-color: #f4f4f4;
+    padding: 20px 30px;
+    border-radius: 4px;
+    min-height: 300px;
+    margin-bottom: 30px;
+}
+.contact-page__city {
+    font-size: 18px;
+    color: #243168;
+    padding: 5px 0 5px 34px;
+    margin-bottom: 10px;
+    float: left;
+    display: block;
+    width: 100%;
+    background: url(../../img/images/ico-location.png) no-repeat left center
+}
+.contact-page__store-item {
+    display: block;
+    float: left;
+    width: 100%;
+    padding: 8px 0;
+
+    b {
+        display: inline-block;
+        margin-right: 10px;
+    }
+    a {
+        border: 1px solid  $color-yellow;
+        display: inline-block;
+        padding: 3px 10px;
+        border-radius: 20px;
+        font-weight: 700;
+        color: #424242;
+        transition: 0.3s ease-in-out;
+
+        &:hover {
+            background-color: $color-yellow;
+        }
+    }
+    span {
+        display: block;
+        margin-top: 8px;
+    }
+}
+.contact-page__stores {
+    display: block;
+    float: left;
+}
+.contact-page__maps {
+    width: 100%;
+    height: 350px;
+    float: left;
+    margin-bottom: 40px;
+    margin-top: 20px;
+    display: block;
+    iframe {
+        width: 100%;
+        height: 100%;
+    }
+}
+.contact-page__title {
+    display: block;
+    float: left;
+    width: 100%;
+    text-align: center;
+    font-size: 24px;
+    color: #4b4b4b;
+}
+.contact-page__form {
+    display: block;
+    width: 100%;
+    float: left;
+    form {
+        margin-top: 30px;
+        padding-bottom: 40px;
+
+        ::placeholder {
+            color: $color-gray;
+            opacity: 0.9;
+          }
+    }
+    .box-1 {
+        display: flex;
+        width: 100%;
+        justify-content: space-between;
+        gap: 20px;
+    }
+    .box-1__input {
+        width: calc(100% / 3 - 20px);
+
+        input {
+            height: 46px;
+            border-radius: 4px;
+            box-shadow: none;
+            border: 1px solid #f4f4f4;
+            background-color: #f4f4f4;
+            color: #929292;
+            width: 100%;
+            padding: 6px 12px;
+            outline: none;
+            font-size: 15px;
+            line-height: 1.42857;
+            transition: all 0.3s ease-in-out;
+
+            &:hover {
+                box-shadow: 3px 0 10px rgba(0,0,0,.1);
+            }
+        }
+    }
+    .box-2 {
+        margin-top: 20px;
+        margin-bottom: 25px;
+
+        textarea {
+            border-radius: 4px;
+            box-shadow: none;
+            border: 1px solid #f4f4f4;
+            background-color: #f4f4f4;
+            color: #929292;
+            outline: none;
+            height: 190px;
+            transition: all 0.3s ease-in-out;
+
+            &:hover {
+                box-shadow: 3px 0 10px rgba(0,0,0,.1);
+            }
+        }
+    }
+    .box-3 {
+        display: flex;
+        justify-content: center;
+        margin-bottom: 15px;
+        button {
+            color: #243168;
+            cursor: pointer;
+            display: inline-block;
+            font-size: 18px;
+            font-weight: 700;
+            line-height: 46px;
+            text-transform: uppercase;
+            transition: .3s ease-in-out;
+            background-color: #feda58;
+            border-radius: 25px;
+            border: 1px solid #feda58;
+            padding: 0 40px;
+            margin: 0 2px;
+
+            &:hover {
+                color: $color-yellow;
+                background-color: $color-primary;
+            }
+        }
+    }
+}
