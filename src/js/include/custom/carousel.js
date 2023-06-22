@@ -3,12 +3,22 @@ export default () => {
   $('.js-carousel-logo').flickity({
     cellAlign: 'left',
     contain: true,
-    pageDots: false
+    pageDots: false,
+    prevNextButtons: false,
+    wrapAround: true
+
   })
   $('.js-carousel-main').flickity({
     cellAlign: 'left',
     contain: true,
     prevNextButtons: false
+  })
+  $('.js-carousel-history').flickity({
+    cellAlign: 'left',
+    contain: true,
+    pageDots: false,
+    prevNextButtons: true,
+    wrapAround: true
   })
   $('.js-carousel-event').flickity({
     cellAlign: 'left',

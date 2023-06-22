@@ -1,0 +1,128 @@
+.news-active_top {
+    display: block;
+    width: 100%;
+    float: left;
+    margin: 30px 0 10px;
+}
+.news-active__wrapper {
+    display: flex;
+    justify-content: space-between;
+    gap: 30px
+}
+.news-active__box1 {
+    width: calc(50% - 15px);
+    position: relative;
+    border-radius: 6px;
+    overflow: hidden;
+    & > a {
+        display: block;
+        position: relative;
+
+        &::before{
+            content: "";
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0,0,0,.6);
+            left: 0;
+            top: 0;
+        }
+    }
+    & > h3 {
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        padding: 15px;
+        width: 100%;
+        
+        a {
+            font-size: 24px;
+            color: #fff;
+            font-weight: 700;
+            display: block;
+            line-height: 1.4em;
+        }
+    }
+}
+.news-active__box2 {
+    width: 100%;
+    display: flex;
+    position: relative;
+    border-radius: 6px;
+    overflow: hidden;
+    & > a {
+        display: block;
+        position: relative;
+        width: 100%;
+
+        &::before{
+            content: "";
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0,0,0,.6);
+            left: 0;
+            top: 0;
+        }
+    }
+    & > h3 {
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        padding: 15px;
+        width: 100%;
+        
+        a {
+            font-size: 24px;
+            color: #fff;
+            font-weight: 700;
+            display: block;
+            line-height: 1.4em;
+        }
+    }
+}
+.news-active__box3 {
+    width: calc(50% - 15px);
+    display: block;
+    position: relative;
+    border-radius: 6px;
+    overflow: hidden;
+    & > a {
+        display: block;
+        position: relative;
+
+        &::before{
+            content: "";
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0,0,0,.6);
+            left: 0;
+            top: 0;
+        }
+    }
+    & > h3 {
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        padding: 15px;
+        
+        a {
+            font-size: 24px;
+            color: #fff;
+            font-weight: 700;
+            display: block;
+            line-height: 1.4em;
+        }
+    }
+    &:nth-child(1) {
+        float: left;
+        margin-right: 15px;
+        margin-top: 30px;
+    }
+    &:nth-child(2) {
+        float: left;
+        margin-left: 15px;
+        margin-top: 30px;
+    }
+}

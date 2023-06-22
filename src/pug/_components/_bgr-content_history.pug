@@ -3,16 +3,23 @@
         .bgr-content2__wrapper
             h2.bgr-content__title Giải Thưởng PAMAS
             p.bgr-content__text Cúp vàng thương hiệu Việt, Top 100 sản phẩm, dịch vụ xuất sắc nhất, doanh nhân Tâm – Tài – Trí – Dũng cho người sáng lập ra Pamas, Dịch vụ triệt lông được yêu thích nhất, dịch vụ trẻ hoá da hiệu quả nhất, giải thưởng tạo hình gương mặt đẹp nhất cho chỉ FTC – gương mặt Vline thế hệ F2, giải thưởng dịch vụ nâng cơ uy tín nhất, dịch vụ trị nám hiệu quả nhất.
-            .bgr-content__slider
-                .item
-                    a(href="#")
-                        img(src="img/images/award-1.png", alt="").img-responsive
-                .item
-                    a(href="#")
-                        img(src="img/images/award-2.png", alt="").img-responsive
-                .item
-                    a(href="#")
-                        img(src="img/images/award-3.png", alt="").img-responsive
-                .item
-                    a(href="#")
-                        img(src="img/images/award-4.png", alt="").img-responsive
+            .carousel-history
+                    .carousel.carousel--history.js-carousel-history
+                        .carousel__item
+                            a(href="#" title).history_carousel-item 
+                                 +image-lazy('img/images/award-1.png', 'carousel__image', 'contain')
+                        .carousel__item
+                            a(href="#" title).history_carousel-item 
+                                 +image-lazy('img/images/award-2.png', 'carousel__image', 'contain')
+                        .carousel__item
+                            a(href="#" title).history_carousel-item 
+                                 +image-lazy('img/images/award-3.png', 'carousel__image', 'contain')
+                        .carousel__item
+                            a(href="#" title).history_carousel-item 
+                                 +image-lazy('img/images/award-4.png', 'carousel__image', 'contain')
+                        .carousel__item
+                            a(href="#" title).history_carousel-item 
+                                 +image-lazy('img/images/award-1.png', 'carousel__image', 'contain')
+                        .carousel__item
+                            a(href="#" title).history_carousel-item
+                                 +image-lazy('img/images/award-4.png', 'carousel__image', 'contain')

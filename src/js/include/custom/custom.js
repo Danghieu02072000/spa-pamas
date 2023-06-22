@@ -25,4 +25,13 @@ export default () => {
       }
     }, window)
   }
+  var scoll_fix =document.querySelector('#header-main')
+  window.addEventListener('scroll', () => {
+    if(window.scrollY > 250){
+      scoll_fix.classList.add("fixed");
+    }
+    else{
+      scoll_fix.classList.remove("fixed");
+    }
+})
 }

@@ -112,10 +112,13 @@
   transition: $target $time $ease;
 }
 
-@mixin aspect($height: 9, $width: 16, $positions: 'before') {
+@mixin aspect($height: 5, $width: 16, $positions: 'before') {
   &:#{$positions} {
     content: '';
     display: block;
-    padding-top: ($height / $width) * 100%;
+    padding-top: 33.4%;
   }
+}
+.carousel--history .carousel__image:before {
+  padding-top: 74.4% ;
 }

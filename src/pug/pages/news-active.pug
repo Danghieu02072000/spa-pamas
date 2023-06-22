@@ -2,13 +2,14 @@ extends ../_layouts/_layouts
 include ../_mixins/_image
 
 block variables
-  - var title='Q&A_pages'
+  - var title='news-active'
 
 block content
   .main-pageAdvanced
     include ../_components/_crumbar
     .container
         .pageQA__wrapper
-            include ../_components/_content_Q&A
-            include ../_components/_sidebar_2
+            include ../_components/_news-active_top
+            include ../_components/_page_story
+            include ../_components/_sidebar_3
             include ../_components/_paging
