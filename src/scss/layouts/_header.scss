@@ -291,6 +291,7 @@
     opacity: 1;
     visibility: visible;
     top: 60px;
+    z-index: 999;
   }
 }
 .sing-sub {
@@ -387,6 +388,15 @@
   border-top: 1px solid #feda58;
   background-color: #24326a;
   text-align: center;
+
+  &::before {
+    content: "";
+    border: 10px solid transparent;
+    border-top: 10px solid #243168;
+    position: absolute;
+    top: 50px;
+    left: calc(50% - 10px);
+  }
 }
 .fixed {
   position: fixed;
@@ -403,7 +413,7 @@
   box-shadow: 10px 0 15px #767676;
 
   .header-sticky {
-    transform: translateY(50px);
+    transform: translateY(52px);
     visibility: visible;
   }
   .mainMenu__li {
@@ -416,4 +426,74 @@
       background-color: $color-primary;
     }
   }
+}
+.hotline-sticky {
+  width: 100%;
+  border-bottom: 3px solid #feda58;
+  position: fixed;
+  bottom: -52px;
+  left: 0;
+  right: 0;
+  z-index: 99;
+  background-color: rgba(35,49,105,.75);
+  transition: .3s ease-in-out;
+}
+.show {
+  transform: translateY(-52px);
+}
+.hotline-sticky__wrapper {
+  position: relative;
+  & >strong {
+    float: left;
+    display: inline-block;
+    color: #fff;
+    padding-top: 15px;
+    float: left;
+  }
+}
+.footer-phone {
+  width: 301px;
+  margin: 0 auto;
+  text-align: center;
+  background: url(../../img/background/foo-phone.png) no-repeat center bottom;
+  padding-top: 1px;
+  & > a {
+    color: #233169;
+    padding-left: 40px;
+    background: url(../../img/icons/foo-phone-ico.png) no-repeat left center;
+    display: inline-block;
+    & > strong {
+      font-size: 20px;
+      font-weight: 700;
+      display: block;
+    }
+    & > span {
+      font-weight: 400;
+      position: relative;
+      top: -2px;
+    }
+  }
+}
+.support-box {
+
+    display: inline-block;
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    background-color: #314079;
+    border-radius: 4px 4px 0 0;
+    padding: 15px 18px;
+    color: #feda58;
+    text-transform: uppercase;
+    font-weight: 700;
+    text-transform: uppercase;
+    transition: 0.3s ease-in-out;
+    &:hover {
+      color: $color-white;
+    }
+    span {
+      display: inline-block;
+      padding-left: 35px;
+      background: url(../../img/icons/icon-chat.png) no-repeat left center;
+    }
 }

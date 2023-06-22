@@ -26,12 +26,15 @@ export default () => {
     }, window)
   }
   var scoll_fix =document.querySelector('#header-main')
+  var hotline = document.querySelector('#hotline-sticky')
   window.addEventListener('scroll', () => {
     if(window.scrollY > 250){
       scoll_fix.classList.add("fixed");
+      hotline.classList.add("show");
     }
     else{
       scoll_fix.classList.remove("fixed");
+      hotline.classList.remove("show");
     }
 })
 }
