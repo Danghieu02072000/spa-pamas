@@ -1,5 +1,11 @@
 .about-home {
     padding: 40px 0;
+    @include mq(xxs){
+        padding: 20px 0;
+    }
+    @include mq(ml){
+        padding: 40px 0;
+    }
 }
 .about-home__title {
     text-align: center;
@@ -13,16 +19,44 @@
         display: block;
         font-weight: 700;
         margin-bottom: 10px;
+        @include mq(xxs){
+            font-size: 22px;
+        }
+        @include mq(xs){
+            font-size: 34px;
+        }
+        @include mq(ml){
+            font-size: 48px;
+        }
+        
     }
 
     span {
         font-size: 24px;
         color: #243168;
+        @include mq(xxs){
+            font-size: 14px;
+            padding-top: 10px;
+            display: block;
+        }
+        @include mq(sm){
+            font-size: 22px;
+        }
+        @include mq(ml){
+            font-size: 24px;
+        }
     }
 }
 .about-home__list {
     display: flex;
     flex-direction: row;
+    @include mq(xxs){
+        flex-direction: column;
+    }
+    @include mq(sm){
+        flex-direction: row;
+    }
+    
 }
 .about-home__item {
     text-align: center;
@@ -30,6 +64,12 @@
     padding: 0 15px;
     justify-content: center;
     align-items: center;
+    @include mq(xxs){
+        width: 100%;
+    }
+    @include mq(sm){
+        width: calc(100% / 3);
+    }
 }
 .about-home__img {
     margin: 15px 0;
@@ -43,7 +83,7 @@
     color: #727272;
     line-height: 1.5em;
     margin-bottom: 10px;
-    display: inline-block;
+    display: block;
     transition: all 0.5s ease;
 }
 .about-home__detail a {

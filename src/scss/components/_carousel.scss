@@ -126,7 +126,7 @@
       width: 100%;
   
       @include mq(sm) {
-        width: calc(100%/2);
+        width: 100%;
       }
   
       @include mq(m) {
@@ -149,6 +149,24 @@
             bottom: 40px;
             right: 29%;
             transition: all 0.3s ease ;
+            @include mq(xxs) {
+              font-size: 12px;
+              padding: 3px 10px;
+              right: 55px;
+              bottom: 6px;
+            }
+            @include mq(xs) {
+              font-size: 15px;
+              padding: 11px 19px;
+              right: 28%;
+              bottom: 16px;
+            }
+            @include mq(ml) {
+              font-size: 24px;
+              padding: 14px 30px;
+              right: 25%;
+              bottom: 7%;
+            }
         }
     
         i {

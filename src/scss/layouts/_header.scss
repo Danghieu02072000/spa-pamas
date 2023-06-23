@@ -4,7 +4,6 @@
 // .header {
 //   padding-bottom: 500px;
 // }
-
 .header-top__wrapper {
   display: flex;
   flex-direction: row;
@@ -437,6 +436,13 @@
   z-index: 99;
   background-color: rgba(35,49,105,.75);
   transition: .3s ease-in-out;
+
+  @include mq(xxs){
+    display: none;
+  }
+  @include mq(ml){
+    display: block;
+  }
 }
 .show {
   transform: translateY(-52px);
@@ -496,4 +502,51 @@
       padding-left: 35px;
       background: url(../../img/icons/icon-chat.png) no-repeat left center;
     }
+}
+//responsive
+@include mq(xxs){
+  .header-wrapper {
+    display: none;
+  }
+  .carousel--banner .carousel__item .banner-home__btn a {
+    font-size: 12px;
+    padding: 3px 10px;
+    right: 44px;
+    bottom: 6px;
+  }
+}
+.header-wrapper {
+  @include mq(ml){
+    display: block;
+  }
+}
+.mobie-sticky {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  padding: 0;
+  text-align: center;
+  background-color: rgba(0,0,0,.7);
+  z-index: 9998;
+}
+.mobie-sticky-phone {
+  line-height: 37px;
+  padding: 0 20px;
+  text-align: center;
+  width: 50%;
+  display: inline-block;
+  font-size: 20px;
+  background-color: $color-primary;
+  i {
+    color: #feda58;
+    font-size: 25px;
+    position: relative;
+    top: 1px;
+  }
+}
+.mobie-sticky {
+  @include mq(m) {
+    display: none;
+  }
 }

@@ -21,6 +21,7 @@
     display: flex;
     gap: 10px;
     justify-content: center;
+    flex-wrap: wrap;
     margin-bottom: 30px;
 
     li {
@@ -32,7 +33,12 @@
         text-transform: uppercase;
         border: 1px dashed #e1e1e1;
         transition: all 0.4s ease;
-
+        @include mq(xxs){
+            width: 100%;
+        }
+        @include mq(sm){
+            width: unset;
+        }
         a {
             color: #727272;
         }
@@ -40,12 +46,24 @@
 
     li:hover {
         background-color: #ebebeb;
+        @include mq(xxs){
+            background-color: $color-primary;
+            a {
+                color: $color-white;
+            }
+        }
     }
 }
 .tab-news__detal {
     display: flex;
     justify-content: space-between;
     flex-wrap: wrap;
+    @include mq(xxs){
+        gap: 10px;
+    }
+    @include mq(sm){
+        gap: 0px;
+    }
 
 }
 .tab-news__news {
@@ -85,7 +103,14 @@
 .tab-news__item {
     width: calc(100% / 3);
     padding: 0 15px;
-
+    @include mq(xxs){
+        width: 100%;
+        padding: 0;
+    }
+    @include mq(sm){
+        width: calc(100% / 3);
+        padding: 0 15px;
+    }
      a {
         font-size: 16px;
         font-weight: 700;
@@ -95,6 +120,7 @@
         position: relative;
         padding-left: 15px;
         transition: all 0.4s ease;
+        text-transform: uppercase;
         &::before {
             content: "";
             width: 8px;

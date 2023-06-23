@@ -11,6 +11,7 @@
 .register-home__content {
     display: flex;
     justify-content: space-between;
+    flex-wrap: wrap;
 }
 .register-home__title {
     text-align: center;
@@ -36,10 +37,31 @@
     padding: 22px;
     background-color: #f4f4f4;
     padding-bottom: 20px;
+    @include mq(xxs){
+        width: 100%;
+    }
+    @include mq(sm){
+        width: 50%;
+    }
+    @include mq(m){
+        width: 55%;
+    }
+    @include mq(l){
+        width: 58%;
+    }
 }
 .img-video {
     background-color: #ccc;
     height: 330px;
+    @include mq(sm){
+        height: 210px;
+    }
+    @include mq(m){
+        height: 260px;
+    }
+    @include mq(l){
+        height: 330px;
+    }
 }
 .register-home__detail {
     text-align: center;
@@ -78,6 +100,7 @@
 .regiser-home__arrow {
     display: flex;
     justify-content: center;
+    flex-wrap: wrap;
     gap: 7px;
     align-items: center;
     
@@ -128,6 +151,30 @@
     padding-bottom: 22px;
     text-align: center;
     background-size: 100%;
+    @include mq(xxs){
+        width: 100%;
+        padding-top: 250px;
+    }
+    @include mq(xs){
+        width: 100%;
+        padding-top: 350px;
+    }
+    @include mq(sm){
+        width:  45%;
+        padding-top: 230px;
+    }
+    @include mq(m){
+        width:  40%;
+        padding-top: 270px;
+    }
+    @include mq(ml){
+        width:  40%;
+        padding-top: 305px;
+    }
+    @include mq(l){
+        width:  40%;
+        padding-top: 310px;
+    }
 
     form {
         display: flex;
@@ -157,6 +204,12 @@
         text-transform: uppercase;
         background-color: #feda58;
         transition: all 0.4s ease;
+        @include mq(xxs){
+            width: 59%;
+        }
+        @include mq(sm){
+            width: 69%;
+        }
     }
 
     a:hover {

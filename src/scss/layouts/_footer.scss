@@ -4,6 +4,7 @@
     background: url(../../img/background/line-foo-top.png) repeat-x top center #243168;
     position: relative;
     border-top: 1px solid #fff;
+    z-index: -2;
 }
 .footer__wrapper::before {
     content: "";
@@ -12,6 +13,7 @@
     position: absolute;
     top: calc(60% - 131px);
     background: url(../../img/background/icon-foo-1.png) no-repeat left center;
+    z-index: -1;
 }
 .footer__wrapper::after {
     content: "";
@@ -21,6 +23,10 @@
     top: calc(60% - 131px);
     background: url(../../img/background/icon-foo-2.png) no-repeat right center;
     right: 0;
+    z-index: -1;
+    @include mq(xxs){
+       top: 20px;
+    }
 }
 .footer__arrow {
     background: url(../../img/background/arrow-foo.png) no-repeat top center;
@@ -32,11 +38,20 @@
 }
 .footer__menu {
     padding: 30px 0;
+    @include mq(xxs){
+        display: none;
+    }
+    @include mq(sm){
+        display: block;
+    }
+    @include mq(sm){
+        padding: 40px 0;
+    }
 }
 .footer-menu__wrapper {
     display: flex;
     justify-content: space-between;
-    
+    flex-wrap: wrap;
 }
 .footer-menu__list {
     padding: 0 15px;
@@ -46,6 +61,14 @@
     justify-content: center;
     gap: 10px;
     color: #DBDBDB;
+    @include mq(sm){
+        width: 50%;
+        padding: 15px 0;
+    }
+    @include mq(m){
+        width: unset;
+        padding: 0 15px;
+    }
 }
 .footer-menu__li {
     display: flex;
@@ -66,16 +89,47 @@
 .footer-company__wrapper {
     display: flex;
     gap: 15px;
+    @include mq(xxs){
+        padding-top: 30px;
+        flex-wrap: wrap;
+    }
+    @include mq(sm){
+        padding-top: 30px;
+        flex-wrap: wrap;
+        justify-content: space-between;
+    }
 }
 .footer-company__logo {
     width: 95px;
+    @include mq(xxs){
+        width: 100%;
+        text-align: center;
+    }
+    @include mq(sm){
+        width: 95px;
+    }
 }
 .footer-company__text {
     padding: 10px 0;
     display: flex;
     flex-direction: column;
     gap: 10px;
+    @include mq(xxs){
+        text-align: center;
 
+        h4 {
+            font-weight: 700;
+        }
+    }
+
+    @include mq(sm){
+        text-align: justify;
+        width: calc(100% - 110px);
+
+        h4 {
+            font-weight: 700;
+        }
+    }
     h4 {
         font-size: 18px;
         color:$color-white;
@@ -90,7 +144,16 @@
 }
 .footer-location__wrapper {
     display: flex;
+    flex-wrap: wrap;
+    text-align: center;
 
+    @include mq(sm){
+        justify-content: end;
+        text-align: justify;
+    }
+    @include mq(m){
+        justify-content: space-between;
+    }
     strong {
         color: #feda58;
         font-size: 16px;
@@ -117,22 +180,74 @@
 }
 .footer-location__left {
     width: calc(100% / 3);
+    @include mq(xxs){
+        width: 100%;
+    }
+    @include mq(sm){
+        width: calc(100% / 2);
+    }
+    @include mq(m){
+        width: calc(100% / 3);
+        padding: 0 15px;
+    }
 }
 .footer-location__center {
     width: calc(100% / 3);
+    @include mq(xxs){
+        width: 100%;
+    }
+    @include mq(sm){
+        width: calc(100% / 2);
+    }
+    @include mq(m){
+        width: calc(100% / 3);
+        padding: 0 15px;
+    }
 }
 .footer-location__right {
     width: calc(100% / 3);
+    @include mq(xxs){
+        width: 100%;
+    }
+    @include mq(sm){
+        width: calc(100% / 2);
+        margin-top: 10px;
+    }
+    @include mq(m){
+        width: calc(100% / 3);
+        padding: 0 15px;
+        margin-top: 0px;
+    }
 }
 .copyright {
     padding: 10px 0 45px 0;
+    @include mq(xxs){
+
+        border-top: 1px solid #b9b9b9;
+    }
 }
 .copyright__wrapper {
     display: flex;
     justify-content: space-between;
+    @include mq(xxs){
+        flex-wrap: wrap;
+        flex-direction: column-reverse;
+    }
+    @include mq(sm){
+        flex-wrap: nowrap;
+        flex-direction: row;
+    }
 }
 .copyright__left {
     width: calc(100% / 3);
+    @include mq(xxs){
+        width: 100%;
+        text-align: center;
+    }
+    @include mq(sm){
+        width: calc(100% / 2.5);
+        text-align: start;
+    }
 
     span {
         font-size: 13px;
@@ -145,6 +260,15 @@
     display: flex;
     gap: 22px;
     justify-content: end;
+    @include mq(xxs){
+        width: 100%;
+        justify-content:center;
+
+    }
+    @include mq(sm){
+        width: calc(100% / 2.5);
+        justify-content: end;
+    }
     a{
         display: inline-block;
         color: #aaabaf;

@@ -2,7 +2,7 @@
     float: left;
     width: 100%;
     padding: 140px 0 20px;
-    background: url(../img/bg-caro.jpg) no-repeat bottom center #f4f4f4;
+    background: url(../../img/background/bg-caro.jpg) no-repeat bottom center #f4f4f4;
 }
 .skinRebon__wrapper {
     display: flex;
@@ -13,15 +13,31 @@
 }
 .skinRebon__left {
     width: 41%;
-
+    @include mq(xxs){
+        width: 100%;
+    }
+    @include mq(m){
+        width: 30%;
+    }
+    @include mq(l){
+        width: 41%;
+    }
     img {
         margin-bottom: 20px;
+        @include mq(xxs){
+            max-width: 70%;
+            margin-left: 15%;
+            margin-right: 15%;
+        }
     }
 }
 .skinRebon__list-btn {
     display: flex;
     flex-direction: column;
     gap: 35px;
+    @include mq(xxs){
+        gap: 20px;
+    }
 
     a {
         display: block;
@@ -34,7 +50,11 @@
     color: #fff;
     padding: 18px 20px;
     position: relative;
-    text-align: center
+    text-align: center;
+    @include mq(xxs){
+        font-size: 12px;
+    }
+    
     }
     a::after{
         content: "";
@@ -59,6 +79,15 @@
 }
 .skinRebon__right{
     width: 56%;
+    @include mq(xxs){
+        width: 100%;
+    }
+    @include mq(m){
+        width: 64%;
+    }
+    @include mq(l){
+        width: 56%;
+    }
 }
 .skinRebon__circle {
     background: url(../../img/background/ico-char-skin.png) no-repeat center center;
@@ -68,6 +97,25 @@
     padding: 110px 20px 120px 20px;
     text-align: center;
     position: relative;
+    @include mq(xxs){
+        width: 100%;
+        margin: 100px auto 100px;
+        padding-top: 65px;
+        background: url(../../img/background/ico-char-skin-2.png) no-repeat center center;
+    }
+    @include mq(xs){
+        width: 100%;
+        margin: 100px auto 100px;
+        padding: 110px 20px 120px 20px;
+        background: url(../../img/background/ico-char-skin.png) no-repeat center center;
+    }
+    @include mq(sm){
+        background: url(../../img/background/ico-char-skin.png) no-repeat center center;
+        width: 416px;
+        height: 374px;
+        margin: 70px auto 30px;
+        padding: 110px 20px 120px 20px;
+    }
 }
 .skinRebon-circle__text {
     padding: 0 75px;
@@ -137,38 +185,146 @@
 .skinRebon-circle__item:nth-child(2) {
     top: -15%;
     left: 34%;
+    @include mq(xxs){
+        top: -4%;
+        left: -4%;
+    }
+    @include mq(xs){
+        top: -15%;
+        left: 35%;
+    }
+    @include mq(sm){
+        top: -15%;
+        left: 34%;
+    }
 }
 .skinRebon-circle__item:nth-child(3) {
     top: 8%;
     left: 83%;
+    @include mq(xxs){
+        top: -10%;
+        left: 33%;    
+    }
+    @include mq(xs){
+        top: 8%;
+        left: 76%;    
+    }
+    @include mq(sm){
+        top: 8%;
+        left: 83%;  
+    }
 }
 .skinRebon-circle__item:nth-child(4) {
     top: 38%;
     left: 101%;
+    @include mq(xxs){
+        top: -4%;
+        left: 69%;
+    }
+    @include mq(xs){
+        top: 38%;
+        left: 90%;
+    }
+    @include mq(sm){
+        top: 38%;
+        left: 101%;
+    }
 }
 .skinRebon-circle__item:nth-child(5) {
     top: 65%;
     left: 99%;
+    @include mq(xxs){
+        top: -22%;
+        left: 4%;
+    }
+    @include mq(xs){
+        top: 65%;
+        left: 87%;
+    }
+    @include mq(sm){
+        top: 65%;
+        left: 99%;
+    }
 }
 .skinRebon-circle__item:nth-child(6) {
     top: 90%;
     left: 88%;
+    @include mq(xxs){
+        top: -22%;
+        left: 62%;
+    }
+    @include mq(xs){
+        top: 90%;
+        left: 81%;
+    }
+    @include mq(sm){
+        top: 90%;
+        left: 88%;
+    }
 }
 .skinRebon-circle__item:nth-child(7) {
     top: 90%;
     left: -17%;
+    @include mq(xxs){
+        top: 99%;
+        left: -3%;
+    }
+    @include mq(xs){
+        top: 90%;
+        left: -3%;
+    }
+    @include mq(sm){
+        top: 90%;
+        left: -17%;
+    }
 }
 .skinRebon-circle__item:nth-child(8) {
     top: 66%;
     left: -28%;
+    @include mq(xxs){
+        top: 114%;
+        left: 21%;
+    }
+    @include mq(xs){
+        top: 66%;
+        left: -12%;
+    }
+    @include mq(sm){
+        top: 66%;
+        left: -28%;
+    }
 }
 .skinRebon-circle__item:nth-child(9) {
     top: 38%;
     left: -28%;
+    @include mq(xxs){
+        top: 99%;
+        left: 68%;
+    }
+    @include mq(xs){
+        top: 38%;
+        left: -14%;
+    }
+    @include mq(sm){
+        top: 38%;
+        left: -28%;
+    }
 }
 .skinRebon-circle__item:nth-child(10) {
     top: 10%;
     left: -14%;
+    @include mq(xxs){
+        top: 114%;
+        left: 49%;
+    }
+    @include mq(xs){
+        top: 10%;
+        left: -2%;
+    }
+    @include mq(sm){
+        top: 10%;
+        left: -14%;
+    }
 }
 .skinRebon-circle__item:hover > b{
     text-shadow: red -3px 3px 20px;
@@ -184,9 +340,15 @@
         font-size: 24px;
         margin-bottom: 10px;
         line-height: 1.4em;
+        @include mq(xxs){
+            font-size: 20px;
+        }
+        @include mq(ml){
+            font-size: 24px;
+        }
     }
 
-    p {
+    span {
         font-size: 16px;
         color: #727272;
     }
