@@ -5,6 +5,11 @@
 }
 .content-history {
     margin-top: 40px;
+    &:nth-child(3) {
+        @include mq(xxs) {
+            margin-bottom: -22px;
+        }
+    }
 
     .list-img {
         display: flex;
@@ -20,17 +25,28 @@
     display: flex;
     justify-content: space-between;
     gap: 10px;
+    @include mq(xxs) {
+        flex-wrap: wrap;
+    }
 }
 .content-history__detail {
     width: 58%;
     padding: 0 15px;
     line-height: 1.5em;
     color: #727272;
-    text-align: justify
+    text-align: justify;
+    @include mq(xxs) {
+        width: 100%;
+        padding: 0;
+    }
 }
 .content-history__img {
     width: 40%;
     padding: 0 15px;
+    @include mq(xxs) {
+        width: 100%;
+        padding: 0;
+    }
 }
 .content-history__title {
     font-size: 24px;
@@ -38,6 +54,12 @@
     font-weight: 700;
     margin-bottom: 10px;
     line-height: 1.4em;
+    @include mq(xxs) {
+        font-size: 18px;
+    }
+    @include mq(xs) {
+        font-size: 24px;
+    }
 }
 .content-history__list {
     margin-bottom: 10px;
@@ -72,6 +94,12 @@
     line-height: 1.4em;
     position: relative;
     width: 100%;
+    @include mq(xxs) {
+        font-size: 14px;
+    }
+    @include mq(xxs) {
+        font-size: 18px;
+    }
 
     &::before {
         content: "";
@@ -87,11 +115,25 @@
 .content-history__detail2 {
     width: calc(50% - 5px) ;
     padding: 0 15px;
+    @include mq(xxs) {
+        width: 100%;
+        padding: 0;
+    }
 }
 .content-history__img2 {
     width: calc(50% - 5px) ;
     width: 50%;
     padding: 0 15px;
+    
+    @include mq(xxs) {
+        width: 100%;
+        padding: 0;
+    }
+
+    a {
+        width: 100%;
+        display: inline-block;
+    }
 }
 .slogan-style2 {
     margin-top: 30px;

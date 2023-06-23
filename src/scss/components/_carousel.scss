@@ -31,12 +31,12 @@
     .carousel__item {
       width: calc(100%/4);
   
-      @include mq(sm) {
-        width: calc(100%/4);
+      @include mq(xxs) {
+        width: calc(100%/2);
       }
   
-      @include mq(m) {
-        width: calc(100%/4);
+      @include mq(xs) {
+        width: calc(100%/3);
       }
   
       @include mq(l) {

@@ -20,6 +20,13 @@
             justify-content: start;
             align-items: center;
             gap: 15px;
+
+            span {
+
+                @include mq(xxs) {
+                    font-size: 12px;
+                  }
+            }
         }
     }
 }

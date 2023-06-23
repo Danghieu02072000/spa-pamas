@@ -3,6 +3,9 @@
     background-image: url(../../img/background/banner-prl-1.jpg);
     transform: translate(0%, 11.5491%) translate3d(0px, 0px, 0px);
     position: relative;
+    @include mq(xxs){
+        padding: 50px 0 70px 0;
+    }
 }
 .dot-arrow {
     background: url(../../img/background/arrow-foo.png) no-repeat top center;
@@ -61,6 +64,12 @@
     text-transform: uppercase;
     font-weight: 700;
     margin-bottom: 15px;
+    @include mq(xxs){
+        font-size: 18px;
+    }
+    @include mq(xs){
+        font-size: 24px;
+    }
 }
 .bgr-content__detail {
 

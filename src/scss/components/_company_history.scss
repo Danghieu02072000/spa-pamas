@@ -7,15 +7,23 @@
 .company-history__wrapper {
     display: flex;
     justify-content: space-between;
+    flex-wrap: wrap;
 }
 .company-history__detail {
     width: calc(100% / 2 - 10px);
     padding: 0 40px;
     text-align: center;
+    @include mq(xxs) {
+        width: 100%;
+    }
 }
 .company-history__ruler {
     width: calc(100% / 2 - 10px);
     padding: 0 30px;
+    @include mq(xxs) {
+        width: 100%;
+        padding: 0;
+    }
 }
 .company-history__logo {
     margin-bottom: 10px;
@@ -25,6 +33,12 @@
     color: #243168;
     font-weight: 700;
     margin: 10px 0;
+    @include mq(xxs) {
+        font-size: 24px;
+    }
+    @include mq(xs) {
+        font-size: 36px;
+    }
 }
 .company-history__slogan {
     font-size: 18px;

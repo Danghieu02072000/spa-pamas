@@ -8,6 +8,14 @@
     font-weight: 700;
     text-transform: uppercase;
     color: #243168;
+    @include mq(xxs) {
+        font-size: 24px;
+        margin-bottom: 10px;
+      }
+    @include mq(xs) {
+        font-size: 34px;
+        margin-bottom: 10px;
+      }
 }
 .timeline-his__slogan {
     font-size: 24px;
@@ -15,6 +23,12 @@
     font-weight: 400;
     text-align: center;
     display: block;
+    @include mq(xxs) {
+        font-size: 16px;
+    }
+    @include mq(xs) {
+        font-size: 24px;
+    }
 }
 .timeline-his__line {
     border-top: 3px solid #455faa;
@@ -22,6 +36,14 @@
     position: relative;
     float: left;
     width: 100%;
+    @include mq(xxs) {
+        border-top:0;
+        border-left: 3px solid #455faa;
+      }
+    @include mq(xs) {
+        border-left:0;
+        border-top: 3px solid #455faa;
+    }
 }
 .timeline-his__item {
     width: 33.333%;
@@ -29,6 +51,21 @@
     text-align: center;
     float: left;
     position: relative;
+
+    @include mq(xxs) {
+        width:  100%;
+        border: 1px solid #e5e5e5;
+        margin-bottom: 30px;
+    }
+    @include mq(xs) {
+        width: 33.333%;
+        border: none;
+        margin-bottom: 0px;
+    }
+    &:nth-child(3) {
+        margin-bottom: 0px;
+    }
+    
 
     &::before {
         content: "";
@@ -40,6 +77,15 @@
         top: -10px;
         left: calc(50% - 8px);
         background-color: #feda58;
+        
+        @include mq(xxs) {
+            top: calc(50% - 10px);
+            left: -3%;
+        }
+        @include mq(xxs) {
+            top: -10px;
+            left: calc(50% - 8px);
+        }
     }
 
     strong {
@@ -49,6 +95,12 @@
         text-align: center;
         display: block;
         transition: 0.3s ease-in-out;
+        @include mq(xxs) {
+            font-size: 16px;
+        }
+        @include mq(xs) {
+            font-size: 24px;
+        }
     }
 
     span {
@@ -86,7 +138,22 @@
     opacity: 0;
     transition: .3s ease-in-out;
     visibility: hidden;
-
+    @include mq(xxs) {
+        position: unset;
+        top: calc(100% - 50px);
+        opacity: 1;
+        visibility: visible;
+        box-shadow:none;
+        padding: 0;
+      }
+      @include mq(xs) {
+        position: absolute;
+        top: calc(100% - 50px);
+        opacity: 0;
+        visibility: hidden;
+        box-shadow: 0 0 57px rgba(0,0,0,.3);
+        padding: 20px;
+      }
     &::before {
         content: "";
         position: absolute;
@@ -94,6 +161,9 @@
         top: -19px;
         border: 10px solid transparent;
         border-bottom: 10px solid #fff;
+        @include mq(xs) {
+            left: calc(50% - 10px);
+        }
     }
     span {
         color: #727272;

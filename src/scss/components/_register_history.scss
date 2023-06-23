@@ -10,12 +10,18 @@
 .register-history__img {
     width: 25%;
     padding: 0 20px;
+    @include mq(xxs) {
+        display: none;
+    }
 }
 .register-history__form {
     width: 75%;
     padding: 0 20px;
     text-align: center;
     margin-top: 40px;
+    @include mq(xxs) {
+        width: 100%;
+    }
 
     form {
         margin-top: 30px;
@@ -27,9 +33,15 @@
         width: 100%;
         justify-content: space-between;
         gap: 20px;
+        @include mq(xxs) {
+            flex-wrap: wrap;
+        }
     }
     .box-1__input {
         width: calc(100% / 3 - 20px);
+        @include mq(xxs) {
+            width: 100%;
+        }
 
         input {
             height: 46px;
@@ -85,6 +97,12 @@
             border: 1px solid #feda58;
             padding: 0 40px;
             margin: 0 2px;
+            @include mq(xxs) {
+                width: 100%;
+            }
+            @include mq(xs) {
+                width: unset;
+            }
 
             &:hover {
                 color: $color-yellow;
@@ -101,6 +119,13 @@
     margin-bottom: 10px;
     text-transform: uppercase;
     line-height: 1.4em;
+    @include mq(xxs) {
+        font-size: 18px;
+    }
+    @include mq(xs) {
+        font-size: 24px;
+    }
+
 }
 .register-history__desc {
     color: #727272;
