@@ -12,7 +12,7 @@
     flex-wrap: wrap;
 }
 .skinRebon__left {
-    width: 41%;
+    width: 100%;
     @include mq(xxs){
         width: 100%;
     }
@@ -34,17 +34,19 @@
 .skinRebon__list-btn {
     display: flex;
     flex-direction: column;
-    gap: 35px;
+    gap: 20px;
     @include mq(xxs){
         gap: 20px;
     }
-
+    @include mq(m){
+        gap: 35px;
+    }
     a {
         display: block;
     width: 100%;
     background-color: #a42e2e;
     border-radius: 4px;
-    font-size: 16px;
+    font-size: 12px;
     font-weight: 700;
     text-transform: uppercase;
     color: #fff;
@@ -53,6 +55,9 @@
     text-align: center;
     @include mq(xxs){
         font-size: 12px;
+    }
+    @include mq(m){
+        font-size: 16px;
     }
     
     }
@@ -78,7 +83,7 @@
     }
 }
 .skinRebon__right{
-    width: 56%;
+    width: 100%;
     @include mq(xxs){
         width: 100%;
     }
@@ -90,11 +95,11 @@
     }
 }
 .skinRebon__circle {
-    background: url(../../img/background/ico-char-skin.png) no-repeat center center;
-    width: 416px;
+    background: url(../../img/background/ico-char-skin-2.png) no-repeat center center;
+    width: 100%;
     height: 374px;
-    margin: 70px auto 30px;
-    padding: 110px 20px 120px 20px;
+    margin: 100px auto 100px;
+    padding-top: 65px;
     text-align: center;
     position: relative;
     @include mq(xxs){
@@ -183,8 +188,8 @@
     }
 }
 .skinRebon-circle__item:nth-child(2) {
-    top: -15%;
-    left: 34%;
+    top: -4%;
+    left: -4%;
     @include mq(xxs){
         top: -4%;
         left: -4%;
@@ -199,8 +204,8 @@
     }
 }
 .skinRebon-circle__item:nth-child(3) {
-    top: 8%;
-    left: 83%;
+    top: -10%;
+    left: 33%;   
     @include mq(xxs){
         top: -10%;
         left: 33%;    
@@ -215,8 +220,8 @@
     }
 }
 .skinRebon-circle__item:nth-child(4) {
-    top: 38%;
-    left: 101%;
+    top: -4%;
+    left: 69%;
     @include mq(xxs){
         top: -4%;
         left: 69%;
@@ -231,8 +236,8 @@
     }
 }
 .skinRebon-circle__item:nth-child(5) {
-    top: 65%;
-    left: 99%;
+    top: -22%;
+    left: 4%;
     @include mq(xxs){
         top: -22%;
         left: 4%;
@@ -247,8 +252,8 @@
     }
 }
 .skinRebon-circle__item:nth-child(6) {
-    top: 90%;
-    left: 88%;
+    top: -22%;
+    left: 62%;
     @include mq(xxs){
         top: -22%;
         left: 62%;
@@ -263,8 +268,8 @@
     }
 }
 .skinRebon-circle__item:nth-child(7) {
-    top: 90%;
-    left: -17%;
+    top: 99%;
+    left: -3%;
     @include mq(xxs){
         top: 99%;
         left: -3%;
@@ -279,8 +284,8 @@
     }
 }
 .skinRebon-circle__item:nth-child(8) {
-    top: 66%;
-    left: -28%;
+    top: 114%;
+    left: 21%;
     @include mq(xxs){
         top: 114%;
         left: 21%;
@@ -295,8 +300,8 @@
     }
 }
 .skinRebon-circle__item:nth-child(9) {
-    top: 38%;
-    left: -28%;
+    top: 99%;
+    left: 68%;
     @include mq(xxs){
         top: 99%;
         left: 68%;
@@ -311,8 +316,8 @@
     }
 }
 .skinRebon-circle__item:nth-child(10) {
-    top: 10%;
-    left: -14%;
+    top: 114%;
+    left: 49%;
     @include mq(xxs){
         top: 114%;
         left: 49%;

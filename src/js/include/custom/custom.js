@@ -37,4 +37,14 @@ export default () => {
       hotline.classList.remove("show");
     }
 })
+  var nav_mobie = document.querySelector('.nav-mobie__menu')
+  var togger_on = document.querySelector('.nav-mobie__togger')
+  var togger_off = document.querySelector('.nav-mobie__close')
+  togger_on.onclick = function() {
+    nav_mobie.classList.toggle("active1");
+  
+  }
+  togger_off.onclick = function() {
+    nav_mobie.classList.toggle("active1");
+  }
 }

@@ -1,10 +1,17 @@
 .title-page {
     float: left;
     width: 100%;
-    font-size: 24px;
+    font-size: 20px;
     color: #424242;
     margin: 30px 0 20px;
     font-weight: 700;
+
+    @include mq(xxs){
+        font-size: 20px;
+    }
+    @include mq(sm){
+        font-size: 24px;
+    }
 }
 .form-search {
     float: left;
@@ -45,17 +52,39 @@
     justify-content: space-between;
     width: 100%;
     flex-wrap: wrap;
-    gap: 25px;
-
+    gap: 0px;
+    
+    @include mq(xxs){
+        gap: 0px;
+    }
+    @include mq(l){
+        gap: 25px;
+    }
     .paging {
         margin-top: 0;
     }
 }
 .content-QA {
-    width: calc(100% - 380px);
+    width: 100%;
+    order:0;
     margin-top: 30px;
     .title-page {
         margin-top: 0;
+    }
+    @include mq(xxs){
+        width: 100%;
+        order:0;
+    }
+    @include mq(xs){
+        width: calc(100% - 275px);
+        order: unset;
+
+    }
+    @include mq(sm){
+        width: calc(100% - 330px);
+    }
+    @include mq(ml){
+        width: calc(100% - 380px);
     }
 }
 .content-QA__list {
@@ -105,7 +134,20 @@
     }
 }
 .content-QA__custom {
+    width: 100%;
+    display: block;
+    margin-top: 10px;
     float: right;
     color: #727272;
     font-size: 12px;
+    @include mq(xxs){
+        width: 100%;
+        display: block;
+        margin-top: 10px;
+    }
+    @include mq(m){
+        width: unset;
+        display: unset;
+        margin-top: 0px;
+    }
 }

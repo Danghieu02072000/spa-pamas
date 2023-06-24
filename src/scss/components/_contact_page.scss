@@ -2,17 +2,43 @@
     float: left;
     width: 100%;
     display: flex;
+    flex-wrap: wrap;
     gap: 30px;
+    margin-bottom: 30px;
+    @include mq(xxs){
+        margin-bottom: 30px;
+    }
 }
 .contact-page__item {
-    width: calc(100% / 3 - 20px);
+    width: 100%;
+    margin-bottom: 0;
     outline: 1px solid #e5e5e5;
     border: 5px solid #fff;
     background-color: #f4f4f4;
     padding: 20px 30px;
     border-radius: 4px;
     min-height: 300px;
-    margin-bottom: 30px;
+    @include mq(xxs){
+        width: 100%;
+        margin-bottom: 0;
+    }
+    @include mq(sm){
+        width: calc(100% / 2 - 20px);
+    }
+    @include mq(m){
+        width: calc(100% / 3 - 20px);
+    }
+    &:last-child{
+        @include mq(sm){
+            width: calc(100% / 1.3 - 20px);
+            margin: 0 auto;
+        }
+        @include mq(m){
+            width: calc(100% / 3 - 20px);
+            margin: 0 auto;
+        }
+    }
+    
 }
 .contact-page__city {
     font-size: 18px;
@@ -80,6 +106,7 @@
     display: block;
     width: 100%;
     float: left;
+    flex-wrap: wrap;
     form {
         margin-top: 30px;
         padding-bottom: 40px;
@@ -94,10 +121,17 @@
         width: 100%;
         justify-content: space-between;
         gap: 20px;
+        flex-wrap: wrap;
     }
     .box-1__input {
-        width: calc(100% / 3 - 20px);
-
+        width: 100%;
+        @include mq(xxs){
+            width: 100%;
+        }
+        @include mq(sm){
+            width: calc(100% / 3 - 20px);
+        }
+        
         input {
             height: 46px;
             border-radius: 4px;
@@ -141,6 +175,7 @@
         justify-content: center;
         margin-bottom: 15px;
         button {
+            width: 100%;
             color: #243168;
             cursor: pointer;
             display: inline-block;
@@ -154,7 +189,12 @@
             border: 1px solid #feda58;
             padding: 0 40px;
             margin: 0 2px;
-
+            @include mq(xxs){
+                width: 100%;
+            }
+            @include mq(xs){
+                width: unset;
+            }
             &:hover {
                 color: $color-yellow;
                 background-color: $color-primary;

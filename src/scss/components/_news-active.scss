@@ -7,13 +7,31 @@
 .news-active__wrapper {
     display: flex;
     justify-content: space-between;
-    gap: 30px
+    flex-wrap: wrap;
+    gap: 15px;
+    @include mq(xs){
+        gap: 15px;
+    }
+    @include mq(m){
+        gap: 30px;
+    }
+    
 }
 .news-active__box1 {
-    width: calc(50% - 15px);
+    width: 100%;
     position: relative;
     border-radius: 6px;
     overflow: hidden;
+
+    @include mq(xxs){
+        width: 100%;
+    }
+    @include mq(xs){
+        width: calc(50% - 7.5px);
+    }
+    @include mq(m){
+        width: calc(50% - 15px);
+    }
     & > a {
         display: block;
         position: relative;
@@ -34,13 +52,24 @@
         left: 0;
         padding: 15px;
         width: 100%;
-        
+        @include mq(xs){
+            padding: 7px;
+        }
+        @include mq(m){
+            padding: 15px;
+        }
         a {
             font-size: 24px;
             color: #fff;
             font-weight: 700;
             display: block;
             line-height: 1.4em;
+            @include mq(xxs){
+               font-size: 16px;
+            }
+            @include mq(m){
+                font-size: 24px;
+             }
         }
     }
 }
@@ -50,6 +79,7 @@
     position: relative;
     border-radius: 6px;
     overflow: hidden;
+    flex-wrap: wrap;
     & > a {
         display: block;
         position: relative;
@@ -69,24 +99,47 @@
         position: absolute;
         bottom: 0;
         left: 0;
-        padding: 15px;
+        padding: 7px;
         width: 100%;
-        
+        @include mq(xs){
+            padding: 7px;
+        }
+        @include mq(m){
+            padding: 15px;
+        }
         a {
-            font-size: 24px;
+            font-size: 16px;
             color: #fff;
             font-weight: 700;
             display: block;
             line-height: 1.4em;
+            @include mq(xxs){
+                font-size: 16px;
+             }
+             @include mq(m){
+                font-size: 24px;
+             }
         }
     }
 }
 .news-active__box3 {
-    width: calc(50% - 15px);
+    width: 100%;
     display: block;
     position: relative;
     border-radius: 6px;
+    margin-top: 30px;
     overflow: hidden;
+    @include mq(xxs){
+        width: 100%;
+    }
+    @include mq(xxs){
+        width: calc(50% - 7.5px);
+        margin-top: 15px;
+    }
+    @include mq(m){
+        width: calc(50% - 15px);
+        margin-top: 30px;
+    }
     & > a {
         display: block;
         position: relative;
@@ -105,7 +158,13 @@
         position: absolute;
         bottom: 0;
         left: 0;
-        padding: 15px;
+        padding: 7px;
+        @include mq(xs){
+            padding: 7px;
+        }
+        @include mq(m){
+            padding: 15px;
+        }
         
         a {
             font-size: 24px;
@@ -113,16 +172,38 @@
             font-weight: 700;
             display: block;
             line-height: 1.4em;
+            @include mq(xxs){
+                font-size: 16px;
+             }
+             @include mq(m){
+                font-size: 24px;
+             }
         }
     }
     &:nth-child(1) {
         float: left;
-        margin-right: 15px;
-        margin-top: 30px;
+        margin-right: 0px;
+        @include mq(xxs){
+            margin-right: 0px;
+        }
+        @include mq(xs){
+            margin-right: 7.5px;
+        }
+        @include mq(m){
+            margin-right: 15px;
+        }
     }
     &:nth-child(2) {
         float: left;
-        margin-left: 15px;
-        margin-top: 30px;
+        margin-left: 0px;
+        @include mq(xxs){
+            margin-left: 0px;
+         }
+        @include mq(xs){
+            margin-left: 7.5px;
+        }
+        @include mq(m){
+            margin-left: 15px;
+        }
     }
 }

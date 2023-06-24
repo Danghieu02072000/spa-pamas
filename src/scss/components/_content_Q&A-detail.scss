@@ -1,6 +1,18 @@
 .detail-QA {
-    width: calc(100% - 380px);
+    width: 100%;
     margin-top: 30px;
+    @include mq(xxs){
+        width: 100%;
+    }
+    @include mq(xs){
+        width: calc(100% - 275px);
+    }
+    @include mq(sm){
+        width: calc(100% - 330px);
+    }
+    @include mq(ml){
+        width: calc(100% - 380px);
+    }
 }
 .title-2 {
     font-size: 18px;

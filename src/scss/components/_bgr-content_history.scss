@@ -3,16 +3,19 @@
     width: 100%;
 }
 .content-about-history {
-    padding-top: 100px;
+    padding-top: 50px;
     @include mq(xxs){
         padding-top: 50px;
+    }
+    @include mq(l){
+        padding-top: 100px;
     }
 
 }
  .history_carousel-item {
 
-    height: 230px;
-    padding: 35px;
+    height: 140px;
+    padding: 22px;
     text-align: center;
     background: url(../../img/background/bg-award.jpg) no-repeat center center;
     background-size: cover;
@@ -24,5 +27,17 @@
     @include mq(xxs){
         height: 140px;
         padding: 22px;
+    }
+    @include mq(ml){
+        height: 180px;
+        padding: 22px;
+    }
+    @include mq(m){
+        height: 190px;
+        padding: 22px;
+    }
+    @include mq(l){
+        height: 230px;
+        padding: 35px;
     }
 }

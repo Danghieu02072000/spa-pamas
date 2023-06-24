@@ -8,6 +8,7 @@
     justify-content: space-between;
 }
 .register-history__img {
+    display: none;
     width: 25%;
     padding: 0 20px;
     @include mq(xxs) {
@@ -36,7 +37,7 @@
     }
 }
 .register-history__form {
-    width: 75%;
+    width: 100%;
     padding: 0 20px;
     text-align: center;
     margin-top: 40px;
@@ -57,12 +58,10 @@
         width: 100%;
         justify-content: space-between;
         gap: 20px;
-        @include mq(xxs) {
-            flex-wrap: wrap;
-        }
+        flex-wrap: wrap;
     }
     .box-1__input {
-        width: calc(100% / 3 - 20px);
+        width: 100%;
         @include mq(xxs) {
             width: 100%;
         }
@@ -124,6 +123,7 @@
             border: 1px solid #feda58;
             padding: 0 40px;
             margin: 0 2px;
+            width: 100%;
             @include mq(xxs) {
                 width: 100%;
             }
@@ -140,7 +140,7 @@
     }
 }
 .register-history__title {
-    font-size: 24px;
+    font-size: 18px;
     color: #243168;
     font-weight: 700;
     margin-bottom: 10px;

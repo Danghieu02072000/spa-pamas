@@ -1,6 +1,19 @@
 .content-story {
-    width: calc(100% - 380px);
+    width: 100%;
     margin-top: 30px;
+    @include mq(xxs){
+        width: 100%;
+    }
+    @include mq(xs){
+        width: calc(100% - 275px);
+    }
+    @include mq(sm){
+        width: calc(100% - 330px);
+        margin-bottom: 30px;
+    }
+    @include mq(ml){
+        width: calc(100% - 380px);
+    }
 }
 .content-story__list {
     display: flex;
@@ -13,7 +26,15 @@
     }
 }
 .content-story__item{
+    margin-bottom: 30px;
     display: flex;
+    flex-wrap: wrap;
+    @include mq(xxs){
+        margin-bottom: 30px;
+    }
+    @include mq(sm){
+        margin-bottom: 0px;
+    }
     &:hover {
         .hover-show {
             opacity: 1;
@@ -27,10 +48,22 @@
     }
 }
 .content-story__detail {
-    width: 65%;
-    padding-left: 30px;
+    width: 100%;
+    padding-left: 0px;
     text-align: justify;
     padding-top: 10px;
+    @include mq(xxs){
+        width: 100%;
+        padding-left: 0px;
+    }
+    @include mq(sm){
+        width: 65%;
+        padding-left: 20px;
+        padding-top: 0;
+    }
+    @include mq(ml){
+        padding-left: 30px;
+    }
     .tab-news__news {
         width: 100%;
         padding: 0;
@@ -100,6 +133,17 @@
 }
 .content-story__img {
     position: relative;
+    width: 100%;
+    @include mq(xxs){
+        width: 100%;
+    }
+    @include mq(sm){
+        width: calc(35% - 20px);
+    }
+    @include mq(ml){
+        width: calc(35% - 30px);
+    }
+
 
     a {
         display: block;

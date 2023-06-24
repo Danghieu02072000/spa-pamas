@@ -4,7 +4,7 @@
     background: url(../../img/background/line-foo-top.png) repeat-x top center #243168;
     position: relative;
     border-top: 1px solid #fff;
-    z-index: -2;
+    z-index: 0;
 }
 .footer__wrapper::before {
     content: "";
@@ -20,7 +20,7 @@
     width: 192px;
     height: 262px;
     position: absolute;
-    top: calc(60% - 131px);
+    top: 20px;
     background: url(../../img/background/icon-foo-2.png) no-repeat right center;
     right: 0;
     z-index: -1;
@@ -38,6 +38,7 @@
 }
 .footer__menu {
     padding: 30px 0;
+    display: none;
     @include mq(xxs){
         display: none;
     }
@@ -54,12 +55,13 @@
     flex-wrap: wrap;
 }
 .footer-menu__list {
-    padding: 0 15px;
     display: flex;
     flex-direction: column;
     align-items: start;
     justify-content: center;
     gap: 10px;
+    width: 50%;
+    padding: 15px 0;
     color: #DBDBDB;
     @include mq(sm){
         width: 50%;
@@ -89,9 +91,11 @@
 .footer-company__wrapper {
     display: flex;
     gap: 15px;
+    flex-wrap: wrap;
+    padding-top: 30px;
     @include mq(xxs){
         padding-top: 30px;
-        flex-wrap: wrap;
+
     }
     @include mq(sm){
         padding-top: 30px;
@@ -101,9 +105,10 @@
 }
 .footer-company__logo {
     width: 95px;
+    width: 100%;
+    text-align: center;
     @include mq(xxs){
         width: 100%;
-        text-align: center;
     }
     @include mq(sm){
         width: 95px;
@@ -114,12 +119,13 @@
     display: flex;
     flex-direction: column;
     gap: 10px;
+    text-align: center;
+    
+    h4 {
+        font-weight: 700;
+    }
     @include mq(xxs){
         text-align: center;
-
-        h4 {
-            font-weight: 700;
-        }
     }
 
     @include mq(sm){
@@ -179,7 +185,7 @@
     
 }
 .footer-location__left {
-    width: calc(100% / 3);
+    width: 100%;
     @include mq(xxs){
         width: 100%;
     }
@@ -192,7 +198,7 @@
     }
 }
 .footer-location__center {
-    width: calc(100% / 3);
+    width: 100%;
     @include mq(xxs){
         width: 100%;
     }
@@ -205,7 +211,7 @@
     }
 }
 .footer-location__right {
-    width: calc(100% / 3);
+    width: 100%;
     @include mq(xxs){
         width: 100%;
     }
@@ -221,6 +227,7 @@
 }
 .copyright {
     padding: 10px 0 45px 0;
+    border-top: 1px solid #b9b9b9;
     @include mq(xxs){
 
         border-top: 1px solid #b9b9b9;
@@ -229,8 +236,9 @@
 .copyright__wrapper {
     display: flex;
     justify-content: space-between;
+    flex-wrap: wrap;
+    flex-direction: column-reverse;
     @include mq(xxs){
-        flex-wrap: wrap;
         flex-direction: column-reverse;
     }
     @include mq(sm){
@@ -239,7 +247,8 @@
     }
 }
 .copyright__left {
-    width: calc(100% / 3);
+    width: 100%;
+    text-align: center;
     @include mq(xxs){
         width: 100%;
         text-align: center;
@@ -256,10 +265,10 @@
     }
 }
 .copyright__right {
-    width: calc(100% / 3);
+    width: 100%;
     display: flex;
     gap: 22px;
-    justify-content: end;
+    justify-content:center;
     @include mq(xxs){
         width: 100%;
         justify-content:center;
@@ -279,7 +288,6 @@
             font-size: 24px;
         }
     }
-    
     a:hover {
         color: $color-yellow;
         transform: scale(1.1);

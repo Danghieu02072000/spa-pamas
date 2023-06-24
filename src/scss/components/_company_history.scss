@@ -10,7 +10,7 @@
     flex-wrap: wrap;
 }
 .company-history__detail {
-    width: calc(100% / 2 - 10px);
+    width: 100%;
     padding: 0 40px;
     text-align: center;
     @include mq(xxs) {
@@ -21,8 +21,8 @@
     }
 }
 .company-history__ruler {
-    width: calc(100% / 2 - 10px);
-    padding: 0 30px;
+    width: 100%;
+    padding: 0;
     @include mq(xxs) {
         width: 100%;
         padding: 0;
@@ -36,7 +36,7 @@
     margin-bottom: 10px;
 }
 .company-history__title {
-    font-size: 36px;
+    font-size: 24px;
     color: #243168;
     font-weight: 700;
     margin: 10px 0;

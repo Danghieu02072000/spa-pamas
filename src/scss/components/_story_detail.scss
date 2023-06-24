@@ -1,6 +1,18 @@
 .story-detail {
-    width: calc(100% - 380px);
+    width: 100%;
     margin-top: 30px;
+    @include mq(xxs){
+        width: 100%;
+    }
+    @include mq(xs){
+        width: calc(100% - 275px);
+    }
+    @include mq(sm){
+        width: calc(100% - 330px);
+    }
+    @include mq(ml){
+        width: calc(100% - 380px);
+    }
 }
 .story-detail__content {
     padding: 20px;

@@ -1,11 +1,12 @@
 .bgr-content {
-    padding: 50px 0 120px 0;
+    padding: 50px 0 70px 0;
     background-image: url(../../img/background/banner-prl-1.jpg);
     transform: translate(0%, 11.5491%) translate3d(0px, 0px, 0px);
     position: relative;
     @include mq(xxs){
         padding: 50px 0 70px 0;
     }
+
 }
 .dot-arrow {
     background: url(../../img/background/arrow-foo.png) no-repeat top center;
@@ -17,7 +18,7 @@
 }
 .bgr-content__wrapper {
     display: flex;
-    flex-direction: row;
+        flex-direction: column;
     justify-content: space-between;
     @include mq(xxs){
         flex-direction: column;
@@ -27,7 +28,7 @@
     }
 }
 .bgr-content__left {
-    width: 42%;
+    width: 100%;
     @include mq(xxs){
         width: 100%;
     }
@@ -41,6 +42,7 @@
 .bgr-content__link {
     display: inline-block;
     box-shadow: #999999 -7px 8px 1px;
+    width: 100%;
     @include mq(xxs){
         width: 100%;
     }
@@ -49,8 +51,9 @@
     width: 50%;
     color: $color-white;
     text-align: center;
+    padding-top: 40px;
+    width: 100%;
     @include mq(xxs){
-        padding-top: 40px;
         width: 100%;
     }
     @include mq(sm){
@@ -60,7 +63,7 @@
 }
 .bgr-content__title {
     color: #fff;
-    font-size: 24px;
+    font-size: 18px;
     text-transform: uppercase;
     font-weight: 700;
     margin-bottom: 15px;
@@ -96,12 +99,15 @@
         background-color: #243168;
         border: 2px solid #243168;
         overflow: hidden;
-        margin: 15px;
+        margin: 5px;
         background-repeat: no-repeat;
         background-position: 6px 7px;
         transition: all 0.3s linear;
         @include mq(xxs){
             margin: 5px;
+        }
+        @include mq(l){
+            margin: 15px;
         }
 
     }

@@ -33,6 +33,7 @@
         text-transform: uppercase;
         border: 1px dashed #e1e1e1;
         transition: all 0.4s ease;
+        width: 100%;
         @include mq(xxs){
             width: 100%;
         }
@@ -58,6 +59,7 @@
     display: flex;
     justify-content: space-between;
     flex-wrap: wrap;
+    gap: 10px;
     @include mq(xxs){
         gap: 10px;
     }
@@ -101,8 +103,8 @@
 
 }
 .tab-news__item {
-    width: calc(100% / 3);
-    padding: 0 15px;
+    width: 100%;
+    padding: 0;
     @include mq(xxs){
         width: 100%;
         padding: 0;

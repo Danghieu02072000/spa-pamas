@@ -9,6 +9,7 @@
 .content-history {
     margin-top: 40px;
     &:nth-child(3) {
+        margin-bottom: -22px;
         @include mq(xxs) {
             margin-bottom: -22px;
         }
@@ -28,13 +29,11 @@
     display: flex;
     justify-content: space-between;
     gap: 10px;
-    @include mq(xxs) {
-        flex-wrap: wrap;
-    }
+    flex-wrap: wrap;
 }
 .content-history__detail {
-    width: 58%;
-    padding: 0 15px;
+    width: 100%;
+    padding: 0;
     line-height: 1.5em;
     color: #727272;
     text-align: justify;
@@ -48,8 +47,8 @@
     }
 }
 .content-history__img {
-    width: 40%;
-    padding: 0 15px;
+    width: 100%;
+    padding: 0;
     @include mq(xxs) {
         width: 100%;
         padding: 0;
@@ -60,7 +59,7 @@
     }
 }
 .content-history__title {
-    font-size: 24px;
+    font-size: 18px;
     color: #424242;
     font-weight: 700;
     margin-bottom: 10px;
@@ -98,7 +97,7 @@
 
 }
 .content-history__slogan {
-    font-size: 18px;
+    font-size: 14px;
     color: #424242;
     font-weight: 700;
     margin-bottom: 30px;
@@ -124,8 +123,8 @@
     }
 }
 .content-history__detail2 {
-    width: calc(50% - 5px) ;
-    padding: 0 15px;
+    width: 100%;
+    padding: 0;
     @include mq(xxs) {
         width: 100%;
         padding: 0;
@@ -136,8 +135,8 @@
     }
 }
 .content-history__img2 {
-    width: calc(50% - 5px) ;
-    width: 50%;
+    width: 100%;
+    padding: 0;
     padding: 0 15px;
     
     @include mq(xxs) {

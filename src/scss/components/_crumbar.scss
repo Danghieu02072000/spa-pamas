@@ -22,9 +22,9 @@
             gap: 15px;
 
             span {
-
-                @include mq(xxs) {
-                    font-size: 12px;
+                font-size: 12px;
+                @include mq(sm) {
+                    font-size: 14px;
                   }
             }
         }
