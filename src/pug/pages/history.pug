@@ -1,12 +1,14 @@
 extends ../_layouts/_layouts
 include ../_mixins/_image
+include ../_mixins/_crumber
 
 block variables
   - var title='History'
 
 block content
   .main-pageHistory
-    include ../_components/_crumbar
+    .crumbar
+      +crumbar("Lịch sử Pamas")
     include ../_components/_video_history
     include ../_components/_timeline_history
     include ../_components/_content-about_history

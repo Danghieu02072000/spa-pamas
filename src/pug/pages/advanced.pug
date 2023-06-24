@@ -1,12 +1,14 @@
 extends ../_layouts/_layouts
 include ../_mixins/_image
+include ../_mixins/_crumber
 
 block variables
   - var title='Advanced'
 
 block content
   .main-pageAdvanced
-    include ../_components/_crumbar
+    .crumbar
+      +crumbar("Hình ảnh trước sau điều trị")
     .container
         .pageAdvanced__wrapper
             include ../_components/_page-Advaced_content

@@ -1,12 +1,14 @@
 extends ../_layouts/_layouts
 include ../_mixins/_image
+include ../_mixins/_crumber
 
 block variables
   - var title='story-detail'
 
 block content
   .main-pageAdvanced
-    include ../_components/_crumbar
+    .crumbar
+      +crumbar("Hành trình tìm lại tuổi xuân")
     .container
         .pageAdvanced__wrapper
             include ../_components/_story_detail_content

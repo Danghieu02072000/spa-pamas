@@ -1,12 +1,14 @@
 extends ../_layouts/_layouts
 include ../_mixins/_image
+include ../_mixins/_crumber
 
 block variables
   - var title='Q&A_pages'
 
 block content
   .main-pageAdvanced
-    include ../_components/_crumbar
+    .crumbar
+      +crumbar("Hỏi đáp")
     .container
         .pageQA__wrapper
             include ../_components/_content_Q&A-detail

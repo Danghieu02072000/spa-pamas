@@ -72,36 +72,43 @@
     width: calc(100% / 3);
     padding: 0 15px;
 
-     a {
-        font-size: 16px;
-        font-weight: 700;
-        color: #243168;
-        display: block;
-        line-height: 1.4em;
-        position: relative;
-        padding-left: 15px;
-        transition: all 0.4s ease;
-        &::before {
-            content: "";
-            width: 8px;
-            height: 8px;
-            border: 2px solid #243168;
-            border-radius: 4px;
-            position: absolute;
-            left: 0;
-            top: 7px;
-            transition: all 0.4s ease;
-        }
-        &:hover {
-            text-decoration: underline;
-            color: $color-primary;
-            &::before {
-                background-color: #243168;
-            }
-        }
-     }
+    .btn--detail {
+        border-color: #e5e5e5;
 
+        &:hover {
+            background-color: $color-yellow;
+        }
+    }
 }
+.tab-news__heading {
+    font-size: 16px;
+    font-weight: 700;
+    color: #243168;
+    display: block;
+    line-height: 1.4em;
+    position: relative;
+    padding-left: 15px;
+    transition: all 0.4s ease;
+    &::before {
+        content: "";
+        width: 8px;
+        height: 8px;
+        border: 2px solid #243168;
+        border-radius: 4px;
+        position: absolute;
+        left: 0;
+        top: 7px;
+        transition: all 0.4s ease;
+    }
+    &:hover {
+        text-decoration: underline;
+        color: $color-primary;
+        &::before {
+            background-color: #243168;
+        }
+    }
+}
+
 .tab-news__item {
     width: 100%;
     padding: 0;

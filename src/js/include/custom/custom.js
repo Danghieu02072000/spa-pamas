@@ -40,11 +40,21 @@ export default () => {
   var nav_mobie = document.querySelector('.nav-mobie__menu')
   var togger_on = document.querySelector('.nav-mobie__togger')
   var togger_off = document.querySelector('.nav-mobie__close')
+  var btn__search = document.querySelector('.nav-mobie__search')
+  var box__search = document.querySelector('.nav-mobie__searchs')
+  var overlay = document.querySelector('.overlay')
   togger_on.onclick = function() {
     nav_mobie.classList.toggle("active1");
-  
   }
   togger_off.onclick = function() {
     nav_mobie.classList.toggle("active1");
+  }
+  btn__search.onclick = function() {
+    box__search.classList.toggle("open");
+    overlay.classList.toggle('lay')
+  }
+  overlay.onclick = function() {
+    overlay.classList.toggle('lay');
+    box__search.classList.toggle("open");
   }
 }
