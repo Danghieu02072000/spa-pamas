@@ -2,6 +2,9 @@
     margin-bottom: -55px;
     float: left;
     width: 100%;
+    @include mq(m) {
+        margin-bottom: -20px;
+    }
 }
 .content-history {
     margin-top: 40px;
@@ -39,6 +42,10 @@
         width: 100%;
         padding: 0;
     }
+    @include mq(m) {
+        width: 58%;
+        padding: 0 15px;
+    }
 }
 .content-history__img {
     width: 40%;
@@ -46,6 +53,10 @@
     @include mq(xxs) {
         width: 100%;
         padding: 0;
+    }
+    @include mq(m) {
+        width: 40%;
+        padding: 0 15px;
     }
 }
 .content-history__title {
@@ -119,6 +130,10 @@
         width: 100%;
         padding: 0;
     }
+    @include mq(m) {
+        width: calc(50% - 5px) ;
+        padding: 0 15px;
+    }
 }
 .content-history__img2 {
     width: calc(50% - 5px) ;
@@ -129,10 +144,27 @@
         width: 100%;
         padding: 0;
     }
+    @include mq(m) {
+        width: calc(50% - 5px) ;
+        padding: 0 15px;
+        position: relative;
+    }
+    @include mq(ml) {
+        position: unset;
+    }
 
     a {
         width: 100%;
         display: inline-block;
+        text-align: center;
+        @include mq(m) {
+           position: absolute;
+           bottom: 0;
+           right: 0;
+        }
+        @include mq(ml) {
+            position: unset;
+         }
     }
 }
 .slogan-style2 {

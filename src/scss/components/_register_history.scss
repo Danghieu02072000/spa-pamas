@@ -13,6 +13,27 @@
     @include mq(xxs) {
         display: none;
     }
+    @include mq(m) {
+        display: block;
+        position: relative;
+
+        & > img {
+            padding: 0 10px;
+            position: absolute;
+            left: 0;
+            bottom: 0;
+            max-height: 100%;
+        }
+    }
+    @include mq(l) {
+        display: block;
+        position: unset;
+
+        & > img {
+            padding: 0;
+            position: unset;
+        }
+    }
 }
 .register-history__form {
     width: 75%;
@@ -21,6 +42,9 @@
     margin-top: 40px;
     @include mq(xxs) {
         width: 100%;
+    }
+    @include mq(m) {
+        width: 75%;
     }
 
     form {
@@ -41,6 +65,9 @@
         width: calc(100% / 3 - 20px);
         @include mq(xxs) {
             width: 100%;
+        }
+        @include mq(m) {
+            width: calc(100% / 3 - 20px);
         }
 
         input {

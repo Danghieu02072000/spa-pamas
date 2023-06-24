@@ -39,7 +39,7 @@
         width: calc(100%/3);
       }
   
-      @include mq(l) {
+      @include mq(sm) {
         width: calc(100%/4);
       }
     }

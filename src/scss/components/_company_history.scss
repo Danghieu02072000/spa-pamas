@@ -16,6 +16,9 @@
     @include mq(xxs) {
         width: 100%;
     }
+    @include mq(m) {
+        width: calc(100% / 2 - 10px);
+    }
 }
 .company-history__ruler {
     width: calc(100% / 2 - 10px);
@@ -23,6 +26,10 @@
     @include mq(xxs) {
         width: 100%;
         padding: 0;
+    }
+    @include mq(m) {
+        width: calc(100% / 2 - 10px);
+        padding: 0 30px;
     }
 }
 .company-history__logo {

@@ -10,12 +10,16 @@
     color: #243168;
     @include mq(xxs) {
         font-size: 24px;
-        margin-bottom: 10px;
-      }
+
+    }
     @include mq(xs) {
         font-size: 34px;
-        margin-bottom: 10px;
-      }
+
+    }
+      @include mq(xs) {
+        font-size: 48px;
+
+    }
 }
 .timeline-his__slogan {
     font-size: 24px;
